@@ -3964,7 +3964,7 @@ def main() -> None:
                 order_info_by_id,
                 _shadow_buy_usd,
             ) = _calc_planned_notional_with_fallback(
-                my_by_token_id,
+                my_by_token_id_for_risk,
                 state.get("open_orders", {}),
                 state.get("last_mid_price_by_token_id", {}),
                 max_position_usd_per_token,
@@ -3981,7 +3981,7 @@ def main() -> None:
                 _shadow_order_info_by_id,
                 _shadow_buy_usd,
             ) = _calc_planned_notional_with_fallback(
-                my_by_token_id,
+                my_by_token_id_for_risk,
                 state.get("open_orders", {}),
                 state.get("last_mid_price_by_token_id", {}),
                 max_position_usd_per_token,
