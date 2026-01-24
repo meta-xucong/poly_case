@@ -1,0 +1,535 @@
+[
+  {
+    "timestamp": "2026-01-23 13:29:54",
+    "token_id": "104894938391189807862361277765134514076044133563085752215952400958137116339740",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00007946888606,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 12:29:54"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 13:30:56",
+    "token_id": "79198300868830485284678716507005480871569275475252085914785144227204298869058",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.008247911930084,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 12:30:55"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 13:31:28",
+    "token_id": "94521268801533640253484626268475643884882213091508756864952897781498391313602",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00194155772527,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 12:31:27"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 13:33:01",
+    "token_id": "104071616575689490708756996503755160411785604144351427331378560378097635400347",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00185003678004,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 12:33:01"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 13:34:03",
+    "token_id": "21527446005162722668702146847806837944786417986794925592709069062391666573103",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00338534116745,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 12:34:03"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 13:36:08",
+    "token_id": "11132544244839265378732084165256379227175677028258955804895976429843086532411",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.007177857557934,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 12:36:08"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 13:37:14",
+    "token_id": "84179647029696184569295249591902766504666878402456968340436905262047026883194",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00341181357702,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 12:37:14"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 14:30:16",
+    "token_id": "57216272564529548464686463691236811991956032201293786790337952253964682584376",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00525668859482,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 13:30:16"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 16:05:18",
+    "token_id": "44169729231600183934113609960222670358715639208411971924042241295619035924872",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 123.60339436531066,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 14:01:42"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 17:13:13",
+    "token_id": "105108334823274411453837752322302146951506166827237470954759784982159162094956",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 221.15250365336735,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 13:32:04"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 19:14:50",
+    "token_id": "114421380098084026753773605667430150755820287180340356465450569515479471185603",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 284.325876279672,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 14:30:31"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 19:32:07",
+    "token_id": "7287681229651258139381689770505580285026522798705230730822294318341036294451",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 362.9893392165502,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 13:29:08"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 20:15:11",
+    "token_id": "29528844389710526928017985681021162633713395060163164804150436006223818497732",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.13750076293945,
+      "timeout_seconds": 180
+    }
+  },
+  {
+    "timestamp": "2026-01-23 20:53:28",
+    "token_id": "4944476394877914550005326223303372074574422985425049648472843024565700862591",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 80.78429003953934,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 19:32:41"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 21:28:34",
+    "token_id": "18289842382539867639079362738467334752951741961393928566628307174343542320349",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 66.28378766377767,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 20:22:17"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 21:54:16",
+    "token_id": "19323538724182223051629422172260586604632454119828774685084899285092343775100",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00753326416016,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 20:54:15"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 22:48:49",
+    "token_id": "30689267060786984695412854852127076341171438058122871281486378535451964982476",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 498.9194243033727,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 14:29:54"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 22:58:01",
+    "token_id": "29505104050205099567598953559561724651636326796247120480119436815501356124449",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 64.21818160613378,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 21:53:48"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 23:06:23",
+    "token_id": "79603803658358131940134977667341878755182252168903267751430480581926601085521",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00196185509364,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 22:06:23"
+    }
+  },
+  {
+    "timestamp": "2026-01-23 23:32:54",
+    "token_id": "39685513581015973828065061115014564319705732336697536508658294168692213551689",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.002758924166365,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 22:32:53"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 00:07:00",
+    "token_id": "37090128566507509913630589460372620352013766554886380785463533062224343545231",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00161889791489,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 23:07:00"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 00:33:33",
+    "token_id": "113092139466786773400046150227283022650845595790917410904665252411285384263934",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.001697878042854,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 23:33:32"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 00:42:40",
+    "token_id": "107096794127270890984101242570698639474010707625351397547174129311341989598349",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 98.4350076119105,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 23:04:14"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 01:44:41",
+    "token_id": "15704223254061637699665008299235004894744524204070683496068480275285392327272",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00369373957316,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 00:44:41"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 02:27:44",
+    "token_id": "54906963185407778588520250373893528650769447293260978407024082288131033892651",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.0076755007108,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 01:27:43"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 02:38:51",
+    "token_id": "8139033351755938183725481412733169800280112179136815730207011384316082498073",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 229.45178029934564,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 22:49:24"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 02:45:17",
+    "token_id": "82991837887127223585838300135823820957946688171642633953055760547186260528157",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00532189210256,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 01:45:17"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 03:16:49",
+    "token_id": "55201180171382344648128505031675400629485078801250545752063029078975592767599",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00630661646525,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 02:16:49"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 03:28:21",
+    "token_id": "23311563303783760858176166115231875564829760730498992986905724285046115223219",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00815004905065,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 02:28:20"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 03:45:54",
+    "token_id": "101443205557953769944584140209356208074985603773882357999963509274129845972413",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.002945772806804,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 02:45:54"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 03:51:31",
+    "token_id": "109485896404435445224771356926428046595093346501629729876439793593978284351864",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 184.55808469057084,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 00:46:58"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 04:17:27",
+    "token_id": "102936224134271070189104847090829839924697394514566827387181305960175107677216",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00498860279719,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 03:17:26"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 04:30:58",
+    "token_id": "95949957895141858444199258452803633110472396604599808168788254125381075552218",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.0028201897939,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 03:30:58"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 04:46:29",
+    "token_id": "14428142189676063257961848327857060527459896245257342585283838945691014997983",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00698606967926,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 03:46:29"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 04:47:35",
+    "token_id": "98686000961840472718925829517679879428244289411307611978452808788429260739944",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 127.47276818752289,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 02:40:07"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 05:18:04",
+    "token_id": "15610403757960672087645132402413181609068502505187076901860989170662864809048",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00522878964742,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 04:18:03"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 05:31:35",
+    "token_id": "65776331158171098119883600447375115999924641197000014423196868505933237200018",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00120975971222,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 04:31:34"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 05:47:07",
+    "token_id": "78011236440210301900948684264515942271208527805809303716211744955049570165464",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00792438586553,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 04:47:07"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 05:48:40",
+    "token_id": "7161906153224224407370336760633445103785276166334589188046811681528887945384",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00067704121272,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 04:48:40"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 05:51:12",
+    "token_id": "49665164098023964834384923240708785834785935017884983383853983081526345523888",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.01732230186462,
+      "timeout_seconds": 180
+    }
+  },
+  {
+    "timestamp": "2026-01-24 05:53:14",
+    "token_id": "35068674912005594575742347599527271016244450706692601867879347677245525639202",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.00910449028015,
+      "timeout_seconds": 180
+    }
+  },
+  {
+    "timestamp": "2026-01-24 05:57:18",
+    "token_id": "90399576495470588494910291378124940374846166689533768399931049914751962702949",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.01882123947144,
+      "timeout_seconds": 180
+    }
+  },
+  {
+    "timestamp": "2026-01-24 06:24:42",
+    "token_id": "13672909524738463047194485253993469755270149698964235984703055596484122584274",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00286657015483,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 05:24:41"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 06:33:12",
+    "token_id": "4920174600328060381478178332126683115937537315909025772685332706706025236975",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00209605693817,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 05:33:12"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 06:59:18",
+    "token_id": "15470971723630340126379023464305254753539639285010628416630282017302992621065",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.004864478111266,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 05:59:18"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 07:03:27",
+    "token_id": "45267339147109499621650645880422741002238753374072106538331654321967687611793",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.16049599647522,
+      "timeout_seconds": 180
+    }
+  },
+  {
+    "timestamp": "2026-01-24 07:16:00",
+    "token_id": "37975265083682450969967223199653164268542375291978582835346444673615244164455",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 225.75071239471436,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 03:30:15"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 07:26:21",
+    "token_id": "35387107368752328644982641185985574345241154905795306214146121961491417818763",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00657516717911,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 06:26:20"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 07:32:35",
+    "token_id": "105886144780792404187351380727805295265636415112963024872889588713803505341754",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.19749808311462,
+      "timeout_seconds": 180
+    }
+  },
+  {
+    "timestamp": "2026-01-24 07:34:35",
+    "token_id": "47971263820124165661582476693485261554582294313581950195269099493635870177372",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.14763259887695,
+      "timeout_seconds": 180
+    }
+  },
+  {
+    "timestamp": "2026-01-24 07:35:23",
+    "token_id": "112746945158746257741635529019662641558199388176511485763810876768315276888838",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 215.33755108118058,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 03:59:51"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 08:17:31",
+    "token_id": "12238337804021350373072513606997115174826680613156170611182546081135779794915",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00607579549153,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 07:17:30"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 08:50:26",
+    "token_id": "33545963172230940906097284857746208554306346197493802234285289298999092475447",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 1153.858597914378,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-23 13:36:23"
+    }
+  },
+  {
+    "timestamp": "2026-01-24 09:50:45",
+    "token_id": "75325926334064369719522833702687350588543226350264281045007110029547967164523",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.004338920116425,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-24 08:50:44"
+    }
+  }
+]
