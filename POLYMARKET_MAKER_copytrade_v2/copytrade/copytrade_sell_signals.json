@@ -1,0 +1,65 @@
+{
+  "updated_at": "2026-01-24T13:15:34.360655Z",
+  "sell_tokens": [
+    {
+      "token_id": "95949957895141858444199258452803633110472396604599808168788254125381075552218",
+      "source_account": "0x9ca119b8cd7bdb890aecf1ff3b0f6e3a45cc13b5",
+      "last_seen": "2026-01-24T13:15:18Z",
+      "introduced_by_buy": true
+    },
+    {
+      "token_id": "10832696757358093775468120009000761778513405247768868107262967513475277652998",
+      "source_account": "0x9ca119b8cd7bdb890aecf1ff3b0f6e3a45cc13b5",
+      "last_seen": "2026-01-24T10:05:46Z",
+      "introduced_by_buy": true
+    },
+    {
+      "token_id": "113520878870385926991970629986149429938184046189616634000943772686650087362197",
+      "source_account": "0x96489abcb9f583d6835c8ef95ffc923d05a86825",
+      "last_seen": "2026-01-23T21:48:44Z",
+      "introduced_by_buy": true
+    },
+    {
+      "token_id": "29528844389710526928017985681021162633713395060163164804150436006223818497732",
+      "source_account": "0x96489abcb9f583d6835c8ef95ffc923d05a86825",
+      "last_seen": "2026-01-23T17:39:00Z",
+      "introduced_by_buy": true
+    },
+    {
+      "token_id": "61204595536415309048842990417891050230036298693816005548214429840698004609023",
+      "source_account": "0x9ca119b8cd7bdb890aecf1ff3b0f6e3a45cc13b5",
+      "last_seen": "2026-01-23T14:38:46Z",
+      "introduced_by_buy": true
+    },
+    {
+      "token_id": "104895545296438735617666172336621441242754294947987367085791779928220778311973",
+      "source_account": "0x9ca119b8cd7bdb890aecf1ff3b0f6e3a45cc13b5",
+      "last_seen": "2026-01-23T11:40:54Z",
+      "introduced_by_buy": true
+    },
+    {
+      "token_id": "104045294480936053574811778073855593786774197730247528172203825562424079956283",
+      "source_account": "0x96489abcb9f583d6835c8ef95ffc923d05a86825",
+      "last_seen": "2026-01-23T08:50:56Z",
+      "introduced_by_buy": true
+    },
+    {
+      "token_id": "18416396490072832638775830122193736517548145465956855461474295313090375157433",
+      "source_account": "0x9ca119b8cd7bdb890aecf1ff3b0f6e3a45cc13b5",
+      "last_seen": "2026-01-23T08:24:52Z",
+      "introduced_by_buy": true
+    },
+    {
+      "token_id": "62595435619678438799673612599999067112702849851098967060818869994133628780778",
+      "source_account": "0x96489abcb9f583d6835c8ef95ffc923d05a86825",
+      "last_seen": "2026-01-22T17:26:48Z",
+      "introduced_by_buy": true
+    },
+    {
+      "token_id": "102493900551645701521693125055452122755587721284263456800351297341161706805154",
+      "source_account": "0x9ca119b8cd7bdb890aecf1ff3b0f6e3a45cc13b5",
+      "last_seen": "2026-01-22T13:34:28Z",
+      "introduced_by_buy": true
+    }
+  ]
+}
