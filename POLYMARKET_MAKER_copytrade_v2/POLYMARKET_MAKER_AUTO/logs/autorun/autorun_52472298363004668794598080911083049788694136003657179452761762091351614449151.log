@@ -1,0 +1,2866 @@
+[CONFIG] 使用配置文件: /home/trader/polymarket_api/POLYMARKET_MAKER_copytrade_v2/POLYMARKET_MAKER_AUTO/data/run_params_52472298363004668794598080911083049788694136003657179452761762091351614449151.json
+[INIT] API 凭证已验证。
+[INIT] ClobClient 就绪。
+[INFO] 未提供 market_url，尝试通过 token_id 获取市场元数据。
+[INFO] 市场/子问题标题: US forces in Venezuela again by June 30, 2026?
+[INFO] 使用 token_id: 52472298363004668794598080911083049788694136003657179452761762091351614449151
+[INFO] 市场标注时区: America/New_York
+[INFO] 市场计划截止时间 (UTC): 2026-01-31T00:00:00+00:00
+[WARN] 自动获取的截止日期缺少具体时刻，已按默认配置设置截止时间为 2026-01-31T23:59:00-05:00 (America/New_York)。
+[INFO] 监控目标结束时间 (UTC): 2026-02-01T04:59:00+00:00
+[INFO] 未能识别市场价格精度，默认按盈利百分比下限 0.300% 执行。
+[INIT] 目标 token_id: 52472298363004668794598080911083049788694136003657179452761762091351614449151
+[INIT] 已读取手动份数 10.0，模式：总持仓目标。
+[INIT] 卖出挂单模式：aggressive
+[INIT] 卖出后递增买入阈值已启用，步长 0.0200%。
+[INIT] 价格停滞监控窗口 120.0 分钟，阈值 0.2000%。
+[INIT] 启动后无行情自动退出阈值 10.0 分钟。
+[INIT] 交易信号超时退出阈值 60.0 分钟（长时间无买入/卖出信号将退出）。
+[INIT] 卖出挂单空窗释放阈值 6.0 小时。
+[INFO] 倒计时卖出模式将在市场结束前 300 分钟开启。
+[WS][SHARED] ✓ 将使用共享 WS 缓存模式
+[WS][SHARED] 缓存路径: /home/trader/polymarket_api/POLYMARKET_MAKER_copytrade_v2/POLYMARKET_MAKER_AUTO/data/ws_cache.json
+[WS][SHARED] ✓ 缓存文件新鲜（3秒前更新）
+[RUN] 监听行情中… 输入 stop / exit 可手动停止。
+[WS][SHARED][TRACE] 函数调用次数: 1
+[WS][SHARED][DEBUG] 读取统计: read=1, skip=0, 当前seq=26158 (last=0), updated_at=1769251890.63 (last=0.00)
+[WS][SHARED] ✓ 检测到seq增长: 0 → 26158 (+26158)
+[WS][SHARED] 开始从共享缓存读取数据 (token=52472298363004668794598080911083049788694136003657179452761762091351614449151)
+[WS][SHARED] seq=26158, updates=1 (2.0/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED][TRACE] ✓ 函数执行完成，准备返回 (latest已设置: True)
+[WAIT][TRACE] _apply_shared_ws_snapshot()返回，latest已设置: True, stop_event: False
+[WAIT][TRACE] Loop iteration 1, latest: True, stop: False
+[WAIT][END] ✓ Waiting loop结束，latest已设置: True
+[WAIT][END] ✓ stop_event未设置，继续初始化...
+[INIT][TRACE] 1. 准备启动input_listener线程...
+[INIT][TRACE] 2. input_listener线程已启动
+[INIT][TRACE] 3. 准备初始化变量和策略状态...
+[INIT][TRACE] 4. 策略状态已获取
+[INIT][TRACE] 5. 检查sell_only和countdown (sell_only_start_ts=1769903940.0, market_deadline_ts=1769921940.0)
+[INIT][TRACE] 7. 启动countdown_monitor线程...
+[INIT][TRACE] 8. 所有初始化完成，准备进入主循环...
+[MAIN_LOOP] 🚀 进入主循环 (use_shared_ws=True)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2): seq和updated_at都未变化且距上次tick仅0.2秒
+[WS][SHARED][SKIP] 当前状态: seq=26158, last_seq=26158, bid=0.2, ask=0.23
+[HEARTBEAT] 主循环运行中... (use_shared_ws=True) (首次心跳)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 1
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 0.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 26158 → 26221 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 26221 → 26284 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 26284 → 26304 (+20)
+[WS][SHARED] ✓ 检测到seq增长: 26304 → 26325 (+21)
+[WS][SHARED] seq=26325, updates=7 (13.8/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 8
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 0.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 26326 → 26339 (+13)
+[WS][SHARED] ✓ 检测到seq增长: 26339 → 26347 (+8)
+[WS][SHARED][DEBUG] 读取统计: read=99, skip=164, 当前seq=26347 (last=26347), updated_at=1769251979.17 (last=1769251979.17)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=99, use_shared_ws=True)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 16
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 1.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 101
+[WS][SHARED] ✓ 检测到seq增长: 26347 → 26436 (+89)
+[WS][SHARED] seq=26436, updates=9 (13.2/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=202): seq和updated_at都未变化且距上次tick仅4.0秒
+[WS][SHARED][SKIP] 当前状态: seq=26436, last_seq=26436, bid=0.2, ask=0.23
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 20
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 1.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=26436, updates=6 (12.0/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED] ✓ 检测到seq增长: 26436 → 26486 (+50)
+[WS][SHARED][DEBUG] 读取统计: read=199, skip=342, 当前seq=26486 (last=26486), updated_at=1769252039.13 (last=1769252039.13)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=199, use_shared_ws=True)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 27
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 2.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 201
+[WS][SHARED] seq=26486, updates=5 (9.8/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED] ✓ 检测到seq增长: 26486 → 26542 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 26542 → 26570 (+28)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=402): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=26570, last_seq=26570, bid=0.2, ask=0.23
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 32
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 2.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 26570 → 26598 (+28)
+[WS][SHARED] seq=26598, updates=7 (14.0/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED] ✓ 检测到seq增长: 26598 → 26626 (+28)
+[WS][SHARED] ✓ 检测到seq增长: 26626 → 26654 (+28)
+[WS][SHARED] ✓ 检测到seq增长: 26654 → 26680 (+26)
+[WS][SHARED] ✓ 检测到seq增长: 26680 → 26682 (+2)
+[WS][SHARED][DEBUG] 读取统计: read=298, skip=514, 当前seq=26682 (last=26682), updated_at=1769252111.11 (last=1769252111.11)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=298, use_shared_ws=True)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 41
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 3.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=26682, updates=7 (13.9/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED][TRACE] 函数调用次数: 301
+[WS][SHARED] ✓ 检测到seq增长: 26682 → 26738 (+56)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 46
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 3.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=602): seq和updated_at都未变化且距上次tick仅2.5秒
+[WS][SHARED][SKIP] 当前状态: seq=26738, last_seq=26738, bid=0.2, ask=0.23
+[WS][SHARED] seq=26738, updates=7 (13.3/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED][DEBUG] 读取统计: read=397, skip=688, 当前seq=26738 (last=26738), updated_at=1769252144.78 (last=1769252144.78)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=397, use_shared_ws=True)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 52
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 4.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 401
+[WS][SHARED] ✓ 检测到seq增长: 26738 → 26794 (+56)
+[WS][SHARED] seq=26794, updates=6 (10.3/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED] ✓ 检测到seq增长: 26794 → 26822 (+28)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 57
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 4.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 26822 → 26850 (+28)
+[WS][SHARED] ✓ 检测到seq增长: 26850 → 26877 (+27)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=802): seq和updated_at都未变化且距上次tick仅0.5秒
+[WS][SHARED][SKIP] 当前状态: seq=26877, last_seq=26877, bid=0.2, ask=0.23
+[WS][SHARED] seq=26877, updates=7 (14.0/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED] ✓ 检测到seq增长: 26877 → 26904 (+27)
+[WS][SHARED] ✓ 检测到seq增长: 26904 → 26931 (+27)
+[WS][SHARED][DEBUG] 读取统计: read=496, skip=860, 当前seq=26931 (last=26931), updated_at=1769252227.34 (last=1769252227.34)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=496, use_shared_ws=True)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 66
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 5.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 26931 → 26957 (+26)
+[WS][SHARED][TRACE] 函数调用次数: 501
+[WS][SHARED] ✓ 检测到seq增长: 26957 → 26983 (+26)
+[WS][SHARED] ✓ 检测到seq增长: 26983 → 27009 (+26)
+[WS][SHARED] ✓ 检测到seq增长: 27009 → 27035 (+26)
+[WS][SHARED] seq=27035, updates=8 (15.4/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED] ✓ 检测到seq增长: 27035 → 27061 (+26)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 73
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 5.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=27061, updates=7 (13.7/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1002): seq和updated_at都未变化且距上次tick仅2.0秒
+[WS][SHARED][SKIP] 当前状态: seq=27061, last_seq=27061, bid=0.2, ask=0.23
+[WS][SHARED] ✓ 检测到seq增长: 27061 → 27113 (+52)
+[WS][SHARED][DEBUG] 读取统计: read=596, skip=1032, 当前seq=27113 (last=27113), updated_at=1769252294.37 (last=1769252294.37)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=596, use_shared_ws=True)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 79
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 6.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 601
+[WS][SHARED] seq=27113, updates=5 (8.6/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 83
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 6.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=27113, updates=6 (12.0/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1202): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=27113, last_seq=27113, bid=0.2, ask=0.23
+[WS][SHARED][DEBUG] 读取统计: read=691, skip=1202, 当前seq=27113 (last=27113), updated_at=1769252294.37 (last=1769252294.37)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=691, use_shared_ws=True)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 89
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 7.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 701
+[WS][SHARED] seq=27113, updates=5 (9.2/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 93
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 7.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 27113 → 27163 (+50)
+[WS][SHARED] ✓ 检测到seq增长: 27163 → 27213 (+50)
+[WS][SHARED][DEBUG] 读取统计: read=791, skip=1380, 当前seq=27213 (last=27213), updated_at=1769252393.43 (last=1769252393.43)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=791, use_shared_ws=True)
+[WS][SHARED] seq=27213, updates=8 (13.9/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 101
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 8.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 27213 → 27305 (+92)
+[WS][SHARED][TRACE] 函数调用次数: 801
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1402): seq和updated_at都未变化且距上次tick仅4.5秒
+[WS][SHARED][SKIP] 当前状态: seq=27305, last_seq=27305, bid=0.2, ask=0.23
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 106
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 8.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=27305, updates=6 (11.7/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED] ✓ 检测到seq增长: 27305 → 27351 (+46)
+[WS][SHARED][DEBUG] 读取统计: read=893, skip=1558, 当前seq=27351 (last=27351), updated_at=1769252452.43 (last=1769252452.43)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=893, use_shared_ws=True)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 113
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 9.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=27351, updates=7 (10.7/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED][TRACE] 函数调用次数: 901
+[WS][SHARED] ✓ 检测到seq增长: 27351 → 27411 (+60)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1602): seq和updated_at都未变化且距上次tick仅2.0秒
+[WS][SHARED][SKIP] 当前状态: seq=27411, last_seq=27411, bid=0.2, ask=0.23
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 118
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 9.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=27411, updates=7 (12.3/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED][DEBUG] 读取统计: read=995, skip=1740, 当前seq=27411 (last=27411), updated_at=1769252497.14 (last=1769252497.14)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=995, use_shared_ws=True)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 124
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 10.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 1001
+[WS][SHARED] seq=27411, updates=5 (9.2/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1802): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=27411, last_seq=27411, bid=0.2, ask=0.23
+[WS][SHARED] ✓ 检测到seq增长: 27411 → 27428 (+17)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 129
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 10.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=27428, updates=7 (13.1/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[WS][SHARED][DEBUG] 读取统计: read=1094, skip=1916, 当前seq=27428 (last=27428), updated_at=1769252566.92 (last=1769252566.92)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1094, use_shared_ws=True)
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 135
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 11.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 27428 → 27488 (+60)
+[WS][SHARED][TRACE] 函数调用次数: 1101
+[WS][SHARED] seq=27488, updates=5 (9.1/min), bid=0.2, ask=0.23, price=0.21500000000000002
+[PX] bid=0.2000 ask=0.2300 mid=0.2150 last=0.2150 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 139
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.2150 / 低 0.2150
+    信号超时: 11.6分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2002): seq和updated_at都未变化且距上次tick仅2.5秒
+[WS][SHARED][SKIP] 当前状态: seq=27488, last_seq=27488, bid=0.2, ask=0.23
+[WS][SHARED] ✓ 检测到seq增长: 27488 → 27493 (+5)
+[ACTION] 🔔 收到交易信号: type=ActionType.BUY, target_price=None
+[HINT][BUY] 目标 10.0000 - 当前仓位(未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151) 0.0000 -> 本次下单 10.0000
+[MAKER][BUY] 开始买入流程 -> target_size=10.0000 poll_sec=10.0s
+[DIAG][BID] latest字典中的token数据: {'price': 0.21000000000000002, 'best_bid': 0.19, 'best_ask': 0.23, 'ts': 1769252641.396345}
+[DIAG][BID] ORDERBOOK_STALE_AFTER_SEC = 30.0
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单 -> price=0.19 qty=10.0000 remaining=10.0000
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=30.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=51.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=93.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=71.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=124.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=102.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=145.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=123.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=166.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=144.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=198.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=176.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=219.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=197.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=241.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=219.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=273.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=251.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=293.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=271.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=313.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=291.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=344.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=322.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=365.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=343.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=386.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=364.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=416.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=394.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=436.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=414.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=457.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=435.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=489.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=467.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=509.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=37.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=70.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=57.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=91.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=78.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=122.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=109.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=143.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=130.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=163.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=150.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=195.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=182.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=216.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=43.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=63.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=95.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=94.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=116.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=115.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=33.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=65.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=94.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=34.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=71.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=55.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=92.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=57.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=41.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=61.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=71.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=81.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=103.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=113.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=124.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=62.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=83.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=93.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=103.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=124.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=135.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=144.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=67.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=74.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=37.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=58.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=93.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=79.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=125.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=111.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=146.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=133.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=166.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=152.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=197.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.19, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.19 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 买一上行 -> 撤单重挂 | old=0.19 new=0.20
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单 -> price=0.20 qty=10.0000 remaining=10.0000
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=46.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=67.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=87.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=105.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=120.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=126.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=51.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=82.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=92.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=102.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=113.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=123.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=144.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=154.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=165.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=175.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=185.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=195.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=217.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=32.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=52.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=65.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=40.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=49.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=53.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=57.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=77.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.22 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=42.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=40.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=39.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=34.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=42.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=35.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=71.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=32.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=70.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=50.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=53.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=45.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=71.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=71.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=101.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=91.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=56.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=77.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=93.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=98.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=125.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=129.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=146.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=150.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=166.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=49.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=53.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=71.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=74.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=91.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=106.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=42.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=33.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=63.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=54.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=84.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=75.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=105.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=107.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=42.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=52.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=42.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=47.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=53.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=48.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=49.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=48.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=69.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=92.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=89.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=125.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=42.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=40.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=71.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=42.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=42.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=47.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=78.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=95.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=101.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=116.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=38.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=52.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=71.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=35.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=57.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=53.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=36.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=39.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=35.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=46.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=70.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=67.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=66.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=71.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=86.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=91.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=106.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=121.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=136.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=141.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=55.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=71.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=76.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=92.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=46.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=66.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=43.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=63.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=30.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=94.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=42.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=53.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=56.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=78.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=93.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=32.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=63.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=93.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=84.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=114.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=105.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=145.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=42.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=68.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=70.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=88.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=101.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=44.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=53.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=63.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=71.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=31.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=71.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=62.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=92.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=34.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=54.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=75.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=104.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=107.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=125.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=128.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=146.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=149.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=177.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=180.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=198.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=201.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=220.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=30.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=51.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=72.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=103.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=103.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=124.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=123.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=145.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=144.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=177.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=176.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=198.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=197.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=218.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=217.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=249.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=48.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=80.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=94.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=101.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=114.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=49.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=42.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=48.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=70.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=90.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=104.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=122.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=126.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=143.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=146.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=45.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=37.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=57.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=79.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=104.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=110.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=124.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=34.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=54.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=38.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=53.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=59.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=74.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=30.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=50.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=39.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=60.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=81.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=104.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=47.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=80.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=93.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=100.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=113.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=39.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=42.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=43.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=45.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=59.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=79.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=72.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=100.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=104.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=39.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=40.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=51.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=39.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=43.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=71.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=75.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=91.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=95.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=112.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=116.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=143.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=147.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=164.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=50.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=41.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=42.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=30.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=40.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[MAKER][BUY] 挂单状态 -> price=0.20 filled=0.0000 remaining=10.0000 status=LIVE
+[DIAG][BID] 快照过期: 年龄=41.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.2, ask=0.23 (缓存数据新鲜)
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 52472298363004668794598080911083049788694136003657179452761762091351614449151 当前无持仓

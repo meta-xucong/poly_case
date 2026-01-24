@@ -1,0 +1,2418 @@
+[CONFIG] 使用配置文件: /home/trader/polymarket_api/POLYMARKET_MAKER_copytrade_v2/POLYMARKET_MAKER_AUTO/data/run_params_35387107368752328644982641185985574345241154905795306214146121961491417818763.json
+[INIT] API 凭证已验证。
+[INIT] ClobClient 就绪。
+[INFO] 未提供 market_url，尝试通过 token_id 获取市场元数据。
+[INFO] 市场/子问题标题: Will Russia capture Sloviansk by June 30?
+[INFO] 使用 token_id: 35387107368752328644982641185985574345241154905795306214146121961491417818763
+[INFO] 市场标注时区: America/New_York
+[INFO] 市场计划截止时间 (UTC): 2026-06-30T00:00:00+00:00
+[WARN] 自动获取的截止日期缺少具体时刻，已按默认配置设置截止时间为 2026-06-30T23:59:00-04:00 (America/New_York)。
+[INFO] 监控目标结束时间 (UTC): 2026-07-01T03:59:00+00:00
+[INFO] 未能识别市场价格精度，默认按盈利百分比下限 0.300% 执行。
+[INIT] 目标 token_id: 35387107368752328644982641185985574345241154905795306214146121961491417818763
+[INIT] 已读取手动份数 10.0，模式：总持仓目标。
+[INIT] 卖出挂单模式：aggressive
+[INIT] 卖出后递增买入阈值已启用，步长 0.0200%。
+[INIT] 价格停滞监控窗口 120.0 分钟，阈值 0.2000%。
+[INIT] 启动后无行情自动退出阈值 10.0 分钟。
+[INIT] 交易信号超时退出阈值 60.0 分钟（长时间无买入/卖出信号将退出）。
+[INIT] 卖出挂单空窗释放阈值 6.0 小时。
+[INFO] 倒计时卖出模式将在市场结束前 300 分钟开启。
+[WS][SHARED] ✓ 将使用共享 WS 缓存模式
+[WS][SHARED] 缓存路径: /home/trader/polymarket_api/POLYMARKET_MAKER_copytrade_v2/POLYMARKET_MAKER_AUTO/data/ws_cache.json
+[WS][SHARED] ✓ 缓存文件新鲜（3秒前更新）
+[RUN] 监听行情中… 输入 stop / exit 可手动停止。
+[WS][SHARED][TRACE] 函数调用次数: 1
+[WS][SHARED][DEBUG] 读取统计: read=1, skip=0, 当前seq=154932 (last=0), updated_at=1769253964.55 (last=0.00)
+[WS][SHARED] ✓ 检测到seq增长: 0 → 154932 (+154932)
+[WS][SHARED] 开始从共享缓存读取数据 (token=35387107368752328644982641185985574345241154905795306214146121961491417818763)
+[WS][SHARED] seq=154932, updates=1 (2.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] ✓ 函数执行完成，准备返回 (latest已设置: True)
+[WAIT][TRACE] _apply_shared_ws_snapshot()返回，latest已设置: True, stop_event: False
+[WAIT][TRACE] Loop iteration 1, latest: True, stop: False
+[WAIT][END] ✓ Waiting loop结束，latest已设置: True
+[WAIT][END] ✓ stop_event未设置，继续初始化...
+[INIT][TRACE] 1. 准备启动input_listener线程...
+[INIT][TRACE] 2. input_listener线程已启动
+[INIT][TRACE] 3. 准备初始化变量和策略状态...
+[INIT][TRACE] 4. 策略状态已获取
+[INIT][TRACE] 5. 检查sell_only和countdown (sell_only_start_ts=1782860340.0, market_deadline_ts=1782878340.0)
+[INIT][TRACE] 7. 启动countdown_monitor线程...
+[INIT][TRACE] 8. 所有初始化完成，准备进入主循环...
+[MAIN_LOOP] 🚀 进入主循环 (use_shared_ws=True)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2): seq和updated_at都未变化且距上次tick仅0.2秒
+[WS][SHARED][SKIP] 当前状态: seq=154932, last_seq=154932, bid=0.09, ask=0.1
+[HEARTBEAT] 主循环运行中... (use_shared_ws=True) (首次心跳)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 1
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 0.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 154932 → 155139 (+207)
+[WS][SHARED] ✓ 检测到seq增长: 155139 → 155220 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 155220 → 155301 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 155301 → 155400 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 155400 → 155490 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 155490 → 155589 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 155589 → 155668 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 155668 → 155760 (+92)
+[WS][SHARED] ✓ 检测到seq增长: 155760 → 155856 (+96)
+[WS][SHARED] ✓ 检测到seq增长: 155856 → 155931 (+75)
+[WS][SHARED] ✓ 检测到seq增长: 155931 → 156021 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 156021 → 156103 (+82)
+[WS][SHARED] ✓ 检测到seq增长: 156103 → 156199 (+96)
+[WS][SHARED] ✓ 检测到seq增长: 156199 → 156291 (+92)
+[WS][SHARED] ✓ 检测到seq增长: 156291 → 156380 (+89)
+[WS][SHARED] ✓ 检测到seq增长: 156380 → 156486 (+106)
+[WS][SHARED] ✓ 检测到seq增长: 156486 → 156534 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 156534 → 156620 (+86)
+[WS][SHARED] ✓ 检测到seq增长: 156620 → 156696 (+76)
+[WS][SHARED] ✓ 检测到seq增长: 156696 → 156750 (+54)
+[WS][SHARED] ✓ 检测到seq增长: 156750 → 156759 (+9)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 23
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 0.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=156759, updates=23 (43.9/min), bid=0.09, ask=0.1, price=0.095
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=100, use_shared_ws=True)
+[WS][SHARED][TRACE] 函数调用次数: 101
+[WS][SHARED][DEBUG] 读取统计: read=101, skip=142, 当前seq=156759 (last=156759), updated_at=1769254001.39 (last=1769254001.39)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 29
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 1.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=156759, updates=6 (9.1/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 156759 → 156771 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 156771 → 156849 (+78)
+[WS][SHARED] ✓ 检测到seq增长: 156849 → 156939 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 156939 → 157013 (+74)
+[WS][SHARED] ✓ 检测到seq增长: 157013 → 157092 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 157092 → 157155 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 157155 → 157240 (+85)
+[WS][SHARED] ✓ 检测到seq增长: 157240 → 157305 (+65)
+[WS][SHARED] ✓ 检测到seq增长: 157305 → 157405 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 157405 → 157434 (+29)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 42
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 1.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=202): seq和updated_at都未变化且距上次tick仅3.5秒
+[WS][SHARED][SKIP] 当前状态: seq=157434, last_seq=157434, bid=0.09, ask=0.1
+[WS][SHARED] ✓ 检测到seq增长: 157434 → 157461 (+27)
+[WS][SHARED] ✓ 检测到seq增长: 157461 → 157582 (+121)
+[WS][SHARED] ✓ 检测到seq增长: 157582 → 157666 (+84)
+[WS][SHARED] ✓ 检测到seq增长: 157666 → 157740 (+74)
+[WS][SHARED] ✓ 检测到seq增长: 157740 → 157821 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 157821 → 157893 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 157893 → 157974 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 157974 → 158055 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 158055 → 158109 (+54)
+[WS][SHARED] ✓ 检测到seq增长: 158109 → 158172 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 158172 → 158253 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 158253 → 158345 (+92)
+[WS][SHARED] ✓ 检测到seq增长: 158345 → 158430 (+85)
+[WS][SHARED] ✓ 检测到seq增长: 158430 → 158505 (+75)
+[WS][SHARED] ✓ 检测到seq增长: 158505 → 158604 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 158604 → 158685 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 158685 → 158757 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 158757 → 158824 (+67)
+[WS][SHARED] ✓ 检测到seq增长: 158824 → 158901 (+77)
+[WS][SHARED] seq=158901, updates=31 (61.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 158901 → 158988 (+87)
+[WS][SHARED] ✓ 检测到seq增长: 158988 → 159036 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 159036 → 159081 (+45)
+[WS][SHARED] ✓ 检测到seq增长: 159081 → 159108 (+27)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=200, use_shared_ws=True)
+[WS][SHARED][TRACE] 函数调用次数: 201
+[WS][SHARED][DEBUG] 读取统计: read=201, skip=264, 当前seq=159108 (last=159108), updated_at=1769254098.36 (last=1769254098.36)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 68
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 2.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=159108, updates=8 (15.6/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 159108 → 159133 (+25)
+[WS][SHARED] ✓ 检测到seq增长: 159133 → 159216 (+83)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 73
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 2.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 159216 → 159225 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 159225 → 159243 (+18)
+[WS][SHARED] seq=159243, updates=8 (16.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=402): seq和updated_at都未变化且距上次tick仅3.5秒
+[WS][SHARED][SKIP] 当前状态: seq=159243, last_seq=159243, bid=0.09, ask=0.1
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=299, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=300, skip=438, 当前seq=159243 (last=159243), updated_at=1769254142.14 (last=1769254142.14)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 80
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 3.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 301
+[WS][SHARED] seq=159243, updates=5 (8.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 159243 → 159261 (+18)
+[WS][SHARED] ✓ 检测到seq增长: 159261 → 159369 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 159369 → 159461 (+92)
+[WS][SHARED] ✓ 检测到seq增长: 159461 → 159558 (+97)
+[WS][SHARED] ✓ 检测到seq增长: 159558 → 159636 (+78)
+[WS][SHARED] ✓ 检测到seq增长: 159636 → 159720 (+84)
+[WS][SHARED] ✓ 检测到seq增长: 159720 → 159792 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 159792 → 159873 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 159873 → 159963 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 159963 → 160041 (+78)
+[WS][SHARED] ✓ 检测到seq增长: 160041 → 160134 (+93)
+[WS][SHARED] ✓ 检测到seq增长: 160134 → 160213 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 160213 → 160285 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 160285 → 160350 (+65)
+[WS][SHARED] ✓ 检测到seq增长: 160350 → 160422 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 160422 → 160521 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 160521 → 160602 (+81)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 100
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 3.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 160602 → 160629 (+27)
+[WS][SHARED] ✓ 检测到seq增长: 160629 → 160635 (+6)
+[WS][SHARED] seq=160635, updates=22 (42.5/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 160635 → 160711 (+76)
+[WS][SHARED] ✓ 检测到seq增长: 160711 → 160813 (+102)
+[WS][SHARED] ✓ 检测到seq增长: 160813 → 160908 (+95)
+[WS][SHARED] ✓ 检测到seq增长: 160908 → 160992 (+84)
+[WS][SHARED] ✓ 检测到seq增长: 160992 → 161016 (+24)
+[WS][SHARED][TRACE] 函数调用次数: 401
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=401, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=402, skip=580, 当前seq=161016 (last=161016), updated_at=1769254209.42 (last=1769254209.42)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 111
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 4.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 161016 → 161673 (+657)
+[WS][SHARED] ✓ 检测到seq增长: 161673 → 161691 (+18)
+[WS][SHARED] ✓ 检测到seq增长: 161691 → 161700 (+9)
+[WS][SHARED] seq=161700, updates=11 (20.4/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=602): seq和updated_at都未变化且距上次tick仅0.5秒
+[WS][SHARED][SKIP] 当前状态: seq=161700, last_seq=161700, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 117
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 4.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=161700, updates=6 (12.0/min), bid=0.09, ask=0.1, price=0.095
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=499, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=500, skip=752, 当前seq=161700 (last=161700), updated_at=1769254234.34 (last=1769254234.34)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 123
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 5.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 501
+[WS][SHARED] ✓ 检测到seq增长: 161700 → 162015 (+315)
+[WS][SHARED] ✓ 检测到seq增长: 162015 → 162078 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 162078 → 162163 (+85)
+[WS][SHARED] ✓ 检测到seq增长: 162163 → 162240 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 162240 → 162326 (+86)
+[WS][SHARED] ✓ 检测到seq增长: 162326 → 162415 (+89)
+[WS][SHARED] ✓ 检测到seq增长: 162415 → 162492 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 162492 → 162582 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 162582 → 162671 (+89)
+[WS][SHARED] ✓ 检测到seq增长: 162671 → 162753 (+82)
+[WS][SHARED] ✓ 检测到seq增长: 162753 → 162825 (+72)
+[WS][SHARED] seq=162825, updates=13 (25.7/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 162825 → 162889 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 162889 → 162969 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 162969 → 163059 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 163059 → 163149 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 163149 → 163230 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 163230 → 163326 (+96)
+[WS][SHARED] ✓ 检测到seq增长: 163326 → 163410 (+84)
+[WS][SHARED] ✓ 检测到seq增长: 163410 → 163473 (+63)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 143
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 5.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=802): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=163473, last_seq=163473, bid=0.09, ask=0.1
+[WS][SHARED] ✓ 检测到seq增长: 163474 → 163576 (+102)
+[WS][SHARED] ✓ 检测到seq增长: 163576 → 163653 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 163653 → 163761 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 163761 → 163842 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 163842 → 163923 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 163923 → 164013 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 164013 → 164112 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 164112 → 164193 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 164193 → 164256 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 164256 → 164337 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 164337 → 164418 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 164418 → 164515 (+97)
+[WS][SHARED] ✓ 检测到seq增长: 164515 → 164607 (+92)
+[WS][SHARED] ✓ 检测到seq增长: 164607 → 164670 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 164670 → 164746 (+76)
+[WS][SHARED] ✓ 检测到seq增长: 164746 → 164841 (+95)
+[WS][SHARED] ✓ 检测到seq增长: 164841 → 164938 (+97)
+[WS][SHARED] ✓ 检测到seq增长: 164938 → 165030 (+92)
+[WS][SHARED] ✓ 检测到seq增长: 165030 → 165123 (+93)
+[WS][SHARED] ✓ 检测到seq增长: 165123 → 165210 (+87)
+[WS][SHARED] ✓ 检测到seq增长: 165210 → 165309 (+99)
+[WS][SHARED] seq=165309, updates=33 (65.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 165309 → 165388 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 165388 → 165469 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 165469 → 165541 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 165541 → 165606 (+65)
+[WS][SHARED] ✓ 检测到seq增长: 165606 → 165678 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 165678 → 165764 (+86)
+[WS][SHARED] ✓ 检测到seq增长: 165764 → 165822 (+58)
+[WS][SHARED] ✓ 检测到seq增长: 165822 → 165896 (+74)
+[WS][SHARED] ✓ 检测到seq增长: 165896 → 165991 (+95)
+[WS][SHARED] ✓ 检测到seq增长: 165991 → 166090 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 166090 → 166173 (+83)
+[WS][SHARED] ✓ 检测到seq增长: 166173 → 166236 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 166236 → 166273 (+37)
+[WS][SHARED] ✓ 检测到seq增长: 166273 → 166360 (+87)
+[WS][SHARED] ✓ 检测到seq增长: 166360 → 166454 (+94)
+[WS][SHARED] ✓ 检测到seq增长: 166454 → 166551 (+97)
+[WS][SHARED] ✓ 检测到seq增长: 166551 → 166641 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 166641 → 166720 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 166720 → 166776 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 166776 → 166875 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 166875 → 166974 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 166974 → 167095 (+121)
+[WS][SHARED] ✓ 检测到seq增长: 167095 → 167206 (+111)
+[WS][SHARED] ✓ 检测到seq增长: 167206 → 167305 (+99)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=598, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=599, skip=814, 当前seq=167415 (last=167305), updated_at=1769254342.44 (last=1769254341.95)
+[WS][SHARED] ✓ 检测到seq增长: 167305 → 167415 (+110)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 192
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 6.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 167415 → 168252 (+837)
+[WS][SHARED][TRACE] 函数调用次数: 601
+[WS][SHARED] seq=168252, updates=28 (52.1/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 168252 → 168324 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 168324 → 168432 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 168432 → 168512 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 168512 → 168607 (+95)
+[WS][SHARED] ✓ 检测到seq增长: 168607 → 168711 (+104)
+[WS][SHARED] ✓ 检测到seq增长: 168711 → 168819 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 168819 → 168909 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 168909 → 168983 (+74)
+[WS][SHARED] ✓ 检测到seq增长: 168983 → 169071 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 169071 → 169080 (+9)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 205
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 6.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 169080 → 169089 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 169089 → 169098 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 169098 → 169134 (+36)
+[WS][SHARED] ✓ 检测到seq增长: 169134 → 169179 (+45)
+[WS][SHARED] seq=169179, updates=17 (29.9/min), bid=0.09, ask=0.1, price=0.095
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=700, use_shared_ws=True)
+[WS][SHARED][TRACE] 函数调用次数: 701
+[WS][SHARED][DEBUG] 读取统计: read=701, skip=974, 当前seq=169179 (last=169179), updated_at=1769254381.04 (last=1769254381.04)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 213
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 7.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 169179 → 169607 (+428)
+[WS][SHARED] ✓ 检测到seq增长: 169607 → 170884 (+1277)
+[WS][SHARED] ✓ 检测到seq增长: 170884 → 170983 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 170983 → 171126 (+143)
+[WS][SHARED] ✓ 检测到seq增长: 171126 → 171259 (+133)
+[WS][SHARED] ✓ 检测到seq增长: 171259 → 171403 (+144)
+[WS][SHARED] ✓ 检测到seq增长: 171403 → 171511 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 171511 → 171655 (+144)
+[WS][SHARED] ✓ 检测到seq增长: 171655 → 171797 (+142)
+[WS][SHARED] ✓ 检测到seq增长: 171797 → 171940 (+143)
+[WS][SHARED] ✓ 检测到seq增长: 171940 → 172059 (+119)
+[WS][SHARED] ✓ 检测到seq增长: 172059 → 172187 (+128)
+[WS][SHARED] ✓ 检测到seq增长: 172187 → 172267 (+80)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1002): seq和updated_at都未变化且距上次tick仅2.0秒
+[WS][SHARED][SKIP] 当前状态: seq=172267, last_seq=172267, bid=0.09, ask=0.1
+[WS][SHARED] seq=172267, updates=15 (28.1/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 228
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 7.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 172267 → 172318 (+51)
+[WS][SHARED] ✓ 检测到seq增长: 172318 → 172455 (+137)
+[WS][SHARED] ✓ 检测到seq增长: 172455 → 172605 (+150)
+[WS][SHARED] ✓ 检测到seq增长: 172605 → 172746 (+141)
+[WS][SHARED] ✓ 检测到seq增长: 172746 → 172888 (+142)
+[WS][SHARED] ✓ 检测到seq增长: 172888 → 173021 (+133)
+[WS][SHARED] ✓ 检测到seq增长: 173021 → 173047 (+26)
+[WS][SHARED] ✓ 检测到seq增长: 173047 → 173320 (+273)
+[WS][SHARED][TRACE] 函数调用次数: 801
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=801, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=802, skip=1124, 当前seq=173320 (last=173320), updated_at=1769254443.28 (last=1769254443.28)
+[WS][SHARED] seq=173320, updates=13 (22.6/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 173320 → 175075 (+1755)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 241
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 8.2分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=175075, updates=5 (9.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1202): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=175075, last_seq=175075, bid=0.09, ask=0.1
+[WS][SHARED] ✓ 检测到seq增长: 175075 → 175945 (+870)
+[WS][SHARED] ✓ 检测到seq增长: 175945 → 176095 (+150)
+[WS][SHARED] ✓ 检测到seq增长: 176095 → 176200 (+105)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 249
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 8.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 176200 → 176215 (+15)
+[WS][SHARED] ✓ 检测到seq增长: 176215 → 176245 (+30)
+[WS][SHARED][TRACE] 函数调用次数: 901
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=902, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=903, skip=1296, 当前seq=176245 (last=176245), updated_at=1769254520.78 (last=1769254520.78)
+[WS][SHARED] seq=176245, updates=10 (14.7/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 255
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 9.2分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 176245 → 176380 (+135)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1402): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=176380, last_seq=176380, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 261
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 9.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=176380, updates=7 (13.5/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 1001
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1002, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1003, skip=1474, 当前seq=176380 (last=176380), updated_at=1769254550.00 (last=1769254550.00)
+[WS][SHARED] ✓ 检测到seq增长: 176380 → 179044 (+2664)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 266
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 10.2分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=179044, updates=5 (8.9/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 272
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 10.7分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1602): seq和updated_at都未变化且距上次tick仅4.5秒
+[WS][SHARED][SKIP] 当前状态: seq=179044, last_seq=179044, bid=0.09, ask=0.1
+[WS][SHARED] seq=179044, updates=6 (12.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 179044 → 179095 (+51)
+[WS][SHARED] ✓ 检测到seq增长: 179095 → 179268 (+173)
+[WS][SHARED] ✓ 检测到seq增长: 179268 → 179401 (+133)
+[WS][SHARED][TRACE] 函数调用次数: 1101
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1103, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1104, skip=1650, 当前seq=179401 (last=179401), updated_at=1769254630.50 (last=1769254630.50)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 279
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 11.2分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=179401, updates=7 (13.6/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 179401 → 179450 (+49)
+[WS][SHARED] ✓ 检测到seq增长: 179450 → 179604 (+154)
+[WS][SHARED] ✓ 检测到seq增长: 179604 → 179775 (+171)
+[WS][SHARED] ✓ 检测到seq增长: 179775 → 179983 (+208)
+[WS][SHARED] ✓ 检测到seq增长: 179983 → 180132 (+149)
+[WS][SHARED] ✓ 检测到seq增长: 180132 → 180320 (+188)
+[WS][SHARED] ✓ 检测到seq增长: 180320 → 180490 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 180490 → 180693 (+203)
+[WS][SHARED] ✓ 检测到seq增长: 180693 → 180863 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 180863 → 181033 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 181033 → 181217 (+184)
+[WS][SHARED] ✓ 检测到seq增长: 181217 → 181372 (+155)
+[WS][SHARED] ✓ 检测到seq增长: 181372 → 181437 (+65)
+[WS][SHARED] ✓ 检测到seq增长: 181437 → 181611 (+174)
+[WS][SHARED] ✓ 检测到seq增长: 181611 → 181815 (+204)
+[WS][SHARED] ✓ 检测到seq增长: 181815 → 182023 (+208)
+[WS][SHARED] ✓ 检测到seq增长: 182023 → 182192 (+169)
+[WS][SHARED] ✓ 检测到seq增长: 182192 → 182361 (+169)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 301
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 11.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 182361 → 182547 (+186)
+[WS][SHARED] ✓ 检测到seq增长: 182547 → 182648 (+101)
+[WS][SHARED] ✓ 检测到seq增长: 182648 → 182839 (+191)
+[WS][SHARED] ✓ 检测到seq增长: 182839 → 182852 (+13)
+[WS][SHARED] ✓ 检测到seq增长: 182852 → 182903 (+51)
+[WS][SHARED] seq=182903, updates=27 (49.8/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 182903 → 182971 (+68)
+[WS][SHARED] ✓ 检测到seq增长: 182971 → 183158 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 183158 → 183328 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 183328 → 183498 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 183498 → 183668 (+170)
+[WS][SHARED][TRACE] 函数调用次数: 1201
+[WS][SHARED] ✓ 检测到seq增长: 183668 → 183804 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 183804 → 183991 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 183991 → 184111 (+120)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1203, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1204, skip=1774, 当前seq=184261 (last=184111), updated_at=1769254704.40 (last=1769254703.89)
+[WS][SHARED] ✓ 检测到seq增长: 184111 → 184261 (+150)
+[WS][SHARED] ✓ 检测到seq增长: 184261 → 187306 (+3045)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 318
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 12.2分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 187306 → 187442 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 187442 → 187626 (+184)
+[WS][SHARED] ✓ 检测到seq增长: 187626 → 187697 (+71)
+[WS][SHARED] seq=187697, updates=15 (29.8/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1802): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=187697, last_seq=187697, bid=0.09, ask=0.1
+[WS][SHARED] ✓ 检测到seq增长: 187697 → 187714 (+17)
+[WS][SHARED] ✓ 检测到seq增长: 187714 → 187867 (+153)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 328
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 12.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 187867 → 187884 (+17)
+[WS][SHARED] ✓ 检测到seq增长: 187884 → 188071 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 188071 → 188241 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 188241 → 188426 (+185)
+[WS][SHARED] ✓ 检测到seq增长: 188426 → 188581 (+155)
+[WS][SHARED] ✓ 检测到seq增长: 188581 → 188768 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 188768 → 188921 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 188921 → 189108 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 189108 → 189244 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 189244 → 189430 (+186)
+[WS][SHARED] seq=189430, updates=16 (31.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 189430 → 189550 (+120)
+[WS][SHARED] ✓ 检测到seq增长: 189550 → 189753 (+203)
+[WS][SHARED] ✓ 检测到seq增长: 189753 → 189873 (+120)
+[WS][SHARED] ✓ 检测到seq增长: 189873 → 189890 (+17)
+[WS][SHARED][TRACE] 函数调用次数: 1301
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1304, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1305, skip=1922, 当前seq=189890 (last=189890), updated_at=1769254754.29 (last=1769254754.29)
+[WS][SHARED] ✓ 检测到seq增长: 189890 → 190079 (+189)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 346
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 13.2分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 190079 → 190213 (+134)
+[WS][SHARED] ✓ 检测到seq增长: 190213 → 190399 (+186)
+[WS][SHARED] ✓ 检测到seq增长: 190399 → 190587 (+188)
+[WS][SHARED] ✓ 检测到seq增长: 190587 → 190685 (+98)
+[WS][SHARED] ✓ 检测到seq增长: 190685 → 190859 (+174)
+[WS][SHARED] ✓ 检测到seq增长: 190859 → 190995 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 190995 → 191148 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 191148 → 191335 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 191335 → 191519 (+184)
+[WS][SHARED] ✓ 检测到seq增长: 191519 → 191692 (+173)
+[WS][SHARED] ✓ 检测到seq增长: 191692 → 191828 (+136)
+[WS][SHARED] seq=191828, updates=20 (36.1/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2002): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=191828, last_seq=191828, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 361
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 13.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 191828 → 191896 (+68)
+[WS][SHARED] ✓ 检测到seq增长: 191896 → 192064 (+168)
+[WS][SHARED] ✓ 检测到seq增长: 192064 → 192236 (+172)
+[WS][SHARED] ✓ 检测到seq增长: 192236 → 192372 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 192372 → 192559 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 192559 → 192709 (+150)
+[WS][SHARED] ✓ 检测到seq增长: 192709 → 192882 (+173)
+[WS][SHARED] ✓ 检测到seq增长: 192882 → 193052 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 193052 → 193235 (+183)
+[WS][SHARED] ✓ 检测到seq增长: 193235 → 193290 (+55)
+[WS][SHARED] ✓ 检测到seq增长: 193290 → 193307 (+17)
+[WS][SHARED] seq=193307, updates=15 (27.2/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 1401
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1406, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1407, skip=2064, 当前seq=193307 (last=193307), updated_at=1769254818.95 (last=1769254818.95)
+[WS][SHARED] ✓ 检测到seq增长: 193307 → 194004 (+697)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 375
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 14.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 194004 → 194037 (+33)
+[WS][SHARED] seq=194037, updates=5 (9.6/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 194037 → 194204 (+167)
+[WS][SHARED] ✓ 检测到seq增长: 194204 → 194378 (+174)
+[WS][SHARED] ✓ 检测到seq增长: 194378 → 194558 (+180)
+[WS][SHARED] ✓ 检测到seq增长: 194558 → 194735 (+177)
+[WS][SHARED] ✓ 检测到seq增长: 194735 → 194888 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 194888 → 195076 (+188)
+[WS][SHARED] ✓ 检测到seq增长: 195076 → 195271 (+195)
+[WS][SHARED] ✓ 检测到seq增长: 195271 → 195447 (+176)
+[WS][SHARED] ✓ 检测到seq增长: 195447 → 195619 (+172)
+[WS][SHARED] ✓ 检测到seq增长: 195619 → 195804 (+185)
+[WS][SHARED] ✓ 检测到seq增长: 195804 → 195972 (+168)
+[WS][SHARED] ✓ 检测到seq增长: 195972 → 196158 (+186)
+[WS][SHARED] ✓ 检测到seq增长: 196158 → 196311 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 196311 → 196481 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 196481 → 196656 (+175)
+[WS][SHARED] ✓ 检测到seq增长: 196656 → 196843 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 196843 → 197013 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 197013 → 197180 (+167)
+[WS][SHARED] ✓ 检测到seq增长: 197180 → 197370 (+190)
+[WS][SHARED] ✓ 检测到seq增长: 197370 → 197538 (+168)
+[WS][SHARED] ✓ 检测到seq增长: 197538 → 197710 (+172)
+[WS][SHARED] ✓ 检测到seq增长: 197710 → 197879 (+169)
+[WS][SHARED] ✓ 检测到seq增长: 197879 → 198033 (+154)
+[WS][SHARED] ✓ 检测到seq增长: 198033 → 198084 (+51)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 402
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 14.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 198084 → 198231 (+147)
+[WS][SHARED] ✓ 检测到seq增长: 198231 → 198407 (+176)
+[WS][SHARED] ✓ 检测到seq增长: 198407 → 198595 (+188)
+[WS][SHARED] ✓ 检测到seq增长: 198595 → 198756 (+161)
+[WS][SHARED] ✓ 检测到seq增长: 198756 → 198913 (+157)
+[WS][SHARED] ✓ 检测到seq增长: 198913 → 199055 (+142)
+[WS][SHARED] ✓ 检测到seq增长: 199055 → 199257 (+202)
+[WS][SHARED] ✓ 检测到seq增长: 199257 → 199410 (+153)
+[WS][SHARED] seq=199410, updates=34 (67.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 1501
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1506, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1507, skip=2188, 当前seq=199478 (last=199410), updated_at=1769254885.36 (last=1769254880.28)
+[WS][SHARED] ✓ 检测到seq增长: 199410 → 199478 (+68)
+[WS][SHARED] ✓ 检测到seq增长: 199478 → 202793 (+3315)
+[WS][SHARED] ✓ 检测到seq增长: 202793 → 202945 (+152)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 415
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 15.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 202945 → 203101 (+156)
+[WS][SHARED] ✓ 检测到seq增长: 203101 → 203252 (+151)
+[WS][SHARED] ✓ 检测到seq增长: 203252 → 203388 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 203388 → 203553 (+165)
+[WS][SHARED] ✓ 检测到seq增长: 203553 → 203724 (+171)
+[WS][SHARED] ✓ 检测到seq增长: 203724 → 203898 (+174)
+[WS][SHARED] ✓ 检测到seq增长: 203898 → 204051 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 204051 → 204186 (+135)
+[WS][SHARED] ✓ 检测到seq增长: 204186 → 204357 (+171)
+[WS][SHARED] ✓ 检测到seq增长: 204357 → 204527 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 204527 → 204697 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 204697 → 204882 (+185)
+[WS][SHARED] ✓ 检测到seq增长: 204882 → 205050 (+168)
+[WS][SHARED] ✓ 检测到seq增长: 205050 → 205190 (+140)
+[WS][SHARED] ✓ 检测到seq增长: 205190 → 205360 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 205360 → 205394 (+34)
+[WS][SHARED] ✓ 检测到seq增长: 205394 → 205532 (+138)
+[WS][SHARED] ✓ 检测到seq增长: 205532 → 205684 (+152)
+[WS][SHARED] ✓ 检测到seq增长: 205684 → 205870 (+186)
+[WS][SHARED] ✓ 检测到seq增长: 205870 → 206006 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 206006 → 206176 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 206176 → 206312 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 206312 → 206448 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 206448 → 206601 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 206601 → 206748 (+147)
+[WS][SHARED] ✓ 检测到seq增长: 206748 → 206895 (+147)
+[WS][SHARED] ✓ 检测到seq增长: 206895 → 207043 (+148)
+[WS][SHARED] seq=207043, updates=30 (59.6/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 207043 → 207195 (+152)
+[WS][SHARED] ✓ 检测到seq增长: 207195 → 207346 (+151)
+[WS][SHARED] ✓ 检测到seq增长: 207346 → 207502 (+156)
+[WS][SHARED] ✓ 检测到seq增长: 207502 → 207650 (+148)
+[WS][SHARED] ✓ 检测到seq增长: 207650 → 207774 (+124)
+[WS][SHARED] ✓ 检测到seq增长: 207774 → 207825 (+51)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2202): seq和updated_at都未变化且距上次tick仅2.5秒
+[WS][SHARED][SKIP] 当前状态: seq=207825, last_seq=207825, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 450
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 15.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 207825 → 207927 (+102)
+[WS][SHARED] ✓ 检测到seq增长: 207927 → 208097 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 208097 → 208250 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 208250 → 208457 (+207)
+[WS][SHARED] ✓ 检测到seq增长: 208457 → 208607 (+150)
+[WS][SHARED] ✓ 检测到seq增长: 208607 → 208775 (+168)
+[WS][SHARED] ✓ 检测到seq增长: 208775 → 208959 (+184)
+[WS][SHARED] ✓ 检测到seq增长: 208959 → 209148 (+189)
+[WS][SHARED] ✓ 检测到seq增长: 209148 → 209304 (+156)
+[WS][SHARED] ✓ 检测到seq增长: 209304 → 209491 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 209491 → 209675 (+184)
+[WS][SHARED] ✓ 检测到seq增长: 209675 → 209848 (+173)
+[WS][SHARED] ✓ 检测到seq增长: 209848 → 210014 (+166)
+[WS][SHARED] ✓ 检测到seq增长: 210014 → 210188 (+174)
+[WS][SHARED] ✓ 检测到seq增长: 210188 → 210358 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 210358 → 210525 (+167)
+[WS][SHARED] ✓ 检测到seq增长: 210525 → 210698 (+173)
+[WS][SHARED] seq=210698, updates=26 (51.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 210698 → 210851 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 210851 → 210989 (+138)
+[WS][SHARED][TRACE] 函数调用次数: 1601
+[WS][SHARED] ✓ 检测到seq增长: 210989 → 211157 (+168)
+[WS][SHARED] ✓ 检测到seq增长: 211157 → 211318 (+161)
+[WS][SHARED] ✓ 检测到seq增长: 211318 → 211378 (+60)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1607, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1608, skip=2268, 当前seq=211378 (last=211378), updated_at=1769254942.78 (last=1769254942.78)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 474
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 16.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=211378, updates=9 (17.8/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 211378 → 211450 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 211450 → 211629 (+179)
+[WS][SHARED] ✓ 检测到seq增长: 211629 → 211820 (+191)
+[WS][SHARED] ✓ 检测到seq增长: 211820 → 212007 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 212007 → 212143 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 212143 → 212337 (+194)
+[WS][SHARED] ✓ 检测到seq增长: 212337 → 212481 (+144)
+[WS][SHARED] ✓ 检测到seq增长: 212481 → 212517 (+36)
+[WS][SHARED] ✓ 检测到seq增长: 212517 → 212647 (+130)
+[WS][SHARED] ✓ 检测到seq增长: 212647 → 212839 (+192)
+[WS][SHARED] ✓ 检测到seq增长: 212839 → 213027 (+188)
+[WS][SHARED] ✓ 检测到seq增长: 213027 → 213231 (+204)
+[WS][SHARED] ✓ 检测到seq增长: 213231 → 213345 (+114)
+[WS][SHARED] ✓ 检测到seq增长: 213345 → 213537 (+192)
+[WS][SHARED] ✓ 检测到seq增长: 213537 → 213699 (+162)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 493
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 16.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 213699 → 213843 (+144)
+[WS][SHARED] ✓ 检测到seq增长: 213843 → 214033 (+190)
+[WS][SHARED] ✓ 检测到seq增长: 214033 → 214163 (+130)
+[WS][SHARED] ✓ 检测到seq增长: 214163 → 214307 (+144)
+[WS][SHARED] ✓ 检测到seq增长: 214307 → 214403 (+96)
+[WS][SHARED][TRACE] 函数调用次数: 1701
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2402): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=214403, last_seq=214403, bid=0.09, ask=0.1
+[WS][SHARED] seq=214403, updates=24 (43.6/min), bid=0.09, ask=0.1, price=0.095
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1708, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1709, skip=2414, 当前seq=214403 (last=214403), updated_at=1769254988.82 (last=1769254988.82)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 502
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 17.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 214403 → 214506 (+103)
+[WS][SHARED] ✓ 检测到seq增长: 214506 → 214641 (+135)
+[WS][SHARED] ✓ 检测到seq增长: 214641 → 214795 (+154)
+[WS][SHARED] ✓ 检测到seq增长: 214795 → 214908 (+113)
+[WS][SHARED] ✓ 检测到seq增长: 214908 → 215047 (+139)
+[WS][SHARED] ✓ 检测到seq增长: 215047 → 215173 (+126)
+[WS][SHARED] ✓ 检测到seq增长: 215173 → 215327 (+154)
+[WS][SHARED] ✓ 检测到seq增长: 215327 → 215495 (+168)
+[WS][SHARED] ✓ 检测到seq增长: 215495 → 215649 (+154)
+[WS][SHARED] ✓ 检测到seq增长: 215649 → 215803 (+154)
+[WS][SHARED] ✓ 检测到seq增长: 215803 → 215939 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 215939 → 216097 (+158)
+[WS][SHARED] ✓ 检测到seq增长: 216097 → 216223 (+126)
+[WS][SHARED] ✓ 检测到seq增长: 216223 → 216376 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 216376 → 216517 (+141)
+[WS][SHARED] ✓ 检测到seq增长: 216517 → 216685 (+168)
+[WS][SHARED] ✓ 检测到seq增长: 216685 → 216811 (+126)
+[WS][SHARED] ✓ 检测到seq增长: 216811 → 216946 (+135)
+[WS][SHARED] ✓ 检测到seq增长: 216946 → 217076 (+130)
+[WS][SHARED] ✓ 检测到seq增长: 217076 → 217206 (+130)
+[WS][SHARED] ✓ 检测到seq增长: 217206 → 217344 (+138)
+[WS][SHARED] ✓ 检测到seq增长: 217344 → 217414 (+70)
+[WS][SHARED] seq=217414, updates=25 (43.8/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 217414 → 217426 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 217426 → 217541 (+115)
+[WS][SHARED] ✓ 检测到seq增长: 217541 → 217654 (+113)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 530
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 17.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 217654 → 217754 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 217754 → 217822 (+68)
+[WS][SHARED] ✓ 检测到seq增长: 217822 → 217930 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 217930 → 218014 (+84)
+[WS][SHARED] ✓ 检测到seq增长: 218014 → 218122 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 218122 → 218218 (+96)
+[WS][SHARED] ✓ 检测到seq增长: 218218 → 218341 (+123)
+[WS][SHARED] ✓ 检测到seq增长: 218341 → 218434 (+93)
+[WS][SHARED] ✓ 检测到seq增长: 218434 → 218542 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 218542 → 218626 (+84)
+[WS][SHARED] ✓ 检测到seq增长: 218626 → 218725 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 218725 → 218842 (+117)
+[WS][SHARED] ✓ 检测到seq增长: 218842 → 218926 (+84)
+[WS][SHARED] ✓ 检测到seq增长: 218926 → 219037 (+111)
+[WS][SHARED] ✓ 检测到seq增长: 219037 → 219154 (+117)
+[WS][SHARED] ✓ 检测到seq增长: 219154 → 219286 (+132)
+[WS][SHARED] ✓ 检测到seq增长: 219286 → 219415 (+129)
+[WS][SHARED] ✓ 检测到seq增长: 219415 → 219525 (+110)
+[WS][SHARED] ✓ 检测到seq增长: 219525 → 219646 (+121)
+[WS][SHARED] ✓ 检测到seq增长: 219646 → 219752 (+106)
+[WS][SHARED] ✓ 检测到seq增长: 219752 → 219840 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 219840 → 219939 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 219939 → 220049 (+110)
+[WS][SHARED] ✓ 检测到seq增长: 220049 → 220159 (+110)
+[WS][SHARED] ✓ 检测到seq增长: 220159 → 220279 (+120)
+[WS][SHARED] ✓ 检测到seq增长: 220279 → 220398 (+119)
+[WS][SHARED] ✓ 检测到seq增长: 220398 → 220481 (+83)
+[WS][SHARED] ✓ 检测到seq增长: 220481 → 220588 (+107)
+[WS][SHARED] ✓ 检测到seq增长: 220588 → 220709 (+121)
+[WS][SHARED] ✓ 检测到seq增长: 220709 → 220817 (+108)
+[WS][SHARED][TRACE] 函数调用次数: 1801
+[WS][SHARED] ✓ 检测到seq增长: 220817 → 220942 (+125)
+[WS][SHARED] ✓ 检测到seq增长: 220942 → 221050 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 221050 → 221162 (+112)
+[WS][SHARED] ✓ 检测到seq增长: 221162 → 221242 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 221242 → 221352 (+110)
+[WS][SHARED] ✓ 检测到seq增长: 221352 → 221442 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 221442 → 221562 (+120)
+[WS][SHARED] ✓ 检测到seq增长: 221562 → 221662 (+100)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1808, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1809, skip=2480, 当前seq=221762 (last=221662), updated_at=1769255066.34 (last=1769255065.83)
+[WS][SHARED] ✓ 检测到seq增长: 221662 → 221762 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 221762 → 221952 (+190)
+[WS][SHARED] seq=221952, updates=44 (67.2/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 570
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 18.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 221952 → 222000 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 222000 → 222064 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 222064 → 222136 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 222136 → 222216 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 222216 → 222296 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 222296 → 222363 (+67)
+[WS][SHARED] ✓ 检测到seq增长: 222363 → 222456 (+93)
+[WS][SHARED] ✓ 检测到seq增长: 222456 → 222543 (+87)
+[WS][SHARED] ✓ 检测到seq增长: 222543 → 222624 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 222624 → 222695 (+71)
+[WS][SHARED] ✓ 检测到seq增长: 222695 → 222750 (+55)
+[WS][SHARED] ✓ 检测到seq增长: 222750 → 222820 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 222820 → 222894 (+74)
+[WS][SHARED] ✓ 检测到seq增长: 222894 → 222960 (+66)
+[WS][SHARED] ✓ 检测到seq增长: 222960 → 223016 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 223016 → 223065 (+49)
+[WS][SHARED] ✓ 检测到seq增长: 223065 → 223142 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 223142 → 223219 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 223219 → 223296 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 223296 → 223366 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 223366 → 223436 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 223436 → 223506 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 223506 → 223513 (+7)
+[WS][SHARED] seq=223513, updates=26 (51.9/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 596
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 18.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 223513 → 223552 (+39)
+[WS][SHARED] ✓ 检测到seq增长: 223552 → 223639 (+87)
+[WS][SHARED] ✓ 检测到seq增长: 223639 → 223702 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 223702 → 223765 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 223765 → 223835 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 223835 → 223898 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 223898 → 223968 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 223968 → 224045 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 224045 → 224115 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 224115 → 224169 (+54)
+[WS][SHARED] ✓ 检测到seq增长: 224169 → 224229 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 224229 → 224277 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 224277 → 224339 (+62)
+[WS][SHARED] ✓ 检测到seq增长: 224339 → 224367 (+28)
+[WS][SHARED][TRACE] 函数调用次数: 1901
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1907, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1908, skip=2590, 当前seq=224392 (last=224367), updated_at=1769255126.60 (last=1769255119.81)
+[WS][SHARED] ✓ 检测到seq增长: 224367 → 224392 (+25)
+[WS][SHARED] ✓ 检测到seq增长: 224392 → 224747 (+355)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 19.3分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2602): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=224747, last_seq=224747, bid=0.09, ask=0.1
+[WS][SHARED] seq=224747, updates=19 (33.8/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 224747 → 224771 (+24)
+[WS][SHARED] ✓ 检测到seq增长: 224771 → 224807 (+36)
+[WS][SHARED] ✓ 检测到seq增长: 224807 → 224831 (+24)
+[WS][SHARED] ✓ 检测到seq增长: 224831 → 224879 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 224879 → 224923 (+44)
+[WS][SHARED] ✓ 检测到seq增长: 224923 → 224963 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 224963 → 225003 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 225003 → 225043 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 225043 → 225083 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 225083 → 225127 (+44)
+[WS][SHARED] ✓ 检测到seq增长: 225127 → 225171 (+44)
+[WS][SHARED] ✓ 检测到seq增长: 225171 → 225215 (+44)
+[WS][SHARED] ✓ 检测到seq增长: 225215 → 225259 (+44)
+[WS][SHARED] ✓ 检测到seq增长: 225259 → 225303 (+44)
+[WS][SHARED] ✓ 检测到seq增长: 225303 → 225339 (+36)
+[WS][SHARED] ✓ 检测到seq增长: 225339 → 225372 (+33)
+[WS][SHARED] ✓ 检测到seq增长: 225372 → 225397 (+25)
+[WS][SHARED] ✓ 检测到seq增长: 225397 → 225427 (+30)
+[WS][SHARED] ✓ 检测到seq增长: 225427 → 225457 (+30)
+[WS][SHARED] ✓ 检测到seq增长: 225457 → 225487 (+30)
+[WS][SHARED] ✓ 检测到seq增长: 225487 → 225514 (+27)
+[WS][SHARED] ✓ 检测到seq增长: 225514 → 225547 (+33)
+[WS][SHARED] ✓ 检测到seq增长: 225547 → 225574 (+27)
+[WS][SHARED] ✓ 检测到seq增长: 225574 → 225610 (+36)
+[WS][SHARED] ✓ 检测到seq增长: 225610 → 225643 (+33)
+[WS][SHARED] ✓ 检测到seq增长: 225643 → 225664 (+21)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 19.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=225664, updates=30 (52.1/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 2001
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2009, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2010, skip=2724, 当前seq=225664 (last=225664), updated_at=1769255160.76 (last=1769255160.76)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 20.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 225664 → 225673 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 225673 → 225675 (+2)
+[WS][SHARED] ✓ 检测到seq增长: 225675 → 225681 (+6)
+[WS][SHARED] seq=225681, updates=7 (13.2/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 225681 → 225689 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 225689 → 225691 (+2)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2802): seq和updated_at都未变化且距上次tick仅2.5秒
+[WS][SHARED][SKIP] 当前状态: seq=225691, last_seq=225691, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 20.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=225691, updates=8 (15.5/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 225691 → 225694 (+3)
+[WS][SHARED] ✓ 检测到seq增长: 225694 → 225705 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 225705 → 225715 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 225715 → 225725 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 225725 → 225736 (+11)
+[WS][SHARED][TRACE] 函数调用次数: 2101
+[WS][SHARED] ✓ 检测到seq增长: 225736 → 225747 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 225747 → 225757 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 225757 → 225767 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 225767 → 225775 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 225775 → 225785 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 225785 → 225791 (+6)
+[WS][SHARED] ✓ 检测到seq增长: 225791 → 225800 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 225800 → 225806 (+6)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2108, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2109, skip=2870, 当前seq=225815 (last=225806), updated_at=1769255247.22 (last=1769255246.61)
+[WS][SHARED] ✓ 检测到seq增长: 225806 → 225815 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 225815 → 225898 (+83)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 21.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=225898, updates=18 (31.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 225898 → 225901 (+3)
+[WS][SHARED] ✓ 检测到seq增长: 225901 → 225909 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 225909 → 225918 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 225918 → 225926 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 225926 → 225928 (+2)
+[WS][SHARED] ✓ 检测到seq增长: 225928 → 225930 (+2)
+[WS][SHARED] ✓ 检测到seq增长: 225930 → 225938 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 225938 → 225947 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 225947 → 225956 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 225956 → 225966 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 225966 → 225974 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 225974 → 225985 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 225985 → 225987 (+2)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 21.8分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=3002): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=225987, last_seq=225987, bid=0.09, ask=0.1
+[WS][SHARED][TRACE] 函数调用次数: 2201
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2207, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2208, skip=3024, 当前seq=225987 (last=225987), updated_at=1769255287.73 (last=1769255287.73)
+[WS][SHARED] seq=225987, updates=18 (24.2/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 22.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 225987 → 225989 (+2)
+[WS][SHARED] ✓ 检测到seq增长: 225989 → 225997 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 225997 → 226005 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226005 → 226014 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226014 → 226022 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226022 → 226029 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226029 → 226032 (+3)
+[WS][SHARED] ✓ 检测到seq增长: 226032 → 226036 (+4)
+[WS][SHARED] ✓ 检测到seq增长: 226036 → 226047 (+11)
+[WS][SHARED] seq=226047, updates=14 (27.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 226047 → 226058 (+11)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 22.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 226058 → 226067 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226067 → 226077 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226077 → 226086 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226086 → 226096 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226096 → 226106 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226106 → 226116 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226116 → 226125 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226125 → 226135 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226135 → 226144 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226144 → 226152 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226152 → 226160 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226160 → 226169 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226169 → 226175 (+6)
+[WS][SHARED] ✓ 检测到seq增长: 226175 → 226181 (+6)
+[WS][SHARED] ✓ 检测到seq增长: 226181 → 226189 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226189 → 226199 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226199 → 226203 (+4)
+[WS][SHARED][TRACE] 函数调用次数: 2301
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2307, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2308, skip=3154, 当前seq=226204 (last=226204), updated_at=1769255357.30 (last=1769255357.30)
+[WS][SHARED] seq=226204, updates=22 (43.0/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 23.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 226204 → 226206 (+2)
+[WS][SHARED] ✓ 检测到seq增长: 226206 → 226216 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226216 → 226224 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226224 → 226234 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226234 → 226241 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226241 → 226250 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226250 → 226257 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226257 → 226267 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226267 → 226270 (+3)
+[WS][SHARED] ✓ 检测到seq增长: 226270 → 226279 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226279 → 226288 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226288 → 226294 (+6)
+[WS][SHARED] ✓ 检测到seq增长: 226294 → 226306 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 226306 → 226317 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 226317 → 226325 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226325 → 226333 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226333 → 226342 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226342 → 226346 (+4)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=3202): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=226346, last_seq=226346, bid=0.09, ask=0.1
+[WS][SHARED] ✓ 检测到seq增长: 226347 → 226349 (+2)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 23.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=226349, updates=24 (41.6/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 226349 → 226359 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226359 → 226367 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226367 → 226376 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226376 → 226380 (+4)
+[WS][SHARED][TRACE] 函数调用次数: 2401
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2406, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2407, skip=3290, 当前seq=226380 (last=226380), updated_at=1769255418.38 (last=1769255418.38)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 24.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=226380, updates=8 (14.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 226380 → 226385 (+5)
+[WS][SHARED] ✓ 检测到seq增长: 226385 → 226393 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226393 → 226403 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226403 → 226411 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226411 → 226420 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226420 → 226427 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226427 → 226435 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226435 → 226447 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 226447 → 226456 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226456 → 226464 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226464 → 226474 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226474 → 226481 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226481 → 226492 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 226492 → 226501 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226501 → 226512 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 226512 → 226519 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226519 → 226527 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226527 → 226534 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226534 → 226542 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226542 → 226549 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226549 → 226556 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226556 → 226565 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226565 → 226572 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226572 → 226580 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226580 → 226587 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226587 → 226595 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226595 → 226602 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226602 → 226609 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226609 → 226618 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226618 → 226626 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226626 → 226635 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226635 → 226645 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226645 → 226654 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226654 → 226663 (+9)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 24.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 226663 → 226668 (+5)
+[WS][SHARED] ✓ 检测到seq增长: 226668 → 226677 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226677 → 226687 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226687 → 226696 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226696 → 226705 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226705 → 226712 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226712 → 226720 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226720 → 226729 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226729 → 226738 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226738 → 226746 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226746 → 226753 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226753 → 226762 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226762 → 226766 (+4)
+[WS][SHARED] seq=226766, updates=48 (87.1/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 2501
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2508, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2509, skip=3390, 当前seq=226766 (last=226766), updated_at=1769255475.55 (last=1769255475.55)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 25.3分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=3402): seq和updated_at都未变化且距上次tick仅2.5秒
+[WS][SHARED][SKIP] 当前状态: seq=226766, last_seq=226766, bid=0.09, ask=0.1
+[WS][SHARED] seq=226766, updates=5 (9.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 226766 → 226774 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226774 → 226784 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226784 → 226792 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226792 → 226795 (+3)
+[WS][SHARED] ✓ 检测到seq增长: 226795 → 226797 (+2)
+[WS][SHARED] ✓ 检测到seq增长: 226797 → 226811 (+14)
+[WS][SHARED] ✓ 检测到seq增长: 226811 → 226819 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226819 → 226827 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226827 → 226837 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226837 → 226847 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226847 → 226857 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226857 → 226866 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226866 → 226874 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226874 → 226883 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226883 → 226891 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226891 → 226900 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226900 → 226909 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226909 → 226919 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226919 → 226929 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226929 → 226936 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 226936 → 226946 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 226946 → 226954 (+8)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 25.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 226954 → 226963 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 226963 → 226969 (+6)
+[WS][SHARED] ✓ 检测到seq增长: 226969 → 226977 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226977 → 226982 (+5)
+[WS][SHARED] ✓ 检测到seq增长: 226982 → 226990 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 226990 → 227000 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227000 → 227008 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 227008 → 227018 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227018 → 227028 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227028 → 227038 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227038 → 227049 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227049 → 227058 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227058 → 227067 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227067 → 227080 (+13)
+[WS][SHARED] ✓ 检测到seq增长: 227080 → 227090 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227090 → 227100 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227100 → 227109 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227109 → 227120 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227120 → 227130 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227130 → 227141 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227141 → 227152 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227152 → 227162 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227162 → 227173 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227173 → 227182 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227182 → 227194 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 227194 → 227202 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 227202 → 227211 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227211 → 227219 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 227219 → 227230 (+11)
+[WS][SHARED] seq=227230, updates=51 (101.8/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 2601
+[WS][SHARED] ✓ 检测到seq增长: 227230 → 227239 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227239 → 227243 (+4)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2608, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2609, skip=3476, 当前seq=227243 (last=227243), updated_at=1769255544.72 (last=1769255544.72)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 26.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 227243 → 227252 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227252 → 227261 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227261 → 227263 (+2)
+[WS][SHARED] seq=227265, updates=11 (20.4/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 26.8分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=3602): seq和updated_at都未变化且距上次tick仅4.0秒
+[WS][SHARED][SKIP] 当前状态: seq=227265, last_seq=227265, bid=0.09, ask=0.1
+[WS][SHARED][TRACE] 函数调用次数: 2701
+[WS][SHARED] seq=227265, updates=6 (12.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 227265 → 227269 (+4)
+[WS][SHARED] ✓ 检测到seq增长: 227269 → 227280 (+11)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2709, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2710, skip=3644, 当前seq=227289 (last=227280), updated_at=1769255608.94 (last=1769255608.50)
+[WS][SHARED] ✓ 检测到seq增长: 227280 → 227289 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227289 → 227313 (+24)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 27.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 227314 → 227322 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 227322 → 227332 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227332 → 227343 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227343 → 227354 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227354 → 227363 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227363 → 227372 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227372 → 227381 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227381 → 227391 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227391 → 227395 (+4)
+[WS][SHARED] seq=227395, updates=17 (29.8/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 27.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 227395 → 227401 (+6)
+[WS][SHARED] ✓ 检测到seq增长: 227401 → 227413 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 227413 → 227424 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227424 → 227435 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227435 → 227446 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227446 → 227454 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 227454 → 227462 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 227462 → 227471 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227471 → 227476 (+5)
+[WS][SHARED][TRACE] 函数调用次数: 2801
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2808, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2809, skip=3784, 当前seq=227477 (last=227477), updated_at=1769255660.92 (last=1769255660.92)
+[WS][SHARED] ✓ 检测到seq增长: 227477 → 227485 (+8)
+[WS][SHARED] seq=227485, updates=15 (23.2/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 28.3分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=3802): seq和updated_at都未变化且距上次tick仅4.0秒
+[WS][SHARED][SKIP] 当前状态: seq=227485, last_seq=227485, bid=0.09, ask=0.1
+[WS][SHARED] seq=227485, updates=6 (12.0/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 28.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 227485 → 227488 (+3)
+[WS][SHARED] ✓ 检测到seq增长: 227488 → 227495 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 227495 → 227501 (+6)
+[WS][SHARED][TRACE] 函数调用次数: 2901
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2909, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2910, skip=3960, 当前seq=227502 (last=227502), updated_at=1769255714.49 (last=1769255714.49)
+[WS][SHARED] seq=227502, updates=8 (15.3/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 29.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 227503 → 227505 (+2)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=4002): seq和updated_at都未变化且距上次tick仅2.5秒
+[WS][SHARED][SKIP] 当前状态: seq=227505, last_seq=227505, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 29.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=227505, updates=8 (13.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 3001
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3008, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3009, skip=4134, 当前seq=227505 (last=227505), updated_at=1769255745.05 (last=1769255745.05)
+[WS][SHARED] ✓ 检测到seq增长: 227505 → 227521 (+16)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 30.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=227521, updates=5 (8.7/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 227522 → 227532 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227532 → 227540 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 227540 → 227550 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227550 → 227560 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227560 → 227569 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227569 → 227581 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 227581 → 227591 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227591 → 227602 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227602 → 227610 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 227610 → 227619 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227619 → 227628 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227628 → 227637 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227637 → 227646 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227646 → 227656 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227656 → 227667 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227667 → 227676 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227676 → 227686 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227686 → 227697 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227697 → 227707 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227707 → 227712 (+5)
+[WS][SHARED] ✓ 检测到seq增长: 227712 → 227719 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 227719 → 227726 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 227726 → 227735 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227735 → 227744 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227744 → 227753 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227753 → 227762 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227762 → 227773 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227773 → 227783 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227783 → 227793 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227793 → 227803 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227803 → 227812 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227812 → 227821 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227821 → 227829 (+8)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 30.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 227829 → 227839 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227839 → 227848 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227848 → 227859 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227859 → 227866 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 227866 → 227873 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 227873 → 227882 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227882 → 227890 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 227890 → 227899 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227899 → 227909 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 227909 → 227918 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227918 → 227927 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227927 → 227938 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 227938 → 227944 (+6)
+[WS][SHARED] ✓ 检测到seq增长: 227944 → 227950 (+6)
+[WS][SHARED] ✓ 检测到seq增长: 227950 → 227959 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 227959 → 227961 (+2)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=4202): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=227961, last_seq=227961, bid=0.09, ask=0.1
+[WS][SHARED] seq=227961, updates=51 (88.5/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 3101
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3109, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3110, skip=4226, 当前seq=227961 (last=227961), updated_at=1769255839.41 (last=1769255839.41)
+[WS][SHARED] ✓ 检测到seq增长: 227961 → 228057 (+96)
+[WS][SHARED] ✓ 检测到seq增长: 228057 → 228066 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 228066 → 228075 (+9)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 31.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 228075 → 228084 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 228084 → 228093 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 228093 → 228101 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 228102 → 228104 (+2)
+[WS][SHARED] ✓ 检测到seq增长: 228104 → 228106 (+2)
+[WS][SHARED] seq=228106, updates=12 (23.1/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 228107 → 228109 (+2)
+[WS][SHARED] ✓ 检测到seq增长: 228110 → 228119 (+9)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 31.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 228119 → 228130 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 228130 → 228140 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 228140 → 228151 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 228151 → 228162 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 228162 → 228173 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 228173 → 228183 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 228183 → 228194 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 228194 → 228206 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 228206 → 228217 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 228217 → 228228 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 228228 → 228231 (+3)
+[WS][SHARED][TRACE] 函数调用次数: 3201
+[WS][SHARED] seq=228231, updates=19 (36.1/min), bid=0.09, ask=0.1, price=0.095
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3209, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3210, skip=4366, 当前seq=228231 (last=228231), updated_at=1769255896.92 (last=1769255896.92)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 32.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 228231 → 228237 (+6)
+[WS][SHARED] ✓ 检测到seq增长: 228237 → 228241 (+4)
+[WS][SHARED] ✓ 检测到seq增长: 228241 → 228255 (+14)
+[WS][SHARED] ✓ 检测到seq增长: 228255 → 228267 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 228267 → 228278 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 228278 → 228287 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 228287 → 228298 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 228298 → 228311 (+13)
+[WS][SHARED] ✓ 检测到seq增长: 228311 → 228320 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 228320 → 228329 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 228329 → 228338 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 228338 → 228348 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 228348 → 228360 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 228360 → 228372 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 228372 → 228380 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 228380 → 228392 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 228392 → 228401 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 228401 → 228410 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 228410 → 228421 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 228421 → 228432 (+11)
+[WS][SHARED] seq=228432, updates=22 (43.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 228432 → 228443 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 228443 → 228449 (+6)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=4402): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=228449, last_seq=228449, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 32.9分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 3301
+[WS][SHARED] seq=228449, updates=8 (15.5/min), bid=0.09, ask=0.1, price=0.095
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3308, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3309, skip=4504, 当前seq=228449 (last=228449), updated_at=1769255938.14 (last=1769255938.14)
+[WS][SHARED] ✓ 检测到seq增长: 228449 → 228830 (+381)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 33.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=228830, updates=5 (9.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=4602): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=228830, last_seq=228830, bid=0.09, ask=0.1
+[WS][SHARED] ✓ 检测到seq增长: 228830 → 228895 (+65)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 33.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 228895 → 228907 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 228907 → 228967 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 228967 → 229027 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 229027 → 229087 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 229087 → 229147 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 229147 → 229201 (+54)
+[WS][SHARED] ✓ 检测到seq增长: 229201 → 229255 (+54)
+[WS][SHARED] ✓ 检测到seq增长: 229255 → 229321 (+66)
+[WS][SHARED] ✓ 检测到seq增长: 229321 → 229363 (+42)
+[WS][SHARED][TRACE] 函数调用次数: 3401
+[WS][SHARED] ✓ 检测到seq增长: 229363 → 229375 (+12)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3407, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3408, skip=4662, 当前seq=229375 (last=229375), updated_at=1769256028.67 (last=1769256028.67)
+[WS][SHARED] ✓ 检测到seq增长: 229375 → 229573 (+198)
+[WS][SHARED] seq=229573, updates=16 (23.7/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 34.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 229573 → 229637 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 229637 → 229726 (+89)
+[WS][SHARED] ✓ 检测到seq增长: 229726 → 229805 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 229805 → 229877 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 229877 → 229928 (+51)
+[WS][SHARED] ✓ 检测到seq增长: 229928 → 230013 (+85)
+[WS][SHARED] ✓ 检测到seq增长: 230013 → 230101 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 230101 → 230133 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 230133 → 230148 (+15)
+[WS][SHARED] ✓ 检测到seq增长: 230148 → 230221 (+73)
+[WS][SHARED] ✓ 检测到seq增长: 230221 → 230300 (+79)
+[WS][SHARED] seq=230300, updates=14 (28.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 230300 → 230365 (+65)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 34.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 230365 → 230413 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 230413 → 230437 (+24)
+[WS][SHARED] ✓ 检测到seq增长: 230437 → 230517 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 230517 → 230575 (+58)
+[WS][SHARED] ✓ 检测到seq增长: 230575 → 230653 (+78)
+[WS][SHARED] ✓ 检测到seq增长: 230653 → 230733 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 230733 → 230813 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 230813 → 230893 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 230893 → 230981 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 230981 → 231055 (+74)
+[WS][SHARED] ✓ 检测到seq增长: 231055 → 231109 (+54)
+[WS][SHARED] ✓ 检测到seq增长: 231109 → 231181 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 231181 → 231269 (+88)
+[WS][SHARED][TRACE] 函数调用次数: 3501
+[WS][SHARED] ✓ 检测到seq增长: 231269 → 231316 (+47)
+[WS][SHARED] ✓ 检测到seq增长: 231316 → 231397 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 231397 → 231461 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 231461 → 231549 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 231549 → 231634 (+85)
+[WS][SHARED] ✓ 检测到seq增长: 231634 → 231709 (+75)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3506, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3507, skip=4788, 当前seq=231789 (last=231709), updated_at=1769256091.11 (last=1769256090.58)
+[WS][SHARED] ✓ 检测到seq增长: 231709 → 231789 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 231789 → 232229 (+440)
+[WS][SHARED] seq=232229, updates=23 (45.9/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 35.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 232229 → 232293 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 232293 → 232365 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 232365 → 232429 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 232429 → 232501 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 232501 → 232551 (+50)
+[WS][SHARED] ✓ 检测到seq增长: 232551 → 232605 (+54)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=4802): seq和updated_at都未变化且距上次tick仅0.5秒
+[WS][SHARED][SKIP] 当前状态: seq=232605, last_seq=232605, bid=0.09, ask=0.1
+[WS][SHARED] ✓ 检测到seq增长: 232605 → 232613 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 232613 → 232693 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 232693 → 232773 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 232773 → 232815 (+42)
+[WS][SHARED] ✓ 检测到seq增长: 232815 → 232895 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 232895 → 232981 (+86)
+[WS][SHARED] ✓ 检测到seq增长: 232981 → 233061 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 233061 → 233093 (+32)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 35.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 233093 → 233122 (+29)
+[WS][SHARED] seq=233122, updates=18 (31.7/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 233122 → 233213 (+91)
+[WS][SHARED] ✓ 检测到seq增长: 233213 → 233285 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 233285 → 233365 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 233365 → 233421 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 233421 → 233501 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 233501 → 233589 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 233589 → 233645 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 233645 → 233733 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 233733 → 233781 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 233781 → 233789 (+8)
+[WS][SHARED][TRACE] 函数调用次数: 3601
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3605, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3606, skip=4924, 当前seq=233789 (last=233789), updated_at=1769256141.63 (last=1769256141.63)
+[WS][SHARED] ✓ 检测到seq增长: 233789 → 234069 (+280)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 36.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=234069, updates=14 (24.2/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 234069 → 234101 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 234101 → 234189 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 234189 → 234269 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 234269 → 234357 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 234357 → 234389 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 234389 → 234421 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 234421 → 234541 (+120)
+[WS][SHARED] ✓ 检测到seq增长: 234541 → 234629 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 234629 → 234695 (+66)
+[WS][SHARED] ✓ 检测到seq增长: 234695 → 234781 (+86)
+[WS][SHARED] ✓ 检测到seq增长: 234781 → 234821 (+40)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=5002): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=234821, last_seq=234821, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 36.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=234821, updates=16 (27.8/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 3701
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3707, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3708, skip=5088, 当前seq=234821 (last=234821), updated_at=1769256180.32 (last=1769256180.32)
+[WS][SHARED] ✓ 检测到seq增长: 234821 → 235847 (+1026)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 37.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=235847, updates=5 (9.3/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 37.9分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=5202): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=235847, last_seq=235847, bid=0.09, ask=0.1
+[WS][SHARED] ✓ 检测到seq增长: 235847 → 236283 (+436)
+[WS][SHARED] ✓ 检测到seq增长: 236283 → 236393 (+110)
+[WS][SHARED] ✓ 检测到seq增长: 236393 → 236493 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 236493 → 236601 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 236601 → 236680 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 236680 → 236778 (+98)
+[WS][SHARED] ✓ 检测到seq增长: 236778 → 236877 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 236877 → 236965 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 236965 → 237064 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 237064 → 237185 (+121)
+[WS][SHARED] ✓ 检测到seq增长: 237185 → 237314 (+129)
+[WS][SHARED] ✓ 检测到seq增长: 237314 → 237434 (+120)
+[WS][SHARED] ✓ 检测到seq增长: 237434 → 237548 (+114)
+[WS][SHARED] ✓ 检测到seq增长: 237548 → 237663 (+115)
+[WS][SHARED] ✓ 检测到seq增长: 237663 → 237779 (+116)
+[WS][SHARED] ✓ 检测到seq增长: 237779 → 237881 (+102)
+[WS][SHARED] ✓ 检测到seq增长: 237881 → 237999 (+118)
+[WS][SHARED] ✓ 检测到seq增长: 237999 → 238043 (+44)
+[WS][SHARED] seq=238043, updates=22 (43.2/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 3801
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3806, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3807, skip=5234, 当前seq=238043 (last=238043), updated_at=1769256263.11 (last=1769256263.11)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 38.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 238043 → 238121 (+78)
+[WS][SHARED] ✓ 检测到seq增长: 238121 → 238238 (+117)
+[WS][SHARED] ✓ 检测到seq增长: 238238 → 238316 (+78)
+[WS][SHARED] seq=238316, updates=7 (12.7/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 238316 → 238386 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 238386 → 238428 (+42)
+[WS][SHARED] ✓ 检测到seq增长: 238428 → 238512 (+84)
+[WS][SHARED] ✓ 检测到seq增长: 238512 → 238627 (+115)
+[WS][SHARED] ✓ 检测到seq增长: 238627 → 238764 (+137)
+[WS][SHARED] ✓ 检测到seq增长: 238764 → 238918 (+154)
+[WS][SHARED] ✓ 检测到seq增长: 238918 → 238988 (+70)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 38.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 238988 → 239708 (+720)
+[WS][SHARED] ✓ 检测到seq增长: 239708 → 239874 (+166)
+[WS][SHARED] ✓ 检测到seq增长: 239874 → 240013 (+139)
+[WS][SHARED] ✓ 检测到seq增长: 240013 → 240189 (+176)
+[WS][SHARED] ✓ 检测到seq增长: 240189 → 240354 (+165)
+[WS][SHARED] ✓ 检测到seq增长: 240354 → 240504 (+150)
+[WS][SHARED] ✓ 检测到seq增长: 240504 → 240669 (+165)
+[WS][SHARED] ✓ 检测到seq增长: 240669 → 240834 (+165)
+[WS][SHARED] ✓ 检测到seq增长: 240834 → 240986 (+152)
+[WS][SHARED] ✓ 检测到seq增长: 240986 → 241164 (+178)
+[WS][SHARED] ✓ 检测到seq增长: 241164 → 241269 (+105)
+[WS][SHARED] ✓ 检测到seq增长: 241269 → 241389 (+120)
+[WS][SHARED] ✓ 检测到seq增长: 241389 → 241494 (+105)
+[WS][SHARED] ✓ 检测到seq增长: 241494 → 241669 (+175)
+[WS][SHARED] ✓ 检测到seq增长: 241669 → 241824 (+155)
+[WS][SHARED] ✓ 检测到seq增长: 241824 → 241989 (+165)
+[WS][SHARED] ✓ 检测到seq增长: 241989 → 242139 (+150)
+[WS][SHARED] ✓ 检测到seq增长: 242139 → 242154 (+15)
+[WS][SHARED][TRACE] 函数调用次数: 3901
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3906, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3907, skip=5366, 当前seq=242154 (last=242154), updated_at=1769256322.49 (last=1769256322.49)
+[WS][SHARED] seq=242154, updates=28 (40.2/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 39.4分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=5402): seq和updated_at都未变化且距上次tick仅4.0秒
+[WS][SHARED][SKIP] 当前状态: seq=242154, last_seq=242154, bid=0.09, ask=0.1
+[WS][SHARED] ✓ 检测到seq增长: 242154 → 242205 (+51)
+[WS][SHARED] ✓ 检测到seq增长: 242205 → 242374 (+169)
+[WS][SHARED] ✓ 检测到seq增长: 242374 → 242528 (+154)
+[WS][SHARED] ✓ 检测到seq增长: 242528 → 242698 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 242698 → 242871 (+173)
+[WS][SHARED] ✓ 检测到seq增长: 242871 → 243021 (+150)
+[WS][SHARED] ✓ 检测到seq增长: 243021 → 243152 (+131)
+[WS][SHARED] ✓ 检测到seq增长: 243152 → 243310 (+158)
+[WS][SHARED] ✓ 检测到seq增长: 243310 → 243429 (+119)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 39.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=243429, updates=14 (25.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 4001
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4005, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4006, skip=5528, 当前seq=243452 (last=243429), updated_at=1769256392.27 (last=1769256356.58)
+[WS][SHARED] ✓ 检测到seq增长: 243429 → 243452 (+23)
+[WS][SHARED] ✓ 检测到seq增长: 243452 → 245061 (+1609)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 40.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=245061, updates=6 (11.3/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 245061 → 245078 (+17)
+[WS][SHARED] ✓ 检测到seq增长: 245078 → 245231 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 245231 → 245384 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 245384 → 245537 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 245537 → 245605 (+68)
+[WS][SHARED] ✓ 检测到seq增长: 245605 → 245622 (+17)
+[WS][SHARED] ✓ 检测到seq增长: 245622 → 245809 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 245809 → 245962 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 245962 → 246115 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 246115 → 246285 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 246285 → 246485 (+200)
+[WS][SHARED] ✓ 检测到seq增长: 246485 → 246625 (+140)
+[WS][SHARED] ✓ 检测到seq增长: 246625 → 246772 (+147)
+[WS][SHARED] ✓ 检测到seq增长: 246772 → 246948 (+176)
+[WS][SHARED] ✓ 检测到seq增长: 246948 → 247118 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 247118 → 247305 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 247305 → 247489 (+184)
+[WS][SHARED] ✓ 检测到seq增长: 247489 → 247662 (+173)
+[WS][SHARED] ✓ 检测到seq增长: 247662 → 247814 (+152)
+[WS][SHARED] ✓ 检测到seq增长: 247814 → 247954 (+140)
+[WS][SHARED] ✓ 检测到seq增长: 247954 → 248121 (+167)
+[WS][SHARED] ✓ 检测到seq增长: 248121 → 248291 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 248291 → 248460 (+169)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 40.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 248460 → 248512 (+52)
+[WS][SHARED] ✓ 检测到seq增长: 248512 → 248614 (+102)
+[WS][SHARED] ✓ 检测到seq增长: 248614 → 248801 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 248801 → 249005 (+204)
+[WS][SHARED] ✓ 检测到seq增长: 249005 → 249176 (+171)
+[WS][SHARED] ✓ 检测到seq增长: 249176 → 249369 (+193)
+[WS][SHARED] ✓ 检测到seq增长: 249369 → 249464 (+95)
+[WS][SHARED] ✓ 检测到seq增长: 249464 → 249651 (+187)
+[WS][SHARED] seq=249651, updates=33 (65.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 249651 → 249804 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 249804 → 249974 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 249974 → 250161 (+187)
+[WS][SHARED] ✓ 检测到seq增长: 250161 → 250365 (+204)
+[WS][SHARED] ✓ 检测到seq增长: 250365 → 250496 (+131)
+[WS][SHARED] ✓ 检测到seq增长: 250496 → 250636 (+140)
+[WS][SHARED] ✓ 检测到seq增长: 250636 → 250804 (+168)
+[WS][SHARED] ✓ 检测到seq增长: 250804 → 251003 (+199)
+[WS][SHARED] ✓ 检测到seq增长: 251003 → 251201 (+198)
+[WS][SHARED] ✓ 检测到seq增长: 251201 → 251385 (+184)
+[WS][SHARED] ✓ 检测到seq增长: 251385 → 251453 (+68)
+[WS][SHARED] ✓ 检测到seq增长: 251453 → 251470 (+17)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=5602): seq和updated_at都未变化且距上次tick仅0.5秒
+[WS][SHARED][SKIP] 当前状态: seq=251470, last_seq=251470, bid=0.09, ask=0.1
+[WS][SHARED][TRACE] 函数调用次数: 4101
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4104, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4105, skip=5628, 当前seq=251470 (last=251470), updated_at=1769256444.16 (last=1769256444.16)
+[WS][SHARED] ✓ 检测到seq增长: 251470 → 252031 (+561)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 41.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=252031, updates=15 (29.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 252031 → 252201 (+170)
+[WS][SHARED] ✓ 检测到seq增长: 252201 → 252354 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 252354 → 252523 (+169)
+[WS][SHARED] ✓ 检测到seq增长: 252523 → 252681 (+158)
+[WS][SHARED] ✓ 检测到seq增长: 252681 → 252845 (+164)
+[WS][SHARED] ✓ 检测到seq增长: 252845 → 253034 (+189)
+[WS][SHARED] ✓ 检测到seq增长: 253034 → 253222 (+188)
+[WS][SHARED] ✓ 检测到seq增长: 253222 → 253374 (+152)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 41.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=253374, updates=13 (24.3/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 253374 → 253391 (+17)
+[WS][SHARED] ✓ 检测到seq增长: 253391 → 253425 (+34)
+[WS][SHARED][TRACE] 函数调用次数: 4201
+[WS][SHARED] ✓ 检测到seq增长: 253425 → 253561 (+136)
+[WS][SHARED] ✓ 检测到seq增长: 253561 → 253748 (+187)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4203, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4204, skip=5786, 当前seq=253901 (last=253748), updated_at=1769256512.65 (last=1769256512.15)
+[WS][SHARED] ✓ 检测到seq增长: 253748 → 253901 (+153)
+[WS][SHARED] ✓ 检测到seq增长: 253901 → 255006 (+1105)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 42.4分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=5802): seq和updated_at都未变化且距上次tick仅4.0秒
+[WS][SHARED][SKIP] 当前状态: seq=255006, last_seq=255006, bid=0.09, ask=0.1
+[WS][SHARED] seq=255006, updates=9 (16.3/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 255006 → 255022 (+16)
+[WS][SHARED] ✓ 检测到seq增长: 255022 → 255261 (+239)
+[WS][SHARED] ✓ 检测到seq增长: 255261 → 255390 (+129)
+[WS][SHARED] ✓ 检测到seq增长: 255390 → 255550 (+160)
+[WS][SHARED] ✓ 检测到seq增长: 255550 → 255709 (+159)
+[WS][SHARED] ✓ 检测到seq增长: 255709 → 255889 (+180)
+[WS][SHARED] ✓ 检测到seq增长: 255889 → 256046 (+157)
+[WS][SHARED] ✓ 检测到seq增长: 256046 → 256238 (+192)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 42.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 256238 → 256398 (+160)
+[WS][SHARED] ✓ 检测到seq增长: 256398 → 256558 (+160)
+[WS][SHARED] ✓ 检测到seq增长: 256558 → 256750 (+192)
+[WS][SHARED] ✓ 检测到seq增长: 256750 → 256894 (+144)
+[WS][SHARED] ✓ 检测到seq增长: 256894 → 257053 (+159)
+[WS][SHARED] ✓ 检测到seq增长: 257053 → 257166 (+113)
+[WS][SHARED] ✓ 检测到seq增长: 257166 → 257326 (+160)
+[WS][SHARED] ✓ 检测到seq增长: 257326 → 257454 (+128)
+[WS][SHARED] ✓ 检测到seq增长: 257454 → 257614 (+160)
+[WS][SHARED] ✓ 检测到seq增长: 257614 → 257773 (+159)
+[WS][SHARED] ✓ 检测到seq增长: 257773 → 257937 (+164)
+[WS][SHARED] ✓ 检测到seq增长: 257937 → 258030 (+93)
+[WS][SHARED] ✓ 检测到seq增长: 258030 → 258214 (+184)
+[WS][SHARED] ✓ 检测到seq增长: 258214 → 258332 (+118)
+[WS][SHARED] ✓ 检测到seq增长: 258332 → 258334 (+2)
+[WS][SHARED] ✓ 检测到seq增长: 258334 → 258349 (+15)
+[WS][SHARED] seq=258349, updates=27 (52.2/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 4301
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4302, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4303, skip=5920, 当前seq=258349 (last=258349), updated_at=1769256564.87 (last=1769256564.87)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 43.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 258349 → 258362 (+13)
+[WS][SHARED] ✓ 检测到seq增长: 258362 → 258388 (+26)
+[WS][SHARED] ✓ 检测到seq增长: 258388 → 258401 (+13)
+[WS][SHARED] seq=258401, updates=7 (12.6/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 258401 → 258509 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 258509 → 258617 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 258617 → 258629 (+12)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=6002): seq和updated_at都未变化且距上次tick仅4.5秒
+[WS][SHARED][SKIP] 当前状态: seq=258629, last_seq=258629, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 43.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 258629 → 258695 (+66)
+[WS][SHARED] ✓ 检测到seq增长: 258695 → 258717 (+22)
+[WS][SHARED] seq=258717, updates=10 (18.4/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 4401
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4401, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4402, skip=6086, 当前seq=258717 (last=258717), updated_at=1769256625.51 (last=1769256625.51)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 44.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 258717 → 258787 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 258787 → 258887 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 258887 → 258957 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 258957 → 259057 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 259057 → 259137 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 259137 → 259207 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 259207 → 259287 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 259287 → 259397 (+110)
+[WS][SHARED] ✓ 检测到seq增长: 259397 → 259427 (+30)
+[WS][SHARED] ✓ 检测到seq增长: 259427 → 259488 (+61)
+[WS][SHARED] ✓ 检测到seq增长: 259488 → 259606 (+118)
+[WS][SHARED] ✓ 检测到seq增长: 259606 → 259697 (+91)
+[WS][SHARED] ✓ 检测到seq增长: 259697 → 259797 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 259797 → 259907 (+110)
+[WS][SHARED] ✓ 检测到seq增长: 259907 → 259995 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 259995 → 260096 (+101)
+[WS][SHARED] seq=260096, updates=18 (35.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 260096 → 260180 (+84)
+[WS][SHARED] ✓ 检测到seq增长: 260180 → 260296 (+116)
+[WS][SHARED] ✓ 检测到seq增长: 260296 → 260407 (+111)
+[WS][SHARED] ✓ 检测到seq增长: 260407 → 260497 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 260497 → 260587 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 260587 → 260669 (+82)
+[WS][SHARED] ✓ 检测到seq增长: 260669 → 260767 (+98)
+[WS][SHARED] ✓ 检测到seq增长: 260767 → 260867 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 260867 → 260975 (+108)
+[WS][SHARED] ✓ 检测到seq增长: 260975 → 261045 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 261045 → 261107 (+62)
+[WS][SHARED] ✓ 检测到seq增长: 261107 → 261207 (+100)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 44.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 261207 → 261326 (+119)
+[WS][SHARED] ✓ 检测到seq增长: 261326 → 261407 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 261407 → 261497 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 261497 → 261585 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 261585 → 261695 (+110)
+[WS][SHARED] ✓ 检测到seq增长: 261695 → 261784 (+89)
+[WS][SHARED] ✓ 检测到seq增长: 261784 → 261877 (+93)
+[WS][SHARED] ✓ 检测到seq增长: 261877 → 261967 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 261967 → 262079 (+112)
+[WS][SHARED] ✓ 检测到seq增长: 262079 → 262185 (+106)
+[WS][SHARED] ✓ 检测到seq增长: 262185 → 262288 (+103)
+[WS][SHARED] ✓ 检测到seq增长: 262288 → 262337 (+49)
+[WS][SHARED] seq=262337, updates=27 (53.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 4501
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4502, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4503, skip=6198, 当前seq=262337 (last=262337), updated_at=1769256680.85 (last=1769256680.85)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=6202): seq和updated_at都未变化且距上次tick仅0.5秒
+[WS][SHARED][SKIP] 当前状态: seq=262337, last_seq=262337, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 45.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=262337, updates=5 (9.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 262337 → 262347 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 262347 → 262427 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 262427 → 262517 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 262517 → 262597 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 262597 → 262657 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 262657 → 262667 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 262667 → 262677 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 262677 → 262754 (+77)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 45.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 262754 → 262847 (+93)
+[WS][SHARED][TRACE] 函数调用次数: 4601
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4601, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4602, skip=6360, 当前seq=262847 (last=262847), updated_at=1769256735.96 (last=1769256735.96)
+[WS][SHARED] seq=262847, updates=14 (21.1/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 46.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 262847 → 262897 (+50)
+[WS][SHARED] ✓ 检测到seq增长: 262897 → 262963 (+66)
+[WS][SHARED] ✓ 检测到seq增长: 262963 → 263007 (+44)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=6402): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=263007, last_seq=263007, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 46.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 263007 → 263088 (+81)
+[WS][SHARED] seq=263088, updates=9 (16.1/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 263088 → 263197 (+109)
+[WS][SHARED] ✓ 检测到seq增长: 263197 → 263297 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 263297 → 263367 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 263367 → 263467 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 263467 → 263577 (+110)
+[WS][SHARED] ✓ 检测到seq增长: 263577 → 263687 (+110)
+[WS][SHARED] ✓ 检测到seq增长: 263687 → 263757 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 263757 → 263847 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 263847 → 263937 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 263937 → 264029 (+92)
+[WS][SHARED] ✓ 检测到seq增长: 264029 → 264120 (+91)
+[WS][SHARED] ✓ 检测到seq增长: 264120 → 264201 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 264201 → 264300 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 264300 → 264372 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 264372 → 264453 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 264453 → 264552 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 264552 → 264634 (+82)
+[WS][SHARED] ✓ 检测到seq增长: 264634 → 264696 (+62)
+[WS][SHARED] ✓ 检测到seq增长: 264696 → 264822 (+126)
+[WS][SHARED] ✓ 检测到seq增长: 264822 → 264912 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 264912 → 264984 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 264984 → 265083 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 265083 → 265146 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 265146 → 265155 (+9)
+[WS][SHARED][TRACE] 函数调用次数: 4701
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4701, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4702, skip=6492, 当前seq=265155 (last=265155), updated_at=1769256809.77 (last=1769256809.77)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 47.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=265155, updates=26 (48.1/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=6602): seq和updated_at都未变化且距上次tick仅4.5秒
+[WS][SHARED][SKIP] 当前状态: seq=265155, last_seq=265155, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 47.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=265155, updates=6 (12.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 265155 → 265159 (+4)
+[WS][SHARED] ✓ 检测到seq增长: 265159 → 265170 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 265170 → 265175 (+5)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4800, use_shared_ws=True)
+[WS][SHARED][TRACE] 函数调用次数: 4801
+[WS][SHARED][DEBUG] 读取统计: read=4801, skip=6666, 当前seq=265175 (last=265175), updated_at=1769256871.01 (last=1769256871.01)
+[WS][SHARED] ✓ 检测到seq增长: 265175 → 265250 (+75)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 48.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=265250, updates=7 (12.3/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 265250 → 265269 (+19)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 48.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 265269 → 265294 (+25)
+[WS][SHARED] ✓ 检测到seq增长: 265294 → 265323 (+29)
+[WS][SHARED] ✓ 检测到seq增长: 265323 → 265355 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 265355 → 265385 (+30)
+[WS][SHARED] ✓ 检测到seq增长: 265385 → 265409 (+24)
+[WS][SHARED] ✓ 检测到seq增长: 265409 → 265418 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 265418 → 265432 (+14)
+[WS][SHARED] ✓ 检测到seq增长: 265432 → 265464 (+32)
+[WS][SHARED] seq=265464, updates=13 (26.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 265464 → 265488 (+24)
+[WS][SHARED] ✓ 检测到seq增长: 265488 → 265506 (+18)
+[WS][SHARED] ✓ 检测到seq增长: 265506 → 265528 (+22)
+[WS][SHARED] ✓ 检测到seq增长: 265528 → 265548 (+20)
+[WS][SHARED] ✓ 检测到seq增长: 265548 → 265570 (+22)
+[WS][SHARED] ✓ 检测到seq增长: 265570 → 265592 (+22)
+[WS][SHARED] ✓ 检测到seq增长: 265592 → 265602 (+10)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=6802): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=265602, last_seq=265602, bid=0.09, ask=0.1
+[WS][SHARED][TRACE] 函数调用次数: 4901
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4901, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4902, skip=6820, 当前seq=265602 (last=265602), updated_at=1769256927.71 (last=1769256927.71)
+[WS][SHARED] ✓ 检测到seq增长: 265602 → 265618 (+16)
+[WS][SHARED] ✓ 检测到seq增长: 265618 → 265628 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 265628 → 265636 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 265636 → 265645 (+9)
+[WS][SHARED] ✓ 检测到seq增长: 265645 → 265654 (+9)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 49.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 265654 → 265666 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 265666 → 265673 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 265673 → 265683 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 265683 → 265694 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 265694 → 265704 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 265704 → 265712 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 265712 → 265723 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 265723 → 265733 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 265733 → 265744 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 265744 → 265755 (+11)
+[WS][SHARED] ✓ 检测到seq增长: 265755 → 265763 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 265763 → 265767 (+4)
+[WS][SHARED] seq=265767, updates=26 (46.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 265767 → 265770 (+3)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 49.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 265770 → 265782 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 265782 → 265806 (+24)
+[WS][SHARED] ✓ 检测到seq增长: 265806 → 265828 (+22)
+[WS][SHARED] ✓ 检测到seq增长: 265828 → 265846 (+18)
+[WS][SHARED] ✓ 检测到seq增长: 265846 → 265864 (+18)
+[WS][SHARED] ✓ 检测到seq增长: 265864 → 265884 (+20)
+[WS][SHARED] ✓ 检测到seq增长: 265884 → 265904 (+20)
+[WS][SHARED] ✓ 检测到seq增长: 265904 → 265922 (+18)
+[WS][SHARED] ✓ 检测到seq增长: 265922 → 265941 (+19)
+[WS][SHARED] ✓ 检测到seq增长: 265941 → 265956 (+15)
+[WS][SHARED] ✓ 检测到seq增长: 265956 → 265974 (+18)
+[WS][SHARED] ✓ 检测到seq增长: 265974 → 265992 (+18)
+[WS][SHARED] ✓ 检测到seq增长: 265992 → 266010 (+18)
+[WS][SHARED] ✓ 检测到seq增长: 266010 → 266030 (+20)
+[WS][SHARED] ✓ 检测到seq增长: 266030 → 266047 (+17)
+[WS][SHARED] ✓ 检测到seq增长: 266047 → 266064 (+17)
+[WS][SHARED] ✓ 检测到seq增长: 266064 → 266076 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 266076 → 266082 (+6)
+[WS][SHARED] seq=266082, updates=23 (40.5/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 5001
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5002, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5003, skip=6940, 当前seq=266082 (last=266082), updated_at=1769256986.51 (last=1769256986.51)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 50.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 266082 → 266094 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 266094 → 266106 (+12)
+[WS][SHARED] ✓ 检测到seq增长: 266106 → 266110 (+4)
+[WS][SHARED] ✓ 检测到seq增长: 266110 → 266114 (+4)
+[WS][SHARED] seq=266114, updates=8 (15.5/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=7002): seq和updated_at都未变化且距上次tick仅0.5秒
+[WS][SHARED][SKIP] 当前状态: seq=266114, last_seq=266114, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 50.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=266114, updates=6 (12.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 5101
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5103, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5104, skip=7114, 当前seq=266114 (last=266114), updated_at=1769257017.68 (last=1769257017.68)
+[WS][SHARED] ✓ 检测到seq增长: 266114 → 267101 (+987)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 51.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=267101, updates=5 (9.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=7202): seq和updated_at都未变化且距上次tick仅3.5秒
+[WS][SHARED][SKIP] 当前状态: seq=267101, last_seq=267101, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 51.9分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 5201
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5202, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5203, skip=7292, 当前seq=267101 (last=267101), updated_at=1769257060.02 (last=1769257060.02)
+[WS][SHARED] seq=267101, updates=6 (8.9/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 52.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 267101 → 267109 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 267109 → 267125 (+16)
+[WS][SHARED] ✓ 检测到seq增长: 267125 → 267133 (+8)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=7402): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=267133, last_seq=267133, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 52.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=267133, updates=9 (15.6/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED][TRACE] 函数调用次数: 5301
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5301, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5302, skip=7466, 当前seq=267133 (last=267133), updated_at=1769257155.78 (last=1769257155.78)
+[WS][SHARED] ✓ 检测到seq增长: 267133 → 267277 (+144)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 53.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 267277 → 267285 (+8)
+[WS][SHARED] seq=267285, updates=5 (9.8/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 267285 → 267293 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 267293 → 267301 (+8)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 54.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=7602): seq和updated_at都未变化且距上次tick仅4.0秒
+[WS][SHARED][SKIP] 当前状态: seq=267301, last_seq=267301, bid=0.09, ask=0.1
+[WS][SHARED] seq=267301, updates=7 (13.1/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 267301 → 267333 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 267333 → 267445 (+112)
+[WS][SHARED] ✓ 检测到seq增长: 267445 → 267501 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 267501 → 267557 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 267557 → 267620 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 267620 → 267692 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 267692 → 267756 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 267756 → 267813 (+57)
+[WS][SHARED] ✓ 检测到seq增长: 267813 → 267877 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 267877 → 267925 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 267925 → 267989 (+64)
+[WS][SHARED][TRACE] 函数调用次数: 5401
+[WS][SHARED] ✓ 检测到seq增长: 267989 → 268074 (+85)
+[WS][SHARED] ✓ 检测到seq增长: 268074 → 268149 (+75)
+[WS][SHARED] ✓ 检测到seq增长: 268149 → 268199 (+50)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5403, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5404, skip=7622, 当前seq=268253 (last=268199), updated_at=1769257235.96 (last=1769257235.46)
+[WS][SHARED] ✓ 检测到seq增长: 268199 → 268253 (+54)
+[WS][SHARED] ✓ 检测到seq增长: 268253 → 268749 (+496)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 54.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=268749, updates=18 (33.1/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 268749 → 268773 (+24)
+[WS][SHARED] ✓ 检测到seq增长: 268773 → 268845 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 268845 → 268933 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 268933 → 268997 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 268997 → 269077 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 269077 → 269125 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 269125 → 269205 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 269205 → 269277 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 269277 → 269357 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 269357 → 269445 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 269445 → 269525 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 269525 → 269605 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 269605 → 269685 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 269685 → 269749 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 269749 → 269837 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 269837 → 269885 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 269885 → 269941 (+56)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 55.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 269941 → 269996 (+55)
+[WS][SHARED] ✓ 检测到seq增长: 269996 → 270045 (+49)
+[WS][SHARED] ✓ 检测到seq增长: 270045 → 270098 (+53)
+[WS][SHARED] ✓ 检测到seq增长: 270098 → 270133 (+35)
+[WS][SHARED] ✓ 检测到seq增长: 270133 → 270182 (+49)
+[WS][SHARED] ✓ 检测到seq增长: 270182 → 270237 (+55)
+[WS][SHARED] ✓ 检测到seq增长: 270237 → 270277 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 270277 → 270325 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 270325 → 270389 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 270389 → 270437 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 270437 → 270485 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 270485 → 270533 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 270533 → 270581 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 270581 → 270637 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 270637 → 270669 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 270669 → 270717 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 270717 → 270756 (+39)
+[WS][SHARED] seq=270756, updates=36 (71.8/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 270756 → 270789 (+33)
+[WS][SHARED] ✓ 检测到seq增长: 270789 → 270837 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 270837 → 270876 (+39)
+[WS][SHARED] ✓ 检测到seq增长: 270876 → 270915 (+39)
+[WS][SHARED] ✓ 检测到seq增长: 270915 → 270957 (+42)
+[WS][SHARED] ✓ 检测到seq增长: 270957 → 270997 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 270997 → 271029 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 271029 → 271077 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 271077 → 271125 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 271125 → 271165 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 271165 → 271205 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 271205 → 271277 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 271277 → 271317 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 271317 → 271333 (+16)
+[WS][SHARED][TRACE] 函数调用次数: 5501
+[WS][SHARED] ✓ 检测到seq增长: 271333 → 271381 (+48)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5503, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5504, skip=7712, 当前seq=271452 (last=271381), updated_at=1769257296.06 (last=1769257295.51)
+[WS][SHARED] ✓ 检测到seq增长: 271381 → 271452 (+71)
+[WS][SHARED] ✓ 检测到seq增长: 271452 → 271525 (+73)
+[WS][SHARED] ✓ 检测到seq增长: 271525 → 271557 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 271557 → 271621 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 271621 → 271698 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 271698 → 271781 (+83)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 55.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 271781 → 271881 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 271881 → 271958 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 271958 → 272037 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 272037 → 272082 (+45)
+[WS][SHARED] ✓ 检测到seq增长: 272082 → 272141 (+59)
+[WS][SHARED] ✓ 检测到seq增长: 272141 → 272229 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 272229 → 272302 (+73)
+[WS][SHARED] ✓ 检测到seq增长: 272302 → 272381 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 272381 → 272453 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 272453 → 272525 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 272525 → 272579 (+54)
+[WS][SHARED] ✓ 检测到seq增长: 272579 → 272645 (+66)
+[WS][SHARED] ✓ 检测到seq增长: 272645 → 272709 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 272709 → 272773 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 272773 → 272845 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 272845 → 272917 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 272917 → 273005 (+88)
+[WS][SHARED] seq=273005, updates=38 (75.2/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 273005 → 273082 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 273082 → 273181 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 273181 → 273261 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 273261 → 273357 (+96)
+[WS][SHARED] ✓ 检测到seq增长: 273357 → 273414 (+57)
+[WS][SHARED] ✓ 检测到seq增长: 273414 → 273493 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 273493 → 273525 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 273525 → 273541 (+16)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 56.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=7802): seq和updated_at都未变化且距上次tick仅4.5秒
+[WS][SHARED][SKIP] 当前状态: seq=273541, last_seq=273541, bid=0.09, ask=0.1
+[WS][SHARED] ✓ 检测到seq增长: 273541 → 273580 (+39)
+[WS][SHARED] seq=273580, updates=14 (26.2/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 273580 → 273653 (+73)
+[WS][SHARED] ✓ 检测到seq增长: 273653 → 273741 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 273741 → 273805 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 273805 → 273876 (+71)
+[WS][SHARED] ✓ 检测到seq增长: 273876 → 273949 (+73)
+[WS][SHARED] ✓ 检测到seq增长: 273949 → 274013 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 274013 → 274077 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 274077 → 274141 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 274141 → 274189 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 274189 → 274245 (+56)
+[WS][SHARED][TRACE] 函数调用次数: 5601
+[WS][SHARED] ✓ 检测到seq增长: 274245 → 274301 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 274301 → 274378 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 274378 → 274446 (+68)
+[WS][SHARED] ✓ 检测到seq增长: 274446 → 274508 (+62)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5604, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5605, skip=7812, 当前seq=274589 (last=274508), updated_at=1769257356.40 (last=1769257355.95)
+[WS][SHARED] ✓ 检测到seq增长: 274508 → 274589 (+81)
+[WS][SHARED] ✓ 检测到seq增长: 274589 → 274741 (+152)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 56.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=274741, updates=19 (34.4/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 274741 → 274773 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 274773 → 274845 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 274845 → 274917 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 274917 → 274979 (+62)
+[WS][SHARED] ✓ 检测到seq增长: 274979 → 275050 (+71)
+[WS][SHARED] ✓ 检测到seq增长: 275050 → 275109 (+59)
+[WS][SHARED] ✓ 检测到seq增长: 275109 → 275149 (+40)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 57.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 275149 → 275197 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 275197 → 275237 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 275237 → 275277 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 275277 → 275331 (+54)
+[WS][SHARED] ✓ 检测到seq增长: 275331 → 275377 (+46)
+[WS][SHARED] ✓ 检测到seq增长: 275377 → 275413 (+36)
+[WS][SHARED] ✓ 检测到seq增长: 275413 → 275461 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 275461 → 275509 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 275509 → 275549 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 275549 → 275588 (+39)
+[WS][SHARED] ✓ 检测到seq增长: 275588 → 275629 (+41)
+[WS][SHARED] ✓ 检测到seq增长: 275629 → 275647 (+18)
+[WS][SHARED] ✓ 检测到seq增长: 275647 → 275693 (+46)
+[WS][SHARED] ✓ 检测到seq增长: 275693 → 275725 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 275725 → 275773 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 275773 → 275805 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 275805 → 275853 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 275853 → 275901 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 275901 → 275941 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 275941 → 275989 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 275989 → 276029 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 276029 → 276069 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 276069 → 276109 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 276109 → 276156 (+47)
+[WS][SHARED] ✓ 检测到seq增长: 276156 → 276197 (+41)
+[WS][SHARED] ✓ 检测到seq增长: 276197 → 276236 (+39)
+[WS][SHARED] ✓ 检测到seq增长: 276236 → 276277 (+41)
+[WS][SHARED] seq=276277, updates=36 (71.9/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 276277 → 276317 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 276317 → 276357 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 276357 → 276397 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 276397 → 276445 (+48)
+[WS][SHARED][TRACE] 函数调用次数: 5701
+[WS][SHARED] ✓ 检测到seq增长: 276445 → 276477 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 276477 → 276509 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 276509 → 276557 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 276557 → 276589 (+32)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5704, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5705, skip=7914, 当前seq=276629 (last=276589), updated_at=1769257416.64 (last=1769257416.12)
+[WS][SHARED] ✓ 检测到seq增长: 276589 → 276629 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 276629 → 277389 (+760)
+[WS][SHARED] ✓ 检测到seq增长: 277389 → 277405 (+16)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 57.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 277405 → 277454 (+49)
+[WS][SHARED] ✓ 检测到seq增长: 277454 → 277557 (+103)
+[WS][SHARED] seq=277557, updates=15 (29.8/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 277557 → 277613 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 277613 → 277669 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 277669 → 277726 (+57)
+[WS][SHARED] ✓ 检测到seq增长: 277726 → 277799 (+73)
+[WS][SHARED] ✓ 检测到seq增长: 277799 → 277869 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 277869 → 277917 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 277917 → 277933 (+16)
+[WS][SHARED] ✓ 检测到seq增长: 277933 → 277941 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 277941 → 277949 (+8)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=8002): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=277949, last_seq=277949, bid=0.09, ask=0.1
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 58.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 5801
+[WS][SHARED] seq=277949, updates=14 (26.2/min), bid=0.09, ask=0.1, price=0.095
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5806, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5807, skip=8076, 当前seq=277949 (last=277949), updated_at=1769257449.00 (last=1769257449.00)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 58.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 277949 → 277981 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 277981 → 278077 (+96)
+[WS][SHARED] ✓ 检测到seq增长: 278077 → 278173 (+96)
+[WS][SHARED] ✓ 检测到seq增长: 278173 → 278253 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 278253 → 278325 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 278325 → 278405 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 278405 → 278477 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 278477 → 278557 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 278557 → 278605 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 278605 → 278693 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 278693 → 278765 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 278765 → 278821 (+56)
+[WS][SHARED] seq=278821, updates=15 (30.0/min), bid=0.09, ask=0.1, price=0.095
+[WS][SHARED] ✓ 检测到seq增长: 278821 → 278893 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 278893 → 278973 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 278973 → 279053 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 279053 → 279133 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 279133 → 279213 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 279213 → 279261 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 279261 → 279333 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 279333 → 279365 (+32)
+[WS][SHARED] ✓ 检测到seq增长: 279365 → 279373 (+8)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 59.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=8202): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=279373, last_seq=279373, bid=0.09, ask=0.1
+[WS][SHARED][TRACE] 函数调用次数: 5901
+[WS][SHARED] seq=279373, updates=14 (27.5/min), bid=0.09, ask=0.1, price=0.095
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5904, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5905, skip=8214, 当前seq=279421 (last=279373), updated_at=1769257537.01 (last=1769257509.88)
+[WS][SHARED] ✓ 检测到seq增长: 279373 → 279421 (+48)
+[WS][SHARED] ✓ 检测到seq增长: 279421 → 279445 (+24)
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 59.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 279445 → 279476 (+31)
+[WS][SHARED] ✓ 检测到seq增长: 279476 → 279536 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 279536 → 279599 (+63)
+[WS][SHARED] ✓ 检测到seq增长: 279599 → 279655 (+56)
+[WS][SHARED] ✓ 检测到seq增长: 279655 → 279697 (+42)
+[WS][SHARED] ✓ 检测到seq增长: 279697 → 279746 (+49)
+[WS][SHARED] ✓ 检测到seq增长: 279746 → 279807 (+61)
+[WS][SHARED] ✓ 检测到seq增长: 279807 → 279837 (+30)
+[WS][SHARED] seq=279837, updates=13 (24.0/min), bid=0.09, ask=0.1, price=0.095
+[PX] bid=0.0900 ask=0.1000 mid=0.0950 last=0.0950 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 600
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0950 / 低 0.0950
+    信号超时: 60.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 279837 → 279844 (+7)
+[WS][SHARED] ✓ 检测到seq增长: 279844 → 279886 (+42)
+[SIGNAL_TIMEOUT] 60.0 分钟内无交易信号，释放队列退出
+[SIGNAL_TIMEOUT] 最后信号时间: 06:26:20
+[QUEUE] 释放队列：长时间无交易信号，已退出。
+[EXIT_RECORD] 已记录退出token: 35387107368752328644... 原因: SIGNAL_TIMEOUT
+[EXIT] 最终状态: {'state': 'FLAT', 'awaiting': None, 'entry_price': None, 'sell_trigger': None, 'position_size': None, 'last_signal': None, 'last_buy_price': None, 'last_sell_price': None, 'price_history_len': 600, 'manual_stop': True, 'manual_stop_reason': 'signal timeout (no position)', 'sell_only': False, 'sell_only_reason': None, 'last_reject_reason': None, 'last_tick': {'ts': 1769257580.726, 'best_ask': 0.1, 'best_bid': 0.09}, 'drop_stats': {'window_high': 0.095, 'window_low': 0.095, 'max_drop_ratio': 0.0, 'current_drop_ratio': 0.0, 'window_seconds': 3600.0}, 'config': {'token_id': '35387107368752328644982641185985574345241154905795306214146121961491417818763', 'buy_price_threshold': None, 'profit_ratio': 0.005, 'drop_window_minutes': 60.0, 'drop_pct': 0.001, 'profit_pct': 0.005, 'max_history_points': 600, 'price_band': (0.0, 1.0), 'disable_duplicate_signal': True, 'enable_incremental_drop_pct': True, 'incremental_drop_pct_step': 0.0002, 'incremental_drop_pct_cap': 0.2, 'min_market_order_size': None}}
+[CLAIM] 未检测到需要 claim 的仓位，脚本结束。

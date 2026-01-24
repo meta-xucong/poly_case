@@ -1,0 +1,1338 @@
+[CONFIG] 使用配置文件: /home/trader/polymarket_api/POLYMARKET_MAKER_copytrade_v2/POLYMARKET_MAKER_AUTO/data/run_params_13672909524738463047194485253993469755270149698964235984703055596484122584274.json
+[INIT] API 凭证已验证。
+[INIT] ClobClient 就绪。
+[INFO] 未提供 market_url，尝试通过 token_id 获取市场元数据。
+[INFO] 市场/子问题标题: Ethereum all time high by March 31, 2026?
+[INFO] 使用 token_id: 13672909524738463047194485253993469755270149698964235984703055596484122584274
+[INFO] 市场标注时区: America/New_York
+[INFO] 市场计划截止时间 (UTC): 2026-04-01T05:00:00+00:00
+[INFO] 监控目标结束时间 (UTC): 2026-04-01T05:00:00+00:00
+[INFO] 未能识别市场价格精度，默认按盈利百分比下限 0.300% 执行。
+[INIT] 目标 token_id: 13672909524738463047194485253993469755270149698964235984703055596484122584274
+[INIT] 已读取手动份数 10.0，模式：总持仓目标。
+[INIT] 卖出挂单模式：aggressive
+[INIT] 卖出后递增买入阈值已启用，步长 0.0200%。
+[INIT] 价格停滞监控窗口 120.0 分钟，阈值 0.2000%。
+[INIT] 启动后无行情自动退出阈值 10.0 分钟。
+[INIT] 交易信号超时退出阈值 60.0 分钟（长时间无买入/卖出信号将退出）。
+[INIT] 卖出挂单空窗释放阈值 6.0 小时。
+[INFO] 倒计时卖出模式将在市场结束前 300 分钟开启。
+[WS][SHARED] ✓ 将使用共享 WS 缓存模式
+[WS][SHARED] 缓存路径: /home/trader/polymarket_api/POLYMARKET_MAKER_copytrade_v2/POLYMARKET_MAKER_AUTO/data/ws_cache.json
+[WS][SHARED] ✓ 缓存文件新鲜（2秒前更新）
+[RUN] 监听行情中… 输入 stop / exit 可手动停止。
+[WS][SHARED][TRACE] 函数调用次数: 1
+[WS][SHARED][DEBUG] 读取统计: read=1, skip=0, 当前seq=3848 (last=0), updated_at=1769249921.11 (last=0.00)
+[WS][SHARED] ✓ 检测到seq增长: 0 → 3848 (+3848)
+[WS][SHARED] 开始从共享缓存读取数据 (token=13672909524738463047194485253993469755270149698964235984703055596484122584274)
+[WS][SHARED] seq=3848, updates=1 (2.0/min), bid=0.045, ask=0.056, price=0.0505
+[WS][SHARED][TRACE] ✓ 函数执行完成，准备返回 (latest已设置: True)
+[WAIT][TRACE] _apply_shared_ws_snapshot()返回，latest已设置: True, stop_event: False
+[WAIT][TRACE] Loop iteration 1, latest: True, stop: False
+[WAIT][END] ✓ Waiting loop结束，latest已设置: True
+[WAIT][END] ✓ stop_event未设置，继续初始化...
+[INIT][TRACE] 1. 准备启动input_listener线程...
+[INIT][TRACE] 2. input_listener线程已启动
+[INIT][TRACE] 3. 准备初始化变量和策略状态...
+[INIT][TRACE] 4. 策略状态已获取
+[INIT][TRACE] 5. 检查sell_only和countdown (sell_only_start_ts=1775001600.0, market_deadline_ts=1775019600.0)
+[INIT][TRACE] 7. 启动countdown_monitor线程...
+[INIT][TRACE] 8. 所有初始化完成，准备进入主循环...
+[MAIN_LOOP] 🚀 进入主循环 (use_shared_ws=True)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2): seq和updated_at都未变化且距上次tick仅0.2秒
+[WS][SHARED][SKIP] 当前状态: seq=3848, last_seq=3848, bid=0.045, ask=0.056
+[HEARTBEAT] 主循环运行中... (use_shared_ws=True) (首次心跳)
+[PX] bid=0.0450 ask=0.0560 mid=0.0505 last=0.0505 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 1
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0505 / 低 0.0505
+    信号超时: 0.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 3848 → 3854 (+6)
+[WS][SHARED] seq=3854, updates=5 (9.9/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 6
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 0.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 3854 → 3861 (+7)
+[ACTION] 🔔 收到交易信号: type=ActionType.BUY, target_price=None
+[HINT][BUY] 目标 10.0000 - 当前仓位(未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 13672909524738463047194485253993469755270149698964235984703055596484122584274) 0.0000 -> 本次下单 10.0000
+[MAKER][BUY] 开始买入流程 -> target_size=10.0000 poll_sec=10.0s
+[DIAG][BID] latest字典中的token数据: {'price': 0.0505, 'best_bid': 0.045, 'best_ask': 0.056, 'ts': 1769249989.0764537}
+[DIAG][BID] ORDERBOOK_STALE_AFTER_SEC = 30.0
+[MAKER][BUY] 检测到市场价格精度 -> decimals=3
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 13672909524738463047194485253993469755270149698964235984703055596484122584274 当前无持仓
+[MAKER][BUY] 挂单 -> price=0.045 qty=22.2223 remaining=10.0000
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=52.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=30.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=73.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=51.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=94.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=72.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 13672909524738463047194485253993469755270149698964235984703055596484122584274 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=125.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=103.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=146.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=124.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=167.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=144.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 13672909524738463047194485253993469755270149698964235984703055596484122584274 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=197.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=175.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=219.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=196.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=239.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=217.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 13672909524738463047194485253993469755270149698964235984703055596484122584274 当前无持仓
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=272.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=249.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=292.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.045, ask=0.056 (缓存数据新鲜)
+[TRADE][BUY][MAKER] resp={'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x88c71324d854c813da01f3b1a568c90f90d0219fe1e084f77d0db3c526b63a17', 'side': 'buy', 'price': 0.045, 'size': 22.2223, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.045}]}
+[WARN] 买入未成交(status=SKIPPED_TOO_SMALL)：{'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x88c71324d854c813da01f3b1a568c90f90d0219fe1e084f77d0db3c526b63a17', 'side': 'buy', 'price': 0.045, 'size': 22.2223, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.045}]}
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=58, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=59, skip=100, 当前seq=3889 (last=3861), updated_at=1769250269.70 (last=1769249988.83)
+[WS][SHARED] ✓ 检测到seq增长: 3861 → 3889 (+28)
+[WS][SHARED] seq=3889, updates=3 (0.6/min), bid=0.045, ask=0.056, price=0.0505
+[PX] bid=0.0450 ask=0.0560 mid=0.0505 last=0.0505 | state=FLAT awaiting=BUY entry=None
+    时间窗口: 60.0m | 采样点数: 9
+    窗口跌幅: 当前 0.98% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: -0.0分钟无信号 / 阈值 60分钟
+[ACTION] 🔔 收到交易信号: type=ActionType.BUY, target_price=None
+[HINT][BUY] 目标 10.0000 - 当前仓位(未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 13672909524738463047194485253993469755270149698964235984703055596484122584274) 0.0000 -> 本次下单 10.0000
+[MAKER][BUY] 开始买入流程 -> target_size=10.0000 poll_sec=10.0s
+[DIAG][BID] 快照过期: 年龄=44.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=44.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY][DIAG] 等待有效的 bid 数据... (循环次数=1, 剩余=10.0000)
+[DIAG][BID] 快照过期: 年龄=45.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=45.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[MAKER][BUY][DIAG] WebSocket bid 不可用 (value=None)
+[MAKER][BUY][DIAG] REST API 回退也未能获取 bid，将在 10s 后重试
+[DIAG][BID] 快照过期: 年龄=55.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=55.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=65.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=65.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=75.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=75.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY][DIAG] 等待有效的 bid 数据... (循环次数=4, 剩余=10.0000)
+[DIAG][BID] 快照过期: 年龄=75.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=75.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[MAKER][BUY][DIAG] WebSocket bid 不可用 (value=None)
+[MAKER][BUY][DIAG] REST API 回退也未能获取 bid，将在 10s 后重试
+[DIAG][BID] 快照过期: 年龄=85.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=85.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=96.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=96.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=106.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=106.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY][DIAG] 等待有效的 bid 数据... (循环次数=7, 剩余=10.0000)
+[DIAG][BID] 快照过期: 年龄=106.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=106.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[MAKER][BUY][DIAG] WebSocket bid 不可用 (value=None)
+[MAKER][BUY][DIAG] REST API 回退也未能获取 bid，将在 10s 后重试
+[DIAG][BID] 快照过期: 年龄=116.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=116.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=127.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=126.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=137.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=137.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY][DIAG] 等待有效的 bid 数据... (循环次数=10, 剩余=10.0000)
+[DIAG][BID] 快照过期: 年龄=137.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=137.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[MAKER][BUY][DIAG] WebSocket bid 不可用 (value=None)
+[MAKER][BUY][DIAG] REST API 回退也未能获取 bid，将在 10s 后重试
+[DIAG][BID] 快照过期: 年龄=147.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=147.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=157.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=157.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=168.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=168.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY][DIAG] 等待有效的 bid 数据... (循环次数=13, 剩余=10.0000)
+[DIAG][BID] 快照过期: 年龄=168.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=168.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[MAKER][BUY][DIAG] WebSocket bid 不可用 (value=None)
+[MAKER][BUY][DIAG] REST API 回退也未能获取 bid，将在 10s 后重试
+[DIAG][BID] 快照过期: 年龄=178.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=178.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=188.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=188.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=199.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=199.0s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY][DIAG] 等待有效的 bid 数据... (循环次数=16, 剩余=10.0000)
+[DIAG][BID] 快照过期: 年龄=199.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=199.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[MAKER][BUY][DIAG] WebSocket bid 不可用 (value=None)
+[MAKER][BUY][DIAG] REST API 回退也未能获取 bid，将在 10s 后重试
+[DIAG][BID] 快照过期: 年龄=209.3s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=209.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=219.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=219.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=229.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=229.8s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY][DIAG] 等待有效的 bid 数据... (循环次数=19, 剩余=10.0000)
+[DIAG][BID] 快照过期: 年龄=230.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=230.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[MAKER][BUY][DIAG] WebSocket bid 不可用 (value=None)
+[MAKER][BUY][DIAG] REST API 回退也未能获取 bid，将在 10s 后重试
+[DIAG][BID] 快照过期: 年龄=240.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=240.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=250.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=250.3s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=260.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=260.6s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY][DIAG] 等待有效的 bid 数据... (循环次数=22, 剩余=10.0000)
+[DIAG][BID] 快照过期: 年龄=260.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=260.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[MAKER][BUY][DIAG] WebSocket bid 不可用 (value=None)
+[MAKER][BUY][DIAG] REST API 回退也未能获取 bid，将在 10s 后重试
+[DIAG][BID] 快照过期: 年龄=270.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=270.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=281.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=281.1s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=291.4s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=291.4s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY][DIAG] 等待有效的 bid 数据... (循环次数=25, 剩余=10.0000)
+[DIAG][BID] 快照过期: 年龄=291.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=291.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[MAKER][BUY][DIAG] WebSocket bid 不可用 (value=None)
+[MAKER][BUY][DIAG] REST API 回退也未能获取 bid，将在 10s 后重试
+[DIAG][BID] 快照过期: 年龄=301.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=301.7s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=311.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=311.9s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=322.2s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=322.2s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[MAKER][BUY][DIAG] 等待有效的 bid 数据... (循环次数=28, 剩余=10.0000)
+[DIAG][BID] 快照过期: 年龄=322.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=322.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[MAKER][BUY][DIAG] WebSocket bid 不可用 (value=None)
+[MAKER][BUY][DIAG] REST API 回退也未能获取 bid，将在 10s 后重试
+[DIAG][BID] 快照过期: 年龄=332.5s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✗ 缓存数据过期: 年龄=332.5s > 阈值=30.0s
+[DIAG][BID] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket bid 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 bid 价格，尝试了 1 个方法: get_order_book
+[DIAG][BID] 快照过期: 年龄=342.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.045, ask=0.057 (缓存数据新鲜)
+[MAKER][BUY] 检测到市场价格精度 -> decimals=3
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER 中找到 token 13672909524738463047194485253993469755270149698964235984703055596484122584274 当前无持仓
+[MAKER][BUY] 挂单 -> price=0.045 qty=22.2223 remaining=10.0000
+[MAKER][BUY] 挂单状态 -> price=0.045 filled=0.0000 remaining=22.2223 status=LIVE
+[DIAG][BID] 快照过期: 年龄=31.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.045, ask=0.057 (缓存数据新鲜)
+[TRADE][BUY][MAKER] resp={'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x1514322d0313539535ca490e4d7c7f5af5ca657ccc6f2326f729156d5e882ab0', 'side': 'buy', 'price': 0.045, 'size': 22.2223, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.045}]}
+[WARN] 买入未成交(status=SKIPPED_TOO_SMALL)：{'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x1514322d0313539535ca490e4d7c7f5af5ca657ccc6f2326f729156d5e882ab0', 'side': 'buy', 'price': 0.045, 'size': 22.2223, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.045}]}
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=59, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=60, skip=100, 当前seq=3902 (last=3889), updated_at=1769250631.73 (last=1769250269.70)
+[WS][SHARED] ✓ 检测到seq增长: 3889 → 3902 (+13)
+[WS][SHARED] seq=3902, updates=1 (0.2/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 10
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 6.2分钟无信号 / 阈值 60分钟
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 14
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 6.8分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 101
+[WS][SHARED] seq=3903, updates=5 (9.5/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=202): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=3903, last_seq=3903, bid=0.045, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=157, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=158, skip=274, 当前seq=3903 (last=3903), updated_at=1769250656.89 (last=1769250656.89)
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 20
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 7.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=3903, updates=6 (9.3/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 25
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 7.8分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 201
+[WS][SHARED] seq=3903, updates=6 (12.0/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=402): seq和updated_at都未变化且距上次tick仅4.5秒
+[WS][SHARED][SKIP] 当前状态: seq=3903, last_seq=3903, bid=0.045, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=258, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=259, skip=456, 当前seq=3903 (last=3903), updated_at=1769250656.89 (last=1769250656.89)
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 31
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 8.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=3903, updates=6 (10.3/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 36
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 8.8分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 301
+[WS][SHARED] seq=3903, updates=6 (12.0/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=602): seq和updated_at都未变化且距上次tick仅0.5秒
+[WS][SHARED][SKIP] 当前状态: seq=3903, last_seq=3903, bid=0.045, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=359, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=360, skip=636, 当前seq=3903 (last=3903), updated_at=1769250656.89 (last=1769250656.89)
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 42
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 9.3分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=3903, updates=5 (9.8/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[WS][SHARED][TRACE] 函数调用次数: 401
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 47
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 9.8分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=3903, updates=6 (12.0/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=802): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=3903, last_seq=3903, bid=0.045, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=459, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=460, skip=814, 当前seq=3903 (last=3903), updated_at=1769250656.89 (last=1769250656.89)
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 53
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 10.4分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 3903 → 3913 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 3913 → 3923 (+10)
+[WS][SHARED] seq=3923, updates=6 (10.3/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[WS][SHARED][TRACE] 函数调用次数: 501
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 60
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 10.9分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=3923, updates=6 (12.0/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=560, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=561, skip=994, 当前seq=3923 (last=3923), updated_at=1769250912.82 (last=1769250912.82)
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 65
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 11.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1002): seq和updated_at都未变化且距上次tick仅2.0秒
+[WS][SHARED][SKIP] 当前状态: seq=3923, last_seq=3923, bid=0.045, ask=0.057
+[WS][SHARED] seq=3923, updates=5 (9.6/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[WS][SHARED][TRACE] 函数调用次数: 601
+[WS][SHARED] ✓ 检测到seq增长: 3923 → 3933 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 3933 → 3943 (+10)
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 71
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 12.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 3943 → 3963 (+20)
+[WS][SHARED] seq=3963, updates=8 (13.9/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=659, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=660, skip=1168, 当前seq=3963 (last=3963), updated_at=1769251003.70 (last=1769251003.70)
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 76
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 12.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1202): seq和updated_at都未变化且距上次tick仅3.5秒
+[WS][SHARED][SKIP] 当前状态: seq=3963, last_seq=3963, bid=0.045, ask=0.057
+[WS][SHARED] ✓ 检测到seq增长: 3963 → 3973 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 3973 → 3983 (+10)
+[WS][SHARED] seq=3983, updates=6 (11.5/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[WS][SHARED][TRACE] 函数调用次数: 701
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 83
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 13.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=3983, updates=6 (12.0/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=760, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=761, skip=1346, 当前seq=3983 (last=3983), updated_at=1769251039.59 (last=1769251039.59)
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 88
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 13.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1402): seq和updated_at都未变化且距上次tick仅4.5秒
+[WS][SHARED][SKIP] 当前状态: seq=3983, last_seq=3983, bid=0.045, ask=0.057
+[WS][SHARED][TRACE] 函数调用次数: 801
+[WS][SHARED] seq=3983, updates=5 (8.9/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 94
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 14.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 3983 → 3993 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 3993 → 4003 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 4003 → 4013 (+10)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=861, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=862, skip=1524, 当前seq=4013 (last=4013), updated_at=1769251133.84 (last=1769251133.84)
+[WS][SHARED] seq=4013, updates=8 (16.0/min), bid=0.045, ask=0.057, price=0.051000000000000004
+[PX] bid=0.0450 ask=0.0570 mid=0.0510 last=0.0510 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 101
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0510 / 低 0.0505
+    信号超时: 14.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 901
+[WS][SHARED] ✓ 检测到seq增长: 4013 → 4023 (+10)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1602): seq和updated_at都未变化且距上次tick仅2.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4023, last_seq=4023, bid=0.045, ask=0.057
+[WS][SHARED] ✓ 检测到seq增长: 4023 → 4033 (+10)
+[WS][SHARED] seq=4033, updates=6 (11.1/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 107
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 15.0分钟无信号 / 阈值 60分钟
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=962, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=963, skip=1702, 当前seq=4033 (last=4033), updated_at=1769251170.95 (last=1769251170.95)
+[WS][SHARED] seq=4033, updates=6 (9.4/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 112
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 15.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 4033 → 4043 (+10)
+[WS][SHARED][TRACE] 函数调用次数: 1001
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=1802): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4043, last_seq=4043, bid=0.046, ask=0.057
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 118
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 16.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4043, updates=7 (13.3/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1063, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1064, skip=1882, 当前seq=4043 (last=4043), updated_at=1769251221.13 (last=1769251221.13)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 123
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 16.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4043, updates=5 (9.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 1101
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 129
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 17.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2002): seq和updated_at都未变化且距上次tick仅2.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4043, last_seq=4043, bid=0.046, ask=0.057
+[WS][SHARED] seq=4043, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED] ✓ 检测到seq增长: 4043 → 4057 (+14)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1165, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1166, skip=2064, 当前seq=4057 (last=4057), updated_at=1769251319.43 (last=1769251319.43)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 134
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 17.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4057, updates=5 (9.6/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 1201
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 140
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 18.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4057, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2202): seq和updated_at都未变化且距上次tick仅2.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4057, last_seq=4057, bid=0.046, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1265, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1266, skip=2244, 当前seq=4057 (last=4057), updated_at=1769251319.43 (last=1769251319.43)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 144
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 18.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4057, updates=5 (8.8/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 1301
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 150
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 19.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4057, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2402): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4057, last_seq=4057, bid=0.046, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1367, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1368, skip=2426, 当前seq=4057 (last=4057), updated_at=1769251319.43 (last=1769251319.43)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 155
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 19.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4057, updates=5 (9.6/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 1401
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 161
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 20.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4057, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2602): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4057, last_seq=4057, bid=0.046, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1467, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1468, skip=2606, 当前seq=4057 (last=4057), updated_at=1769251319.43 (last=1769251319.43)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 165
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 20.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4057, updates=4 (7.7/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 1501
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 171
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 21.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4057, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1565, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1566, skip=2782, 当前seq=4057 (last=4057), updated_at=1769251319.43 (last=1769251319.43)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 175
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 21.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2802): seq和updated_at都未变化且距上次tick仅4.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4057, last_seq=4057, bid=0.046, ask=0.057
+[WS][SHARED] seq=4057, updates=5 (8.7/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 1601
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 181
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 22.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4057, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1664, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1665, skip=2960, 当前seq=4057 (last=4057), updated_at=1769251319.43 (last=1769251319.43)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 185
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 22.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=3002): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4057, last_seq=4057, bid=0.046, ask=0.057
+[WS][SHARED] seq=4057, updates=4 (7.9/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 1701
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 191
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 23.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4057, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1763, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1764, skip=3138, 当前seq=4057 (last=4057), updated_at=1769251319.43 (last=1769251319.43)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 195
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 23.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=3202): seq和updated_at都未变化且距上次tick仅2.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4057, last_seq=4057, bid=0.046, ask=0.057
+[WS][SHARED][TRACE] 函数调用次数: 1801
+[WS][SHARED] seq=4057, updates=5 (8.6/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 201
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 24.0分钟无信号 / 阈值 60分钟
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1863, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1864, skip=3318, 当前seq=4057 (last=4057), updated_at=1769251319.43 (last=1769251319.43)
+[WS][SHARED] ✓ 检测到seq增长: 4057 → 4066 (+9)
+[WS][SHARED] seq=4066, updates=6 (8.9/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 205
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 24.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 1901
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=3402): seq和updated_at都未变化且距上次tick仅2.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4066, last_seq=4066, bid=0.046, ask=0.057
+[WS][SHARED] seq=4066, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 211
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 25.0分钟无信号 / 阈值 60分钟
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=1962, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=1963, skip=3496, 当前seq=4066 (last=4066), updated_at=1769251748.04 (last=1769251748.04)
+[WS][SHARED] seq=4066, updates=4 (7.6/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 215
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 25.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 2001
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=3602): seq和updated_at都未变化且距上次tick仅3.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4066, last_seq=4066, bid=0.046, ask=0.057
+[WS][SHARED] seq=4066, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 221
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 26.0分钟无信号 / 阈值 60分钟
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2059, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2060, skip=3670, 当前seq=4066 (last=4066), updated_at=1769251748.04 (last=1769251748.04)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 225
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 26.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4066, updates=5 (8.9/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 2101
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 231
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 27.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4066, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=3802): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4066, last_seq=4066, bid=0.046, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2159, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2160, skip=3850, 当前seq=4066 (last=4066), updated_at=1769251748.04 (last=1769251748.04)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 235
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 27.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4066, updates=5 (8.6/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 2201
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 241
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 28.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4066, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=4002): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4066, last_seq=4066, bid=0.046, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2260, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2261, skip=4032, 当前seq=4066 (last=4066), updated_at=1769251748.04 (last=1769251748.04)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 246
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 28.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4066, updates=5 (10.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 2301
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 252
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 29.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4066, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=4202): seq和updated_at都未变化且距上次tick仅2.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4066, last_seq=4066, bid=0.046, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2361, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2362, skip=4212, 当前seq=4066 (last=4066), updated_at=1769251748.04 (last=1769251748.04)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 257
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 29.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4066, updates=5 (9.6/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 2401
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 263
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 30.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4066, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2460, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2461, skip=4388, 当前seq=4066 (last=4066), updated_at=1769251748.04 (last=1769251748.04)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 267
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 30.6分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=4402): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4066, last_seq=4066, bid=0.046, ask=0.057
+[WS][SHARED] seq=4066, updates=4 (7.8/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 2501
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 273
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 31.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4066, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2558, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2559, skip=4564, 当前seq=4066 (last=4066), updated_at=1769251748.04 (last=1769251748.04)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 277
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 31.6分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=4602): seq和updated_at都未变化且距上次tick仅4.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4066, last_seq=4066, bid=0.046, ask=0.057
+[WS][SHARED] seq=4066, updates=5 (8.9/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 2601
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 283
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 32.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4066, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2659, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2660, skip=4746, 当前seq=4066 (last=4066), updated_at=1769251748.04 (last=1769251748.04)
+[WS][SHARED] ✓ 检测到seq增长: 4066 → 4093 (+27)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 288
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 32.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4093, updates=5 (9.6/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=4802): seq和updated_at都未变化且距上次tick仅0.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4093, last_seq=4093, bid=0.046, ask=0.057
+[WS][SHARED][TRACE] 函数调用次数: 2701
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 294
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 33.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4093, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2758, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2759, skip=4922, 当前seq=4093 (last=4093), updated_at=1769252231.88 (last=1769252231.88)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 298
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 33.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4093, updates=4 (7.9/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 2801
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=5002): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4093, last_seq=4093, bid=0.046, ask=0.057
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 304
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 34.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4093, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2857, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2858, skip=5100, 当前seq=4093 (last=4093), updated_at=1769252231.88 (last=1769252231.88)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 308
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 34.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 4093 → 4120 (+27)
+[WS][SHARED] seq=4120, updates=5 (9.6/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 2901
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=5202): seq和updated_at都未变化且距上次tick仅2.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4120, last_seq=4120, bid=0.046, ask=0.057
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 315
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 35.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4120, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=2956, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=2957, skip=5276, 当前seq=4120 (last=4120), updated_at=1769252364.82 (last=1769252364.82)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 319
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 35.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4120, updates=5 (8.7/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 3001
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 325
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 36.1分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=5402): seq和updated_at都未变化且距上次tick仅4.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4120, last_seq=4120, bid=0.046, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3055, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3056, skip=5454, 当前seq=4120 (last=4120), updated_at=1769252364.82 (last=1769252364.82)
+[WS][SHARED] seq=4120, updates=6 (9.1/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 329
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 36.6分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 3101
+[WS][SHARED] seq=4120, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 335
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 37.1分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=5602): seq和updated_at都未变化且距上次tick仅0.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4120, last_seq=4120, bid=0.046, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3155, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3156, skip=5634, 当前seq=4120 (last=4120), updated_at=1769252364.82 (last=1769252364.82)
+[WS][SHARED] seq=4120, updates=4 (7.9/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 339
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 37.6分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 3201
+[WS][SHARED] seq=4120, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 345
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 38.1分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=5802): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4120, last_seq=4120, bid=0.046, ask=0.057
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3255, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3256, skip=5814, 当前seq=4120 (last=4120), updated_at=1769252364.82 (last=1769252364.82)
+[WS][SHARED] seq=4120, updates=4 (8.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 349
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 38.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 4120 → 4148 (+28)
+[WS][SHARED] ✓ 检测到seq增长: 4148 → 4162 (+14)
+[WS][SHARED][TRACE] 函数调用次数: 3301
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 356
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 39.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4162, updates=8 (14.3/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3355, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3356, skip=5990, 当前seq=4162 (last=4162), updated_at=1769252609.78 (last=1769252609.78)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 361
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 39.6分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=6002): seq和updated_at都未变化且距上次tick仅2.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4162, last_seq=4162, bid=0.046, ask=0.057
+[WS][SHARED] ✓ 检测到seq增长: 4162 → 4172 (+10)
+[WS][SHARED] seq=4172, updates=5 (9.7/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED] ✓ 检测到seq增长: 4172 → 4182 (+10)
+[WS][SHARED][TRACE] 函数调用次数: 3401
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 368
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 40.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4182, updates=7 (13.7/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED] ✓ 检测到seq增长: 4182 → 4192 (+10)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3455, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3456, skip=6166, 当前seq=4192 (last=4192), updated_at=1769252699.23 (last=1769252699.23)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 373
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 40.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4192, updates=5 (9.8/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=6202): seq和updated_at都未变化且距上次tick仅4.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4192, last_seq=4192, bid=0.046, ask=0.057
+[WS][SHARED][TRACE] 函数调用次数: 3501
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 379
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 41.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4192, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3554, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3555, skip=6344, 当前seq=4192 (last=4192), updated_at=1769252699.23 (last=1769252699.23)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 383
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 41.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4192, updates=4 (7.9/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED] ✓ 检测到seq增长: 4192 → 4202 (+10)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=6402): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4202, last_seq=4202, bid=0.046, ask=0.057
+[WS][SHARED] ✓ 检测到seq增长: 4202 → 4212 (+10)
+[WS][SHARED][TRACE] 函数调用次数: 3601
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 390
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 42.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=7 (13.3/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3653, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3654, skip=6520, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 394
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 42.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=5 (8.9/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=6602): seq和updated_at都未变化且距上次tick仅2.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4212, last_seq=4212, bid=0.046, ask=0.057
+[WS][SHARED][TRACE] 函数调用次数: 3701
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 400
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 43.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3752, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3753, skip=6698, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 404
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 43.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=5 (8.7/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 3801
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=6802): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4212, last_seq=4212, bid=0.046, ask=0.057
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 410
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 44.1分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3853, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3854, skip=6880, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 415
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 44.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=5 (9.8/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 3901
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 421
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 45.1分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=7002): seq和updated_at都未变化且距上次tick仅3.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4212, last_seq=4212, bid=0.046, ask=0.057
+[WS][SHARED] seq=4212, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=3953, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=3954, skip=7058, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 425
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 45.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=4 (8.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 4001
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 431
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 46.1分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=7202): seq和updated_at都未变化且距上次tick仅4.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4212, last_seq=4212, bid=0.046, ask=0.057
+[WS][SHARED] seq=4212, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4053, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4054, skip=7238, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 435
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 46.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=4 (7.8/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 4101
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 441
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 47.1分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=7402): seq和updated_at都未变化且距上次tick仅4.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4212, last_seq=4212, bid=0.046, ask=0.057
+[WS][SHARED] seq=4212, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4152, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4153, skip=7416, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 445
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 47.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=5 (8.6/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 4201
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 451
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 48.1分钟无信号 / 阈值 60分钟
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4252, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4253, skip=7596, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[WS][SHARED] seq=4212, updates=6 (9.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=7602): seq和updated_at都未变化且距上次tick仅1.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4212, last_seq=4212, bid=0.046, ask=0.057
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 455
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 48.6分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 4301
+[WS][SHARED] seq=4212, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 461
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 49.1分钟无信号 / 阈值 60分钟
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4352, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4353, skip=7776, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[WS][SHARED] seq=4212, updates=4 (8.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 465
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 49.6分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=7802): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4212, last_seq=4212, bid=0.046, ask=0.057
+[WS][SHARED][TRACE] 函数调用次数: 4401
+[WS][SHARED] seq=4212, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 471
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 50.1分钟无信号 / 阈值 60分钟
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4452, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4453, skip=7956, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 475
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 50.6分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=5 (8.6/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=8002): seq和updated_at都未变化且距上次tick仅2.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4212, last_seq=4212, bid=0.046, ask=0.057
+[WS][SHARED][TRACE] 函数调用次数: 4501
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 481
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 51.2分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4553, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4554, skip=8138, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 486
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 51.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=5 (9.7/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=8202): seq和updated_at都未变化且距上次tick仅2.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4212, last_seq=4212, bid=0.046, ask=0.057
+[WS][SHARED][TRACE] 函数调用次数: 4601
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 492
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 52.2分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4652, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4653, skip=8314, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 496
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 52.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=4 (7.9/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 4701
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=8402): seq和updated_at都未变化且距上次tick仅3.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4212, last_seq=4212, bid=0.046, ask=0.057
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 502
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 53.2分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4750, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4751, skip=8490, 当前seq=4212 (last=4212), updated_at=1769252793.91 (last=1769252793.91)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 506
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 53.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=5 (8.6/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 4801
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=8602): seq和updated_at都未变化且距上次tick仅0.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4212, last_seq=4212, bid=0.046, ask=0.057
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 512
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 54.2分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4212, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4849, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4850, skip=8666, 当前seq=4213 (last=4213), updated_at=1769253543.39 (last=1769253543.39)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 516
+    窗口跌幅: 当前 0.00% / 最大 0.98% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 54.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4214, updates=6 (11.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 4901
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 517
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 55.2分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=8802): seq和updated_at都未变化且距上次tick仅4.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4214, last_seq=4214, bid=0.046, ask=0.057
+[WS][SHARED] seq=4214, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=4949, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=4950, skip=8844, 当前seq=4214 (last=4214), updated_at=1769253572.02 (last=1769253572.02)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 521
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 55.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4214, updates=5 (9.2/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 5001
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 527
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 56.2分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=9002): seq和updated_at都未变化且距上次tick仅3.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4214, last_seq=4214, bid=0.046, ask=0.057
+[WS][SHARED] seq=4214, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5048, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5049, skip=9022, 当前seq=4214 (last=4214), updated_at=1769253572.02 (last=1769253572.02)
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 531
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 56.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4214, updates=4 (8.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 5101
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 537
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 57.2分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4214, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5147, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5148, skip=9200, 当前seq=4214 (last=4214), updated_at=1769253572.02 (last=1769253572.02)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=9202): seq和updated_at都未变化且距上次tick仅4.0秒
+[WS][SHARED][SKIP] 当前状态: seq=4214, last_seq=4214, bid=0.046, ask=0.057
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 541
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 57.7分钟无信号 / 阈值 60分钟
+[WS][SHARED] seq=4214, updates=5 (8.8/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 5201
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 547
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 58.2分钟无信号 / 阈值 60分钟
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5248, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5249, skip=9382, 当前seq=4214 (last=4214), updated_at=1769253572.02 (last=1769253572.02)
+[WS][SHARED] seq=4214, updates=6 (12.0/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 552
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 58.7分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=9402): seq和updated_at都未变化且距上次tick仅0.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4214, last_seq=4214, bid=0.046, ask=0.057
+[WS][SHARED] seq=4214, updates=5 (9.7/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[WS][SHARED][TRACE] 函数调用次数: 5301
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 558
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 59.2分钟无信号 / 阈值 60分钟
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=5347, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=5348, skip=9558, 当前seq=4214 (last=4214), updated_at=1769253572.02 (last=1769253572.02)
+[WS][SHARED] ✓ 检测到seq增长: 4214 → 4216 (+2)
+[WS][SHARED] seq=4216, updates=6 (8.9/min), bid=0.046, ask=0.057, price=0.051500000000000004
+[PX] bid=0.0460 ask=0.0570 mid=0.0515 last=0.0515 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 561
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0515 / 低 0.0505
+    信号超时: 59.7分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=9602): seq和updated_at都未变化且距上次tick仅1.5秒
+[WS][SHARED][SKIP] 当前状态: seq=4216, last_seq=4216, bid=0.046, ask=0.057
+[SIGNAL_TIMEOUT] 60.0 分钟内无交易信号，释放队列退出
+[SIGNAL_TIMEOUT] 最后信号时间: 05:24:41
+[QUEUE] 释放队列：长时间无交易信号，已退出。
+[EXIT_RECORD] 已记录退出token: 13672909524738463047... 原因: SIGNAL_TIMEOUT
+[EXIT] 最终状态: {'state': 'FLAT', 'awaiting': None, 'entry_price': None, 'sell_trigger': None, 'position_size': None, 'last_signal': <ActionType.BUY: 'BUY'>, 'last_buy_price': None, 'last_sell_price': None, 'price_history_len': 565, 'manual_stop': True, 'manual_stop_reason': 'signal timeout (no position)', 'sell_only': False, 'sell_only_reason': None, 'last_reject_reason': "{'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x1514322d0313539535ca490e4d7c7f5af5ca657ccc6f2326f729156d5e882ab0', 'side': 'buy', 'price': 0.045, 'size': 22.2223, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.045}]}", 'last_tick': {'ts': 1769253857.894, 'best_ask': 0.057, 'best_bid': 0.046}, 'drop_stats': {'window_high': 0.051500000000000004, 'window_low': 0.0505, 'max_drop_ratio': 0.0, 'current_drop_ratio': 0.0, 'window_seconds': 3600.0}, 'config': {'token_id': '13672909524738463047194485253993469755270149698964235984703055596484122584274', 'buy_price_threshold': None, 'profit_ratio': 0.005, 'drop_window_minutes': 60.0, 'drop_pct': 0.001, 'profit_pct': 0.005, 'max_history_points': 600, 'price_band': (0.0, 1.0), 'disable_duplicate_signal': True, 'enable_incremental_drop_pct': True, 'incremental_drop_pct_step': 0.0002, 'incremental_drop_pct_cap': 0.2, 'min_market_order_size': None}}
+[CLAIM] 未检测到需要 claim 的仓位，脚本结束。

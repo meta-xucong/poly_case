@@ -1,0 +1,1968 @@
+[CONFIG] 使用配置文件: /home/trader/polymarket_api/POLYMARKET_MAKER_copytrade_v2/POLYMARKET_MAKER_AUTO/data/run_params_112746945158746257741635529019662641558199388176511485763810876768315276888838.json
+[INIT] API 凭证已验证。
+[INIT] ClobClient 就绪。
+[INFO] 未提供 market_url，尝试通过 token_id 获取市场元数据。
+[INFO] 市场/子问题标题: Will Diosdado Cabello Rondón be the leader of Venezuela end of 2026?
+[INFO] 使用 token_id: 112746945158746257741635529019662641558199388176511485763810876768315276888838
+[INFO] 市场标注时区: America/New_York
+[INFO] 市场计划截止时间 (UTC): 2026-12-31T00:00:00+00:00
+[WARN] 自动获取的截止日期缺少具体时刻，已按默认配置设置截止时间为 2026-12-31T23:59:00-05:00 (America/New_York)。
+[INFO] 监控目标结束时间 (UTC): 2027-01-01T04:59:00+00:00
+[INFO] 未能识别市场价格精度，默认按盈利百分比下限 0.300% 执行。
+[INIT] 目标 token_id: 112746945158746257741635529019662641558199388176511485763810876768315276888838
+[INIT] 已读取手动份数 10.0，模式：总持仓目标。
+[INIT] 卖出挂单模式：aggressive
+[INIT] 卖出后递增买入阈值已启用，步长 0.0200%。
+[INIT] 价格停滞监控窗口 120.0 分钟，阈值 0.2000%。
+[INIT] 启动后无行情自动退出阈值 10.0 分钟。
+[INIT] 交易信号超时退出阈值 60.0 分钟（长时间无买入/卖出信号将退出）。
+[INIT] 卖出挂单空窗释放阈值 6.0 小时。
+[INFO] 倒计时卖出模式将在市场结束前 300 分钟开启。
+[WS][SHARED] ✓ 将使用共享 WS 缓存模式
+[WS][SHARED] 缓存路径: /home/trader/polymarket_api/POLYMARKET_MAKER_copytrade_v2/POLYMARKET_MAKER_AUTO/data/ws_cache.json
+[WS][SHARED] ✓ 缓存文件新鲜（2秒前更新）
+[RUN] 监听行情中… 输入 stop / exit 可手动停止。
+[WS][SHARED][TRACE] 函数调用次数: 1
+[WS][SHARED][DEBUG] 读取统计: read=1, skip=0, 当前seq=274834 (last=0), updated_at=1769244731.70 (last=0.00)
+[WS][SHARED] ✓ 检测到seq增长: 0 → 274834 (+274834)
+[WS][SHARED] 开始从共享缓存读取数据 (token=112746945158746257741635529019662641558199388176511485763810876768315276888838)
+[WS][SHARED] seq=274834, updates=1 (2.0/min), bid=0.029, ask=0.03, price=0.0295
+[WS][SHARED][TRACE] ✓ 函数执行完成，准备返回 (latest已设置: True)
+[WAIT][TRACE] _apply_shared_ws_snapshot()返回，latest已设置: True, stop_event: False
+[WAIT][TRACE] Loop iteration 1, latest: True, stop: False
+[WAIT][END] ✓ Waiting loop结束，latest已设置: True
+[WAIT][END] ✓ stop_event未设置，继续初始化...
+[INIT][TRACE] 1. 准备启动input_listener线程...
+[INIT][TRACE] 2. input_listener线程已启动
+[INIT][TRACE] 3. 准备初始化变量和策略状态...
+[INIT][TRACE] 4. 策略状态已获取
+[INIT][TRACE] 5. 检查sell_only和countdown (sell_only_start_ts=1798761540.0, market_deadline_ts=1798779540.0)
+[INIT][TRACE] 7. 启动countdown_monitor线程...
+[INIT][TRACE] 8. 所有初始化完成，准备进入主循环...
+[MAIN_LOOP] 🚀 进入主循环 (use_shared_ws=True)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=2): seq和updated_at都未变化且距上次tick仅0.2秒
+[WS][SHARED][SKIP] 当前状态: seq=274834, last_seq=274834, bid=0.029, ask=0.03
+[HEARTBEAT] 主循环运行中... (use_shared_ws=True) (首次心跳)
+[PX] bid=0.0290 ask=0.0300 mid=0.0295 last=0.0295 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 1
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0295 / 低 0.0295
+    信号超时: 0.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 274834 → 275194 (+360)
+[WS][SHARED] ✓ 检测到seq增长: 275194 → 275202 (+8)
+[WS][SHARED] ✓ 检测到seq增长: 275202 → 275284 (+82)
+[WS][SHARED] ✓ 检测到seq增长: 275284 → 275354 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 275354 → 275444 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 275444 → 275514 (+70)
+[WS][SHARED] seq=275514, updates=9 (17.8/min), bid=0.029, ask=0.03, price=0.0295
+[PX] bid=0.0290 ask=0.0300 mid=0.0295 last=0.0295 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 10
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0295 / 低 0.0295
+    信号超时: 0.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 275514 → 275614 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 275614 → 275674 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 275674 → 275784 (+110)
+[WS][SHARED] ✓ 检测到seq增长: 275784 → 275863 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 275863 → 275904 (+41)
+[WS][SHARED] ✓ 检测到seq增长: 275904 → 275984 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 275984 → 276044 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 276044 → 276134 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 276134 → 276174 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 276174 → 276194 (+20)
+[WS][SHARED] ✓ 检测到seq增长: 276194 → 276225 (+31)
+[WS][SHARED] ✓ 检测到seq增长: 276225 → 276304 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 276304 → 276314 (+10)
+[WS][SHARED] ✓ 检测到seq增长: 276314 → 276334 (+20)
+[WS][SHARED] ✓ 检测到seq增长: 276334 → 276364 (+30)
+[WS][SHARED] ✓ 检测到seq增长: 276364 → 276425 (+61)
+[WS][SHARED] ✓ 检测到seq增长: 276425 → 276494 (+69)
+[WS][SHARED] ✓ 检测到seq增长: 276494 → 276544 (+50)
+[WS][SHARED] ✓ 检测到seq增长: 276544 → 276643 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 276643 → 276693 (+50)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=100, use_shared_ws=True)
+[WS][SHARED][TRACE] 函数调用次数: 101
+[WS][SHARED][DEBUG] 读取统计: read=101, skip=134, 当前seq=276740 (last=276693), updated_at=1769244809.88 (last=1769244809.34)
+[WS][SHARED] ✓ 检测到seq增长: 276693 → 276740 (+47)
+[WS][SHARED] seq=276740, updates=24 (47.9/min), bid=0.029, ask=0.03, price=0.0295
+[PX] bid=0.0290 ask=0.0300 mid=0.0295 last=0.0295 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 34
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0295 / 低 0.0295
+    信号超时: 1.0分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 276740 → 276954 (+214)
+[WS][SHARED] ✓ 检测到seq增长: 276954 → 277004 (+50)
+[WS][SHARED] ✓ 检测到seq增长: 277004 → 277054 (+50)
+[PX] bid=0.0290 ask=0.0300 mid=0.0295 last=0.0295 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 40
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0295 / 低 0.0295
+    信号超时: 1.5分钟无信号 / 阈值 60分钟
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=202): seq和updated_at都未变化且距上次tick仅3.5秒
+[WS][SHARED][SKIP] 当前状态: seq=277054, last_seq=277054, bid=0.029, ask=0.03
+[WS][SHARED] seq=277054, updates=7 (13.1/min), bid=0.029, ask=0.03, price=0.0295
+[WS][SHARED] ✓ 检测到seq增长: 277054 → 277144 (+90)
+[WS][SHARED] ✓ 检测到seq增长: 277144 → 277224 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 277224 → 277274 (+50)
+[WS][SHARED] ✓ 检测到seq增长: 277274 → 277354 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 277354 → 277433 (+79)
+[WS][SHARED] ✓ 检测到seq增长: 277433 → 277504 (+71)
+[WS][SHARED] ✓ 检测到seq增长: 277504 → 277564 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 277564 → 277634 (+70)
+[WS][SHARED] ✓ 检测到seq增长: 277634 → 277698 (+64)
+[WS][SHARED] ✓ 检测到seq增长: 277698 → 277794 (+96)
+[WS][SHARED] ✓ 检测到seq增长: 277794 → 277874 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 277874 → 277974 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 277974 → 278034 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 278034 → 278084 (+50)
+[WS][SHARED] ✓ 检测到seq增长: 278084 → 278144 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 278144 → 278184 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 278184 → 278244 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 278244 → 278284 (+40)
+[WS][SHARED] ✓ 检测到seq增长: 278284 → 278364 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 278364 → 278413 (+49)
+[WS][SHARED] ✓ 检测到seq增长: 278413 → 278474 (+61)
+[WS][SHARED] ✓ 检测到seq增长: 278474 → 278534 (+60)
+[WS][SHARED] ✓ 检测到seq增长: 278534 → 278603 (+69)
+[WS][SHARED] ✓ 检测到seq增长: 278603 → 278664 (+61)
+[WS][SHARED] ✓ 检测到seq增长: 278664 → 278744 (+80)
+[WS][SHARED] ✓ 检测到seq增长: 278744 → 278783 (+39)
+[WS][SHARED] ✓ 检测到seq增长: 278783 → 278814 (+31)
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=199, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=200, skip=258, 当前seq=278814 (last=278814), updated_at=1769244860.66 (last=1769244860.66)
+[PX] bid=0.0290 ask=0.0300 mid=0.0295 last=0.0295 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 70
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0295 / 低 0.0295
+    信号超时: 2.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 201
+[WS][SHARED] seq=278814, updates=30 (46.2/min), bid=0.029, ask=0.03, price=0.0295
+[WS][SHARED] ✓ 检测到seq增长: 278814 → 278891 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 278891 → 279034 (+143)
+[WS][SHARED] ✓ 检测到seq增长: 279034 → 279162 (+128)
+[WS][SHARED] ✓ 检测到seq增长: 279162 → 279265 (+103)
+[WS][SHARED] ✓ 检测到seq增长: 279265 → 279342 (+77)
+[WS][SHARED] ✓ 检测到seq增长: 279342 → 279430 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 279430 → 279529 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 279529 → 279628 (+99)
+[WS][SHARED] ✓ 检测到seq增长: 279628 → 279716 (+88)
+[WS][SHARED] ✓ 检测到seq增长: 279716 → 279782 (+66)
+[WS][SHARED] ✓ 检测到seq增长: 279782 → 279826 (+44)
+[PX] bid=0.0290 ask=0.0300 mid=0.0295 last=0.0295 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 84
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0295 / 低 0.0295
+    信号超时: 2.5分钟无信号 / 阈值 60分钟
+[WS][SHARED] ✓ 检测到seq增长: 279826 → 280243 (+417)
+[WS][SHARED] ✓ 检测到seq增长: 280243 → 280315 (+72)
+[WS][SHARED] ✓ 检测到seq增长: 280315 → 280411 (+96)
+[WS][SHARED] ✓ 检测到seq增长: 280411 → 280511 (+100)
+[WS][SHARED] ✓ 检测到seq增长: 280511 → 280573 (+62)
+[WS][SHARED] ✓ 检测到seq增长: 280573 → 280639 (+66)
+[WS][SHARED] ✓ 检测到seq增长: 280639 → 280723 (+84)
+[WS][SHARED] ✓ 检测到seq增长: 280723 → 280759 (+36)
+[WS][SHARED] ✓ 检测到seq增长: 280759 → 280842 (+83)
+[WS][SHARED] ✓ 检测到seq增长: 280842 → 280926 (+84)
+[WS][SHARED] ✓ 检测到seq增长: 280926 → 280963 (+37)
+[WS][SHARED] seq=280963, updates=25 (46.1/min), bid=0.029, ask=0.03, price=0.0295
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=299, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=300, skip=400, 当前seq=280963 (last=280963), updated_at=1769244908.43 (last=1769244908.43)
+[WS][SHARED][SKIP] 跳过策略调用 (总跳过次数=402): seq和updated_at都未变化且距上次tick仅2.0秒
+[WS][SHARED][SKIP] 当前状态: seq=280963, last_seq=280963, bid=0.029, ask=0.03
+[PX] bid=0.0290 ask=0.0300 mid=0.0295 last=0.0295 | state=FLAT awaiting=None entry=None
+    时间窗口: 60.0m | 采样点数: 99
+    窗口跌幅: 当前 0.00% / 最大 0.00% / 阈值 0.10%
+    窗口价格(mid): 高 0.0295 / 低 0.0295
+    信号超时: 3.0分钟无信号 / 阈值 60分钟
+[WS][SHARED][TRACE] 函数调用次数: 301
+[WS][SHARED] ✓ 检测到seq增长: 280963 → 281874 (+911)
+[WS][SHARED] ✓ 检测到seq增长: 281874 → 281918 (+44)
+[ACTION] 🔔 收到交易信号: type=ActionType.BUY, target_price=None
+[HINT][BUY] 目标 10.0000 - 当前仓位(未在 data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER 中找到 token 112746945158746257741635529019662641558199388176511485763810876768315276888838) 0.0000 -> 本次下单 10.0000
+[MAKER][BUY] 开始买入流程 -> target_size=10.0000 poll_sec=10.0s
+[DIAG][BID] latest字典中的token数据: {'price': 0.0285, 'best_bid': 0.028, 'best_ask': 0.029, 'ts': 1769244940.7448435}
+[DIAG][BID] ORDERBOOK_STALE_AFTER_SEC = 30.0
+[MAKER][BUY] 检测到市场价格精度 -> decimals=3
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER 中找到 token 112746945158746257741635529019662641558199388176511485763810876768315276888838 当前无持仓
+[MAKER][BUY] 挂单 -> price=0.028 qty=35.7143 remaining=10.0000
+[MAKER][BUY] 挂单状态 -> price=0.028 filled=0.0000 remaining=35.7143 status=LIVE
+[DIAG][BID] 快照过期: 年龄=53.9s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.028, ask=0.029 (缓存数据新鲜)
+[TRADE][BUY][MAKER] resp={'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x1a2cf745e1fa047497749fa09fca892574811d2a7ea9c125caabd6de16f3a634', 'side': 'buy', 'price': 0.028, 'size': 35.7143, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.028}]}
+[WARN] 买入未成交(status=SKIPPED_TOO_SMALL)：{'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x1a2cf745e1fa047497749fa09fca892574811d2a7ea9c125caabd6de16f3a634', 'side': 'buy', 'price': 0.028, 'size': 35.7143, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.028}]}
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=302, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=303, skip=402, 当前seq=288680 (last=281918), updated_at=1769244994.88 (last=1769244940.68)
+[WS][SHARED] ✓ 检测到seq增长: 281918 → 288680 (+6762)
+[WS][SHARED] seq=288680, updates=6 (4.4/min), bid=0.028, ask=0.029, price=0.0285
+[PX] bid=0.0280 ask=0.0290 mid=0.0285 last=0.0285 | state=FLAT awaiting=BUY entry=None
+    时间窗口: 60.0m | 采样点数: 102
+    窗口跌幅: 当前 3.39% / 最大 3.39% / 阈值 0.10%
+    窗口价格(mid): 高 0.0295 / 低 0.0285
+    信号超时: -0.0分钟无信号 / 阈值 60分钟
+[ACTION] 🔔 收到交易信号: type=ActionType.BUY, target_price=None
+[HINT][BUY] 目标 10.0000 - 当前仓位(未在 data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER 中找到 token 112746945158746257741635529019662641558199388176511485763810876768315276888838) 0.0000 -> 本次下单 10.0000
+[MAKER][BUY] 开始买入流程 -> target_size=10.0000 poll_sec=10.0s
+[DIAG][BID] 快照过期: 年龄=33.1s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.028, ask=0.029 (缓存数据新鲜)
+[MAKER][BUY] 检测到市场价格精度 -> decimals=3
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER 中找到 token 112746945158746257741635529019662641558199388176511485763810876768315276888838 当前无持仓
+[MAKER][BUY] 挂单 -> price=0.028 qty=35.7143 remaining=10.0000
+[MAKER][BUY] 挂单状态 -> price=0.028 filled=0.0000 remaining=35.7143 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.028, ask=0.029 (缓存数据新鲜)
+[TRADE][BUY][MAKER] resp={'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x6a09296bb8387b6cca7e0c200ca31c7c9126abb16936e475daae3ea97f66a78a', 'side': 'buy', 'price': 0.028, 'size': 35.7143, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.028}]}
+[WARN] 买入未成交(status=SKIPPED_TOO_SMALL)：{'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x6a09296bb8387b6cca7e0c200ca31c7c9126abb16936e475daae3ea97f66a78a', 'side': 'buy', 'price': 0.028, 'size': 35.7143, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.028}]}
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=303, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=304, skip=402, 当前seq=290241 (last=288680), updated_at=1769245040.62 (last=1769244994.88)
+[WS][SHARED] ✓ 检测到seq增长: 288680 → 290241 (+1561)
+[WS][SHARED] seq=290241, updates=1 (0.9/min), bid=0.028, ask=0.029, price=0.0285
+[PX] bid=0.0280 ask=0.0290 mid=0.0285 last=0.0285 | state=FLAT awaiting=BUY entry=None
+    时间窗口: 60.0m | 采样点数: 103
+    窗口跌幅: 当前 3.39% / 最大 3.39% / 阈值 0.10%
+    窗口价格(mid): 高 0.0295 / 低 0.0285
+    信号超时: -0.0分钟无信号 / 阈值 60分钟
+[ACTION] 🔔 收到交易信号: type=ActionType.BUY, target_price=None
+[HINT][BUY] 目标 10.0000 - 当前仓位(未在 data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER 中找到 token 112746945158746257741635529019662641558199388176511485763810876768315276888838) 0.0000 -> 本次下单 10.0000
+[MAKER][BUY] 开始买入流程 -> target_size=10.0000 poll_sec=10.0s
+[DIAG][BID] 快照过期: 年龄=33.7s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.028, ask=0.029 (缓存数据新鲜)
+[MAKER][BUY] 检测到市场价格精度 -> decimals=3
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER 中找到 token 112746945158746257741635529019662641558199388176511485763810876768315276888838 当前无持仓
+[MAKER][BUY] 挂单 -> price=0.028 qty=35.7143 remaining=10.0000
+[MAKER][BUY] 挂单状态 -> price=0.028 filled=0.0000 remaining=35.7143 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.0s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.028, ask=0.029 (缓存数据新鲜)
+[TRADE][BUY][MAKER] resp={'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x6fbfcbc7b9a06b4c081a6f8393b632c53dbe5dc70dcf0060682f742c9548d9e6', 'side': 'buy', 'price': 0.028, 'size': 35.7143, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.028}]}
+[WARN] 买入未成交(status=SKIPPED_TOO_SMALL)：{'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x6fbfcbc7b9a06b4c081a6f8393b632c53dbe5dc70dcf0060682f742c9548d9e6', 'side': 'buy', 'price': 0.028, 'size': 35.7143, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.028}]}
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=304, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=305, skip=402, 当前seq=292791 (last=290241), updated_at=1769245125.33 (last=1769245040.62)
+[WS][SHARED] ✓ 检测到seq增长: 290241 → 292791 (+2550)
+[WS][SHARED] seq=292791, updates=1 (0.9/min), bid=0.028, ask=0.029, price=0.0285
+[PX] bid=0.0280 ask=0.0290 mid=0.0285 last=0.0285 | state=FLAT awaiting=BUY entry=None
+    时间窗口: 60.0m | 采样点数: 104
+    窗口跌幅: 当前 3.39% / 最大 3.39% / 阈值 0.10%
+    窗口价格(mid): 高 0.0295 / 低 0.0285
+    信号超时: -0.0分钟无信号 / 阈值 60分钟
+[ACTION] 🔔 收到交易信号: type=ActionType.BUY, target_price=None
+[HINT][BUY] 目标 10.0000 - 当前仓位(未在 data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER 中找到 token 112746945158746257741635529019662641558199388176511485763810876768315276888838) 0.0000 -> 本次下单 10.0000
+[MAKER][BUY] 开始买入流程 -> target_size=10.0000 poll_sec=10.0s
+[DIAG][BID] 快照过期: 年龄=31.8s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.028, ask=0.029 (缓存数据新鲜)
+[MAKER][BUY] 检测到市场价格精度 -> decimals=3
+[WATCHDOG][BUY] 持仓检查 -> origin=未在 data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER 中找到 token 112746945158746257741635529019662641558199388176511485763810876768315276888838 当前无持仓
+[MAKER][BUY] 挂单 -> price=0.028 qty=35.7143 remaining=10.0000
+[MAKER][BUY] 挂单状态 -> price=0.028 filled=0.0000 remaining=35.7143 status=LIVE
+[DIAG][BID] 快照过期: 年龄=32.6s > 阈值=30.0s
+[DIAG][BID] 尝试从缓存刷新数据...
+[DIAG][BID] ✓ 已刷新快照: bid=0.026, ask=0.028 (缓存数据新鲜)
+[TRADE][BUY][MAKER] resp={'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x687065a1337ce28b93dc90eadba4031c3b1a4b4341bc5fb1a79207b93c2da736', 'side': 'buy', 'price': 0.028, 'size': 35.7143, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.028}]}
+[WARN] 买入未成交(status=SKIPPED_TOO_SMALL)：{'status': 'SKIPPED_TOO_SMALL', 'avg_price': None, 'filled': 0.0, 'remaining': 10.0, 'orders': [{'id': '0x687065a1337ce28b93dc90eadba4031c3b1a4b4341bc5fb1a79207b93c2da736', 'side': 'buy', 'price': 0.028, 'size': 35.7143, 'status': 'CANCELLED', 'filled': 0.0, 'avg_price': 0.028}]}
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=305, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=306, skip=402, 当前seq=297121 (last=292791), updated_at=1769245191.22 (last=1769245125.33)
+[WS][SHARED] ✓ 检测到seq增长: 292791 → 297121 (+4330)
+[WS][SHARED] seq=297121, updates=1 (0.9/min), bid=0.026, ask=0.028, price=0.027
+[PX] bid=0.0260 ask=0.0280 mid=0.0270 last=0.0270 | state=FLAT awaiting=BUY entry=None
+    时间窗口: 60.0m | 采样点数: 105
+    窗口跌幅: 当前 8.47% / 最大 8.47% / 阈值 0.10%
+    窗口价格(mid): 高 0.0295 / 低 0.0270
+    信号超时: -0.0分钟无信号 / 阈值 60分钟
+[ACTION] 🔔 收到交易信号: type=ActionType.BUY, target_price=None
+[WATCHDOG][POSITION] [BUY][STATE-SYNC] -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[STATE] 同步策略持仓 -> price=0.0280 size=35.7100
+[STATE] 同步远端持仓后，标记等待卖出以避免误入买入分支。
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单 -> price=0.029 qty=35.71 remaining=35.71
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][ASK] ✓ 已刷新快照: bid=0.026, ask=0.028 (缓存数据新鲜)
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][ASK] ✗ 缓存数据过期: 年龄=41.5s > 阈值=30.0s
+[DIAG][ASK] 缓存数据过期，返回None触发REST API fallback
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=12, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=11, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=35.7100
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=10, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=0.00 remaining=35.71 status=LIVE
+[WATCHDOG][SELL] 持仓检查 -> origin=data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER avg=0.0280 size=13.8600
+[MAKER][SELL] 挂单状态 -> price=0.029 sold=35.71 remaining=0.00 status=MATCHED
+[TRADE][SELL][MAKER] resp={'status': 'FILLED_TRUNCATED', 'avg_price': 0.028999999999999998, 'filled': 35.71, 'remaining': 0.0, 'orders': [{'id': '0xfb0b37b83c786deccdd79b4898a255c54a1a45f67b20ad67afc07dd92df1f45f', 'side': 'sell', 'price': 0.029, 'size': 35.71, 'status': 'CANCELLED', 'filled': 35.71, 'avg_price': 0.029}]}
+[STATE] 卖出成交 -> price=0.0290 size=35.7100 status=FILLED_TRUNCATED
+[SKIP][BUY] 当前仓位(data-api positions(limit=500, total=9, param=user) via env:POLY_FUNDER) 13.8600 已满足手动目标 10.0000，跳过本次买入。
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=306, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=307, skip=402, 当前seq=402926 (last=297121), updated_at=1769257420.48 (last=1769245191.22)
+[WS][SHARED] ✓ 检测到seq增长: 297121 → 402926 (+105805)
+[WS][SHARED] seq=402926, updates=1 (0.0/min), bid=0.028, ask=0.029, price=0.0285
+[SIGNAL_TIMEOUT] 203.8 分钟内无交易信号，释放队列退出
+[SIGNAL_TIMEOUT] 最后信号时间: 03:59:51
+[SIGNAL_TIMEOUT] 检测到持仓，先执行清仓...
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 下单失败，疑似仓位不足，等待60s后刷新仓位。
+[MAKER][SELL] 无法获取最新仓位，等待60s后重试同步。 (attempt 1/5)
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 下单失败，疑似仓位不足，等待60s后刷新仓位。
+[MAKER][SELL] 无法获取最新仓位，等待60s后重试同步。 (attempt 2/5)
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 下单失败，疑似仓位不足，等待60s后刷新仓位。
+[MAKER][SELL] 无法获取最新仓位，等待60s后重试同步。 (attempt 3/5)
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 下单失败，疑似仓位不足，等待60s后刷新仓位。
+[MAKER][SELL] 无法获取最新仓位，等待60s后重试同步。 (attempt 4/5)
+[DIAG][WS] WebSocket ask 返回 None（可能原因：快照过期或数据缺失）
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[FETCH][WARN] 无法通过 REST API 获取 ask 价格，尝试了 1 个方法: get_order_book
+[MAKER][SELL] 下单失败，疑似仓位不足，等待60s后刷新仓位。
+[MAKER][SELL] 无法获取最新仓位，退出卖出流程。
+[TRADE][SELL][MAKER] resp={'status': 'FAILED', 'avg_price': None, 'filled': 0.0, 'remaining': 13.86, 'orders': []}
+[STATE] 卖出部分成交 -> price=0.0290 sold=0.0000 remaining=13.8600 status=FAILED
+[MAIN_LOOP] ✓ 主循环运行中 (iterations=307, use_shared_ws=True)
+[WS][SHARED][DEBUG] 读取统计: read=308, skip=402, 当前seq=404690 (last=402926), updated_at=1769258095.70 (last=1769257420.48)
+[WS][SHARED] ✓ 检测到seq增长: 402926 → 404690 (+1764)
+[WS][SHARED] seq=404690, updates=1 (0.1/min), bid=0.028, ask=0.029, price=0.0285
+[WATCHDOG][POSITION] [LOOP] -> origin=未在 data-api positions(limit=500, total=8, param=user) via env:POLY_FUNDER 中找到 token 112746945158746257741635529019662641558199388176511485763810876768315276888838 avg=- 当前无持仓
+[STATE] 同步策略为空仓 (fallback_px=0.0280)
+[SIGNAL_TIMEOUT] 215.3 分钟内无交易信号，释放队列退出
+[SIGNAL_TIMEOUT] 最后信号时间: 03:59:51
+[QUEUE] 释放队列：长时间无交易信号，已退出。
+[EXIT_RECORD] 已记录退出token: 11274694515874625774... 原因: SIGNAL_TIMEOUT
+[EXIT] 最终状态: {'state': 'FLAT', 'awaiting': None, 'entry_price': None, 'sell_trigger': None, 'position_size': None, 'last_signal': <ActionType.BUY: 'BUY'>, 'last_buy_price': 0.028, 'last_sell_price': 0.028, 'price_history_len': 0, 'manual_stop': True, 'manual_stop_reason': 'signal timeout (no position)', 'sell_only': False, 'sell_only_reason': None, 'last_reject_reason': None, 'last_tick': {'ts': 1769258095.562, 'best_ask': 0.029, 'best_bid': 0.028}, 'drop_stats': {'window_high': None, 'window_low': None, 'max_drop_ratio': None, 'current_drop_ratio': None, 'window_seconds': 3600.0}, 'config': {'token_id': '112746945158746257741635529019662641558199388176511485763810876768315276888838', 'buy_price_threshold': None, 'profit_ratio': 0.005, 'drop_window_minutes': 60.0, 'drop_pct': 0.0014000000000000002, 'profit_pct': 0.005, 'max_history_points': 600, 'price_band': (0.0, 1.0), 'disable_duplicate_signal': True, 'enable_incremental_drop_pct': True, 'incremental_drop_pct_step': 0.0002, 'incremental_drop_pct_cap': 0.2, 'min_market_order_size': None}}
+[CLAIM] 未检测到需要 claim 的仓位，脚本结束。
