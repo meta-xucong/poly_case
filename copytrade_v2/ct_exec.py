@@ -382,22 +382,8 @@ def reconcile_one(
                 total_open += float(order.get("size") or order.get("original_size") or 0.0)
             except Exception:
                 continue
-        if use_taker and effective_min_shares > 0 and size < effective_min_shares:
+        if effective_min_shares > 0 and size < effective_min_shares:
             size = max(size, effective_min_shares, total_open)
-        elif not use_taker and effective_min_shares > 0 and size < effective_min_shares:
-            actions = []
-            for order in open_orders:
-                order_id = order.get("order_id") or order.get("id")
-                if order_id:
-                    actions.append(
-                        {
-                            "type": "cancel",
-                            "order_id": order_id,
-                            "token_id": token_id,
-                            "ts": now_ts,
-                        }
-                    )
-            return actions
     if size > max_shares_cap:
         size = max_shares_cap
     if side == "SELL" and not allow_short:
@@ -795,6 +781,72 @@ def apply_actions(
             return text
         return f"{text[: limit - 3]}..."
 
+    def _remove_recent_buy(
+        orders: object,
+        token_id: str,
+        usd: float,
+        eps: float = 1e-6,
+    ) -> bool:
+        if not isinstance(orders, list):
+            return False
+        for idx in range(len(orders) - 1, -1, -1):
+            item = orders[idx]
+            if not isinstance(item, dict):
+                continue
+            if str(item.get("token_id") or "") != token_id:
+                continue
+            item_usd = float(item.get("usd") or 0.0)
+            if abs(item_usd - usd) <= max(eps, eps * max(1.0, usd)):
+                orders.pop(idx)
+                return True
+        return False
+
+    def _rollback_buy_tracking(token_id: str, usd: float) -> None:
+        if state is None or usd <= 0:
+            return
+        accumulator = state.get("buy_notional_accumulator")
+        if isinstance(accumulator, dict) and token_id in accumulator:
+            acc_data = accumulator.get(token_id)
+            if isinstance(acc_data, dict):
+                old_usd = float(acc_data.get("usd", 0.0))
+                new_usd = max(0.0, old_usd - usd)
+                if new_usd <= 0.01:
+                    accumulator.pop(token_id, None)
+                else:
+                    acc_data["usd"] = new_usd
+                    acc_data["last_ts"] = now_ts
+                logger.info(
+                    "[ACCUMULATOR_ROLLBACK] token_id=%s old=%s cancel=%s new=%s",
+                    token_id,
+                    old_usd,
+                    usd,
+                    new_usd,
+                )
+        recent_orders = state.get("recent_buy_orders")
+        if _remove_recent_buy(recent_orders, token_id, usd):
+            state["recent_buy_orders"] = recent_orders
+            logger.info(
+                "[RECENT_BUY_ROLLBACK] token_id=%s usd=%s",
+                token_id,
+                usd,
+            )
+        taker_orders = state.get("taker_buy_orders")
+        if _remove_recent_buy(taker_orders, token_id, usd):
+            state["taker_buy_orders"] = taker_orders
+            logger.info(
+                "[TAKER_BUY_ROLLBACK] token_id=%s usd=%s",
+                token_id,
+                usd,
+            )
+        shadow_orders = state.get("shadow_buy_orders")
+        if _remove_recent_buy(shadow_orders, token_id, usd):
+            state["shadow_buy_orders"] = shadow_orders
+            logger.info(
+                "[SHADOW_BUY_ROLLBACK] token_id=%s usd=%s",
+                token_id,
+                usd,
+            )
+
     def _bump_backoff(token_id: str, kind: str, msg: str) -> None:
         if state is None or cfg is None:
             return
@@ -822,12 +874,33 @@ def apply_actions(
             order_id = action.get("order_id")
             if not order_id:
                 continue
+            token_id = ""
+            side_u = ""
+            price = 0.0
+            size = 0.0
+            for order in updated:
+                if str(order.get("order_id")) == str(order_id):
+                    token_id = str(order.get("token_id") or "")
+                    side_u = str(order.get("side") or "").upper()
+                    try:
+                        price = float(order.get("price") or 0.0)
+                    except Exception:
+                        price = 0.0
+                    try:
+                        size = float(order.get("size") or order.get("original_size") or 0.0)
+                    except Exception:
+                        size = 0.0
+                    break
             if dry_run:
                 updated = [o for o in updated if str(o.get("order_id")) != str(order_id)]
+                if token_id and side_u == "BUY" and price > 0 and size > 0:
+                    _rollback_buy_tracking(token_id, abs(size) * price)
                 continue
             try:
                 cancel_order(client, str(order_id))
                 updated = [o for o in updated if str(o.get("order_id")) != str(order_id)]
+                if token_id and side_u == "BUY" and price > 0 and size > 0:
+                    _rollback_buy_tracking(token_id, abs(size) * price)
             except Exception as exc:
                 logger.warning("cancel_order failed order_id=%s: %s", order_id, exc)
             continue
