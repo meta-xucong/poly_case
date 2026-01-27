@@ -1,0 +1,1001 @@
+[
+  {
+    "timestamp": "2026-01-26 14:27:45",
+    "exit_ts": 1769455665.1123133,
+    "token_id": "63936500481663834926944960788933316943382552476637487906998029827305407706287",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00162262121837,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 13:27:45",
+      "has_position": false,
+      "last_bid": 0.61,
+      "last_ask": 0.64
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 14:28:54",
+    "exit_ts": 1769455734.3829536,
+    "token_id": "50542064621184561349707331015145156913358801313849201002479571845882477088291",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00428707997004,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 13:28:54",
+      "has_position": false,
+      "last_bid": 0.17,
+      "last_ask": 0.19
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 14:47:45",
+    "exit_ts": 1769456865.5947266,
+    "token_id": "19323538724182223051629422172260586604632454119828774685084899285092343775100",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 79.15482057730357,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 13:28:36",
+      "has_position": false,
+      "last_bid": 0.65,
+      "last_ask": 0.66
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 15:28:22",
+    "exit_ts": 1769459302.1801572,
+    "token_id": "11132544244839265378732084165256379227175677028258955804895976429843086532411",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00281621217728,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 14:28:22",
+      "has_position": false,
+      "last_bid": 0.95,
+      "last_ask": 0.96
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 15:37:02",
+    "exit_ts": 1769459822.770395,
+    "token_id": "15704223254061637699665008299235004894744524204070683496068480275285392327272",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 64.08925757010778,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 14:32:57",
+      "has_position": false,
+      "last_bid": 0.38,
+      "last_ask": 0.4
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 15:53:31",
+    "exit_ts": 1769460811.6150796,
+    "token_id": "23335802789834581465194357666581277128721995869213978918567231959416168340652",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 91.4244580467542,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 14:22:06",
+      "has_position": false,
+      "last_bid": 0.75,
+      "last_ask": 0.77
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 16:09:28",
+    "exit_ts": 1769461768.1682868,
+    "token_id": "40830885204655264873840207302506289503114516353562334493442621675346558190074",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 161.6916735649109,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 13:27:46",
+      "has_position": false,
+      "last_bid": 0.157,
+      "last_ask": 0.168
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 17:59:46",
+    "exit_ts": 1769468386.302252,
+    "token_id": "51338236787729560681434534660841415073585974762690814047670810862722808070955",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 124.91480987469355,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 15:54:51",
+      "has_position": false,
+      "last_bid": 0.29,
+      "last_ask": 0.3
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 18:54:18",
+    "exit_ts": 1769471658.6602352,
+    "token_id": "18289842382539867639079362738467334752951741961393928566628307174343542320349",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 324.25656607548393,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 13:30:03",
+      "has_position": false,
+      "last_bid": 0.71,
+      "last_ask": 0.72
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 19:07:41",
+    "exit_ts": 1769472461.3056297,
+    "token_id": "114421380098084026753773605667430150755820287180340356465450569515479471185603",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.007210874557494,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 18:07:40",
+      "has_position": false,
+      "last_bid": 0.099,
+      "last_ask": 0.1
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 19:18:57",
+    "exit_ts": 1769473137.8656952,
+    "token_id": "22802130763821766047382314926654345322953005062130920361011056163048911488589",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 108.95067807038625,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 17:30:00",
+      "has_position": false,
+      "last_bid": 0.93,
+      "last_ask": 0.935
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 20:19:16",
+    "exit_ts": 1769476756.563383,
+    "token_id": "106181075047366745139197108801635573283215248045056329679360376976893016488727",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.001225364208224,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 19:19:16",
+      "has_position": false,
+      "last_bid": 0.65,
+      "last_ask": 0.66
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 20:30:18",
+    "exit_ts": 1769477418.5871072,
+    "token_id": "112746945158746257741635529019662641558199388176511485763810876768315276888838",
+    "exit_reason": "SELL_ABANDONED",
+    "exit_data": {
+      "has_position": true,
+      "position_size": 15.37,
+      "entry_price": 0.031,
+      "last_bid": 0.031,
+      "last_ask": 0.032,
+      "sell_floor_price": 0.031154999999999995,
+      "inactive_timeout_hours": 6.0
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 21:19:48",
+    "exit_ts": 1769480388.9262147,
+    "token_id": "63369941481876265079669200084080935839244983653494876131040874623657755022508",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00717525879542,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 20:19:48",
+      "has_position": false,
+      "last_bid": 0.41,
+      "last_ask": 0.42
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 21:30:49",
+    "exit_ts": 1769481049.7976933,
+    "token_id": "39342171144861816896992253440408377265010285664347210041520694491243996062356",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00130762259165,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 20:30:49",
+      "has_position": false,
+      "last_bid": 0.93,
+      "last_ask": 0.94
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 21:56:33",
+    "exit_ts": 1769482593.2809691,
+    "token_id": "44169729231600183934113609960222670358715639208411971924042241295619035924872",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 507.07916940053303,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 13:29:17",
+      "has_position": false,
+      "last_bid": 0.49,
+      "last_ask": 0.5
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 22:03:33",
+    "exit_ts": 1769483013.0137563,
+    "token_id": "16206267440377108972343351482425564384973031696941663558076310969498822538172",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 435.5012714187304,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 14:47:53",
+      "has_position": false,
+      "last_bid": 0.469,
+      "last_ask": 0.475
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 22:20:22",
+    "exit_ts": 1769484022.4774377,
+    "token_id": "84179647029696184569295249591902766504666878402456968340436905262047026883194",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00249628623327,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 21:20:22",
+      "has_position": false,
+      "last_bid": 0.945,
+      "last_ask": 0.949
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 22:30:56",
+    "exit_ts": 1769484656.2111478,
+    "token_id": "34465433013244737261777301958314575283534514587255327061285941306189159190135",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.005217691262565,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 21:30:55",
+      "has_position": false,
+      "last_bid": 0.91,
+      "last_ask": 0.92
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 22:38:05",
+    "exit_ts": 1769485085.261218,
+    "token_id": "3464795463763108108909057219187376740735691886447931192725079515654033695019",
+    "exit_reason": "SELL_ABANDONED",
+    "exit_data": {
+      "has_position": true,
+      "position_size": 10.0,
+      "entry_price": 0.43,
+      "last_bid": 0.41,
+      "last_ask": 0.43,
+      "sell_floor_price": 0.4321499999999999,
+      "inactive_timeout_hours": 6.0
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 23:04:30",
+    "exit_ts": 1769486670.9926507,
+    "token_id": "52607315900507156846622820770453728082833251091510131025984187712529448877245",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00795101722081,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 22:04:30",
+      "has_position": false,
+      "last_bid": 0.8,
+      "last_ask": 0.81
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 23:39:08",
+    "exit_ts": 1769488748.0252924,
+    "token_id": "37975265083682450969967223199653164268542375291978582835346444673615244164455",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00337812503179,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 22:39:07",
+      "has_position": false,
+      "last_bid": 0.83,
+      "last_ask": 0.84
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 23:54:22",
+    "exit_ts": 1769489662.486955,
+    "token_id": "46746822541461330721074821991383617225657173789584499857683753079229786702095",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 353.55508958101274,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 18:00:39",
+      "has_position": false,
+      "last_bid": 0.75,
+      "last_ask": 0.76
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-26 23:58:13",
+    "exit_ts": 1769489893.9722998,
+    "token_id": "65923220567788607983422921985993151814724368232743822977847877362622927113171",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.09775733947754,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 00:02:47",
+    "exit_ts": 1769490167.416681,
+    "token_id": "33500624603717915548751257601790831230034214276562194133717878870648873631267",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.1171452999115,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 00:05:09",
+    "exit_ts": 1769490309.639278,
+    "token_id": "101443205557953769944584140209356208074985603773882357999963509274129845972413",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.002362898985545,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 23:05:09",
+      "has_position": false,
+      "last_bid": 0.833,
+      "last_ask": 0.834
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 00:25:00",
+    "exit_ts": 1769491500.0613608,
+    "token_id": "8139033351755938183725481412733169800280112179136815730207011384316082498073",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00196497042974,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 23:24:59",
+      "has_position": false,
+      "last_bid": 0.999,
+      "last_ask": 1.0
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 00:40:11",
+    "exit_ts": 1769492411.9964352,
+    "token_id": "55201180171382344648128505031675400629485078801250545752063029078975592767599",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00059956709544,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 23:40:11",
+      "has_position": false,
+      "last_bid": 0.51,
+      "last_ask": 0.52
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 01:26:51",
+    "exit_ts": 1769495211.1535428,
+    "token_id": "54906963185407778588520250373893528650769447293260978407024082288131033892651",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.0061576128006,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 00:26:50",
+      "has_position": false,
+      "last_bid": 0.019,
+      "last_ask": 0.02
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 01:31:58",
+    "exit_ts": 1769495518.0217144,
+    "token_id": "107096794127270890984101242570698639474010707625351397547174129311341989598349",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.0397961139679,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 01:40:53",
+    "exit_ts": 1769496053.4960682,
+    "token_id": "106017940879858349164181550590287954569883893970967364254906038420908987752390",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00667831897736,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 00:40:53",
+      "has_position": false,
+      "last_bid": 0.72,
+      "last_ask": 0.73
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 01:44:48",
+    "exit_ts": 1769496288.5083158,
+    "token_id": "13294549611854156060952327202052855585194847446707854951585060180328600525494",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 353.3809461037318,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 19:51:25",
+      "has_position": false,
+      "last_bid": 0.88,
+      "last_ask": 0.89
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 02:05:05",
+    "exit_ts": 1769497505.939445,
+    "token_id": "79198300868830485284678716507005480871569275475252085914785144227204298869058",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 67.11560252110164,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 00:57:58",
+      "has_position": false,
+      "last_bid": 0.969,
+      "last_ask": 0.987
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 02:41:30",
+    "exit_ts": 1769499690.9448602,
+    "token_id": "104894938391189807862361277765134514076044133563085752215952400958137116339740",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.000606246789296,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 01:41:30",
+      "has_position": false,
+      "last_bid": 0.93,
+      "last_ask": 0.94
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 02:45:34",
+    "exit_ts": 1769499934.8123972,
+    "token_id": "15470971723630340126379023464305254753539639285010628416630282017302992621065",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.0071342031161,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 01:45:34",
+      "has_position": false,
+      "last_bid": 0.85,
+      "last_ask": 0.87
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 02:57:37",
+    "exit_ts": 1769500657.720794,
+    "token_id": "109485896404435445224771356926428046595093346501629729876439793593978284351864",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 264.6205152988434,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-26 22:33:00",
+      "has_position": false,
+      "last_bid": 0.66,
+      "last_ask": 0.69
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 03:07:09",
+    "exit_ts": 1769501229.0421534,
+    "token_id": "104071616575689490708756996503755160411785604144351427331378560378097635400347",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00038871367772,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 02:07:09",
+      "has_position": false,
+      "last_bid": 0.43,
+      "last_ask": 0.44
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 03:46:18",
+    "exit_ts": 1769503578.29282,
+    "token_id": "57216272564529548464686463691236811991956032201293786790337952253964682584376",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00574941635132,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 02:46:17",
+      "has_position": false,
+      "last_bid": 0.87,
+      "last_ask": 0.88
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 03:49:54",
+    "exit_ts": 1769503794.581824,
+    "token_id": "4944476394877914550005326223303372074574422985425049648472843024565700862591",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.17920923233032,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 03:53:55",
+    "exit_ts": 1769504035.74449,
+    "token_id": "29505104050205099567598953559561724651636326796247120480119436815501356124449",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.18967175483704,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 03:56:39",
+    "exit_ts": 1769504199.87582,
+    "token_id": "7287681229651258139381689770505580285026522798705230730822294318341036294451",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 66.91855350732803,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 02:49:33",
+      "has_position": false,
+      "last_bid": 0.972,
+      "last_ask": 0.977
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 03:58:20",
+    "exit_ts": 1769504300.9670827,
+    "token_id": "30689267060786984695412854852127076341171438058122871281486378535451964982476",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.003506509462994,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 02:58:20",
+      "has_position": false,
+      "last_bid": 0.988,
+      "last_ask": 0.99
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 04:07:53",
+    "exit_ts": 1769504873.0678847,
+    "token_id": "33545963172230940906097284857746208554306346197493802234285289298999092475447",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00658145745595,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 03:07:52",
+      "has_position": false,
+      "last_bid": 0.11,
+      "last_ask": 0.13
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 04:11:34",
+    "exit_ts": 1769505094.0430784,
+    "token_id": "47631962361019443293490867658911118421224816970845895778479269167508326656227",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.17942428588867,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 04:57:30",
+    "exit_ts": 1769507850.8738356,
+    "token_id": "79603803658358131940134977667341878755182252168903267751430480581926601085521",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00620781580607,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 03:57:30",
+      "has_position": false,
+      "last_bid": 0.09,
+      "last_ask": 0.1
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 04:59:03",
+    "exit_ts": 1769507943.7864597,
+    "token_id": "39685513581015973828065061115014564319705732336697536508658294168692213551689",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00827247699102,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 03:59:03",
+      "has_position": false,
+      "last_bid": 0.91,
+      "last_ask": 0.92
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 05:03:07",
+    "exit_ts": 1769508187.5030072,
+    "token_id": "57721255918203444040812658058284235188269653653554732062913299540215817575563",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.11728167533875,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 05:12:34",
+    "exit_ts": 1769508754.8456445,
+    "token_id": "37090128566507509913630589460372620352013766554886380785463533062224343545231",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00492200056712,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 04:12:34",
+      "has_position": false,
+      "last_bid": 0.107,
+      "last_ask": 0.11
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 05:34:36",
+    "exit_ts": 1769510076.9282484,
+    "token_id": "67076910226706078190932071197776845355087170182555212200493103875418660497817",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00612571239471,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 04:34:36",
+      "has_position": false,
+      "last_bid": 0.006,
+      "last_ask": 0.007
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 05:58:10",
+    "exit_ts": 1769511490.4072742,
+    "token_id": "98686000961840472718925829517679879428244289411307611978452808788429260739944",
+    "exit_reason": "STALE_DATA_IN_TRADING",
+    "exit_data": {
+      "data_age_minutes": 30.006975344816844,
+      "threshold_minutes": 30.0,
+      "updated_at": 1769509689.9860675,
+      "last_seq": 476,
+      "has_position": null
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 06:04:11",
+    "exit_ts": 1769511851.6185308,
+    "token_id": "82991837887127223585838300135823820957946688171642633953055760547186260528157",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.0067768851916,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 05:04:11",
+      "has_position": false,
+      "last_bid": 0.86,
+      "last_ask": 0.87
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 06:14:04",
+    "exit_ts": 1769512444.6242652,
+    "token_id": "97278843093518170983116788293559302501059038797143772070255096806379425818363",
+    "exit_reason": "SELL_ABANDONED",
+    "exit_data": {
+      "has_position": true,
+      "position_size": 9.99,
+      "entry_price": 0.523,
+      "last_bid": 0.507,
+      "last_ask": 0.509,
+      "sell_floor_price": 0.5256149999999999,
+      "inactive_timeout_hours": 6.0
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 06:35:45",
+    "exit_ts": 1769513745.6900315,
+    "token_id": "102936224134271070189104847090829839924697394514566827387181305960175107677216",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00269472201665,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 05:35:45",
+      "has_position": false,
+      "last_bid": 0.29,
+      "last_ask": 0.31
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 06:59:47",
+    "exit_ts": 1769515187.242905,
+    "token_id": "15610403757960672087645132402413181609068502505187076901860989170662864809048",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00055485169093,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 05:59:47",
+      "has_position": false,
+      "last_bid": 0.16,
+      "last_ask": 0.18
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 07:15:51",
+    "exit_ts": 1769516151.0974238,
+    "token_id": "78011236440210301900948684264515942271208527805809303716211744955049570165464",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.007786043485005,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 06:15:50",
+      "has_position": false,
+      "last_bid": 0.89,
+      "last_ask": 0.91
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 07:16:04",
+    "exit_ts": 1769516164.8372104,
+    "token_id": "65776331158171098119883600447375115999924641197000014423196868505933237200018",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00357213417689,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 06:16:04",
+      "has_position": false,
+      "last_bid": 0.67,
+      "last_ask": 0.69
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 07:19:58",
+    "exit_ts": 1769516398.527186,
+    "token_id": "49665164098023964834384923240708785834785935017884983383853983081526345523888",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.02807712554932,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 07:24:59",
+    "exit_ts": 1769516699.373834,
+    "token_id": "35068674912005594575742347599527271016244450706692601867879347677245525639202",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.06339073181152,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 07:36:23",
+    "exit_ts": 1769517383.5090215,
+    "token_id": "14428142189676063257961848327857060527459896245257342585283838945691014997983",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 359.14579734404884,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 01:37:14",
+      "has_position": false,
+      "last_bid": 0.4,
+      "last_ask": 0.43
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 07:36:51",
+    "exit_ts": 1769517411.6671872,
+    "token_id": "7161906153224224407370336760633445103785276166334589188046811681528887945384",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.0042564034462,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 06:36:51",
+      "has_position": false,
+      "last_bid": 0.92,
+      "last_ask": 0.93
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 07:40:01",
+    "exit_ts": 1769517601.3472776,
+    "token_id": "90399576495470588494910291378124940374846166689533768399931049914751962702949",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.10872173309326,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 08:16:26",
+    "exit_ts": 1769519786.4899588,
+    "token_id": "4920174600328060381478178332126683115937537315909025772685332706706025236975",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00571897824605,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 07:16:26",
+      "has_position": false,
+      "last_bid": 0.75,
+      "last_ask": 0.76
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 08:21:06",
+    "exit_ts": 1769520066.6967835,
+    "token_id": "45267339147109499621650645880422741002238753374072106538331654321967687611793",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.10267043113708,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 08:38:04",
+    "exit_ts": 1769521084.1700912,
+    "token_id": "35387107368752328644982641185985574345241154905795306214146121961491417818763",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00404777526855,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 07:38:03",
+      "has_position": false,
+      "last_bid": 0.09,
+      "last_ask": 0.11
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 08:42:04",
+    "exit_ts": 1769521324.215154,
+    "token_id": "53481396712842089320349903159134403826367214581988937152055339754029604578480",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.00177041292191,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 07:42:04",
+      "has_position": false,
+      "last_bid": 0.83,
+      "last_ask": 0.84
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 08:46:09",
+    "exit_ts": 1769521569.7786348,
+    "token_id": "105886144780792404187351380727805295265636415112963024872889588713803505341754",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.00657081604004,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 08:49:43",
+    "exit_ts": 1769521783.562642,
+    "token_id": "96229871085374132303116376471322311695842738677806841162553339355812305824040",
+    "exit_reason": "SELL_ABANDONED",
+    "exit_data": {
+      "has_position": true,
+      "position_size": 10.0,
+      "entry_price": 0.59,
+      "last_bid": 0.54,
+      "last_ask": 0.57,
+      "sell_floor_price": 0.5929499999999999,
+      "inactive_timeout_hours": 6.0
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 08:51:12",
+    "exit_ts": 1769521872.3512082,
+    "token_id": "47971263820124165661582476693485261554582294313581950195269099493635870177372",
+    "exit_reason": "AGGREGATOR_NO_DATA",
+    "exit_data": {
+      "duration_seconds": 180.18277025222778,
+      "timeout_seconds": 180,
+      "has_position": false
+    },
+    "refillable": true
+  },
+  {
+    "timestamp": "2026-01-27 09:39:09",
+    "exit_ts": 1769524749.0927029,
+    "token_id": "12238337804021350373072513606997115174826680613156170611182546081135779794915",
+    "exit_reason": "SIGNAL_TIMEOUT",
+    "exit_data": {
+      "signal_idle_minutes": 60.005429903666176,
+      "timeout_threshold_minutes": 60.0,
+      "last_signal_time": "2026-01-27 08:39:08",
+      "has_position": false,
+      "last_bid": 0.75,
+      "last_ask": 0.76
+    },
+    "refillable": true
+  }
+]
