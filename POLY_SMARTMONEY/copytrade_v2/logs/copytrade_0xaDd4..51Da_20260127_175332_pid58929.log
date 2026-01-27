@@ -1,0 +1,4 @@
+2026-01-27 17:53:32 INFO __main__ 日志初始化完成: /home/trader/polymarket_api/POLY_SMARTMONEY/copytrade_v2/logs/copytrade_0xaDd4..51Da_20260127_175332_pid58929.log
+2026-01-27 17:53:32 INFO __main__ [STATE] per-target state: /home/trader/polymarket_api/POLY_SMARTMONEY/copytrade_v2/state.json -> /home/trader/polymarket_api/POLY_SMARTMONEY/copytrade_v2/state_add4_51da.json
+2026-01-27 17:53:32 INFO __main__ [STATE] path=/home/trader/polymarket_api/POLY_SMARTMONEY/copytrade_v2/state_add4_51da.json run_start_ms=1769507612808
+2026-01-27 17:53:32 INFO __main__ [CFG] target=0xaDd407264226afaD5536752765C6F98b2a8a51Da my=0x96E62a298FcB7ade69487b2AC4B1dA8a799d8623 ratio=1.0
