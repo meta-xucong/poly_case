@@ -1,0 +1,92 @@
+2026-01-28 04:15:35 INFO __main__ 日志初始化完成: /home/trader/polymarket_api/POLY_SMARTMONEY/copytrade_v2/logs/copytrade_0xaDd4..51Da_20260128_041535_pid62427.log
+2026-01-28 04:15:35 INFO __main__ [STATE] per-target state: /home/trader/polymarket_api/POLY_SMARTMONEY/copytrade_v2/state.json -> /home/trader/polymarket_api/POLY_SMARTMONEY/copytrade_v2/state_add4_51da.json
+2026-01-28 04:15:35 INFO __main__ [STATE] path=/home/trader/polymarket_api/POLY_SMARTMONEY/copytrade_v2/state_add4_51da.json run_start_ms=1769544935629
+2026-01-28 04:15:35 INFO __main__ [CFG] target=0xaDd407264226afaD5536752765C6F98b2a8a51Da my=0x96E62a298FcB7ade69487b2AC4B1dA8a799d8623 ratio=1.0
+2026-01-28 04:15:39 INFO __main__ [POS] target_count=1 my_count=0 target_incomplete=False my_incomplete=False | t_src=http_positions t_cb=1769544938 t_rsec=25 t_mode=sec t_http=200 t_hit=None
+2026-01-28 04:15:39 INFO __main__ [POS] target cache_headers_first={'CF-Cache-Status': 'MISS', 'Cache-Control': 'public, max-age=2', 'Last-Modified': 'Tue, 27 Jan 2026 20:15:38 GMT', 'Date': 'Tue, 27 Jan 2026 20:15:39 GMT', 'Server': 'cloudflare'}
+2026-01-28 04:15:39 INFO __main__ [POS] target cache_headers_last={'CF-Cache-Status': 'MISS', 'Cache-Control': 'public, max-age=2', 'Last-Modified': 'Tue, 27 Jan 2026 20:15:38 GMT', 'Date': 'Tue, 27 Jan 2026 20:15:39 GMT', 'Server': 'cloudflare'}
+2026-01-28 04:15:39 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:15:39 INFO __main__ [RISK_SUMMARY] used_total=0.0 used_total_shadow=0.0 open_buy_orders_usd=0 shadow_buy_usd=0.0 recent_buy_usd=0.0 top_tokens=[]
+2026-01-28 04:15:39 INFO __main__ [ACTION] token_id=105558941490961743100777566068860209662825133870227537458865376585139033981276 -> [{'type': 'place', 'token_id': '105558941490961743100777566068860209662825133870227537458865376585139033981276', 'side': 'BUY', 'price': 0.957, 'size': 5.0, 'ts': 1769544937, '_taker': True, '_taker_spread': 0.0020000000000000018, '_taker_thr': 0.011}]
+2026-01-28 04:15:40 INFO ct_exec [ACCUMULATOR_UPDATE] token_id=105558941490961743100777566068860209662825133870227537458865376585139033981276 added_usd=4.785 total_usd=4.785 is_taker=True
+2026-01-28 04:15:40 INFO ct_exec [BACKOFF_CLEAR] token_id=105558941490961743100777566068860209662825133870227537458865376585139033981276 place succeeded -> clear place_fail_until
+2026-01-28 04:16:02 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:16:02 INFO __main__ [RISK_SUMMARY] used_total=2.619435 used_total_shadow=7.404435 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=4.785 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6194']
+2026-01-28 04:16:24 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:16:25 INFO __main__ [RISK_SUMMARY] used_total=2.619435 used_total_shadow=7.404435 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=4.785 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6194']
+2026-01-28 04:16:47 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:16:47 INFO __main__ [RISK_SUMMARY] used_total=2.619435 used_total_shadow=7.404435 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=4.785 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6194']
+2026-01-28 04:17:10 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:17:10 INFO __main__ [RISK_SUMMARY] used_total=2.619435 used_total_shadow=7.404435 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=4.785 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6194']
+2026-01-28 04:17:33 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:17:33 INFO __main__ [RISK_SUMMARY] used_total=2.61807 used_total_shadow=7.40307 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=4.785 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6181']
+2026-01-28 04:17:56 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:17:56 INFO __main__ [RISK_SUMMARY] used_total=2.619435 used_total_shadow=7.404435 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6194']
+2026-01-28 04:18:19 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:18:19 INFO __main__ [RISK_SUMMARY] used_total=2.61807 used_total_shadow=7.40307 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6181']
+2026-01-28 04:18:42 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:18:42 INFO __main__ [RISK_SUMMARY] used_total=2.61807 used_total_shadow=7.40307 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6181']
+2026-01-28 04:19:05 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:19:05 INFO __main__ [RISK_SUMMARY] used_total=2.61807 used_total_shadow=7.40307 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6181']
+2026-01-28 04:19:29 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:19:29 INFO __main__ [RISK_SUMMARY] used_total=2.61807 used_total_shadow=7.40307 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6181']
+2026-01-28 04:19:51 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:19:51 INFO __main__ [RISK_SUMMARY] used_total=2.61807 used_total_shadow=7.40307 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6181']
+2026-01-28 04:20:14 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:20:14 INFO __main__ [RISK_SUMMARY] used_total=2.61807 used_total_shadow=7.40307 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6181']
+2026-01-28 04:20:38 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:20:38 INFO __main__ [RISK_SUMMARY] used_total=2.61807 used_total_shadow=7.40307 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6181']
+2026-01-28 04:21:01 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:21:01 INFO __main__ [RISK_SUMMARY] used_total=2.611245 used_total_shadow=7.396245 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6112']
+2026-01-28 04:21:24 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:21:25 INFO __main__ [RISK_SUMMARY] used_total=2.611245 used_total_shadow=7.396245 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6112']
+2026-01-28 04:21:48 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:21:48 INFO __main__ [RISK_SUMMARY] used_total=2.611245 used_total_shadow=7.396245 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6112']
+2026-01-28 04:22:11 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:22:11 INFO __main__ [RISK_SUMMARY] used_total=2.611245 used_total_shadow=7.396245 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6112']
+2026-01-28 04:22:34 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:22:34 INFO __main__ [RISK_SUMMARY] used_total=2.622165 used_total_shadow=7.407165 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6222']
+2026-01-28 04:22:58 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:22:58 INFO __main__ [RISK_SUMMARY] used_total=2.622165 used_total_shadow=7.407165 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6222']
+2026-01-28 04:23:21 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:23:21 INFO __main__ [RISK_SUMMARY] used_total=2.622165 used_total_shadow=7.407165 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6222']
+2026-01-28 04:23:44 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:23:44 INFO __main__ [RISK_SUMMARY] used_total=2.622165 used_total_shadow=7.407165 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6222']
+2026-01-28 04:24:07 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:24:07 INFO __main__ [RISK_SUMMARY] used_total=2.622165 used_total_shadow=7.407165 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6222']
+2026-01-28 04:24:30 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:24:30 INFO __main__ [RISK_SUMMARY] used_total=2.622165 used_total_shadow=7.407165 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6222']
+2026-01-28 04:24:53 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:24:53 INFO __main__ [RISK_SUMMARY] used_total=2.624895 used_total_shadow=7.409895000000001 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6249']
+2026-01-28 04:25:16 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:25:16 INFO __main__ [RISK_SUMMARY] used_total=2.624895 used_total_shadow=7.409895000000001 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6249']
+2026-01-28 04:25:38 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:25:38 INFO __main__ [RISK_SUMMARY] used_total=2.624895 used_total_shadow=7.409895000000001 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6249']
+2026-01-28 04:25:59 INFO __main__ [CFG] reloaded (interval)
+2026-01-28 04:26:01 INFO __main__ [POS] target_count=1 my_count=1 target_incomplete=False my_incomplete=False | t_src=http_positions t_cb=1769545560 t_rsec=25 t_mode=sec t_http=200 t_hit=None
+2026-01-28 04:26:01 INFO __main__ [POS] target cache_headers_first={'CF-Cache-Status': 'MISS', 'Cache-Control': 'public, max-age=2', 'Last-Modified': 'Tue, 27 Jan 2026 20:26:01 GMT', 'Date': 'Tue, 27 Jan 2026 20:26:01 GMT', 'Server': 'cloudflare'}
+2026-01-28 04:26:01 INFO __main__ [POS] target cache_headers_last={'CF-Cache-Status': 'MISS', 'Cache-Control': 'public, max-age=2', 'Last-Modified': 'Tue, 27 Jan 2026 20:26:01 GMT', 'Date': 'Tue, 27 Jan 2026 20:26:01 GMT', 'Server': 'cloudflare'}
+2026-01-28 04:26:01 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:26:01 INFO __main__ [RISK_SUMMARY] used_total=2.624895 used_total_shadow=7.409895000000001 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6249']
+2026-01-28 04:26:24 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:26:24 INFO __main__ [RISK_SUMMARY] used_total=2.62899 used_total_shadow=7.41399 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6290']
+2026-01-28 04:26:48 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:26:48 INFO __main__ [RISK_SUMMARY] used_total=2.62899 used_total_shadow=7.41399 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6290']
+2026-01-28 04:27:11 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:27:11 INFO __main__ [RISK_SUMMARY] used_total=2.62899 used_total_shadow=7.41399 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6290']
+2026-01-28 04:27:34 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:27:34 INFO __main__ [RISK_SUMMARY] used_total=2.62899 used_total_shadow=7.41399 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6290']
+2026-01-28 04:27:57 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:27:57 INFO __main__ [RISK_SUMMARY] used_total=2.62899 used_total_shadow=7.41399 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6290']
+2026-01-28 04:28:20 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:28:20 INFO __main__ [RISK_SUMMARY] used_total=2.62899 used_total_shadow=7.41399 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6290']
+2026-01-28 04:28:43 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:28:43 INFO __main__ [RISK_SUMMARY] used_total=2.62899 used_total_shadow=7.41399 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6290']
+2026-01-28 04:29:07 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:29:07 INFO __main__ [RISK_SUMMARY] used_total=2.622165 used_total_shadow=7.407165 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6222']
+2026-01-28 04:29:29 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:29:29 INFO __main__ [RISK_SUMMARY] used_total=2.622165 used_total_shadow=7.407165 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6222']
+2026-01-28 04:29:52 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:29:52 INFO __main__ [RISK_SUMMARY] used_total=2.622165 used_total_shadow=7.407165 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6222']
+2026-01-28 04:30:15 INFO __main__ [SAFE] actions_empty reduce_reconcile_set size=1 recent_sec=600 lag_ms=0 actions=0 actions_unreliable=False
+2026-01-28 04:30:15 INFO __main__ [RISK_SUMMARY] used_total=2.622165 used_total_shadow=7.407165 open_buy_orders_usd=0 shadow_buy_usd=4.785 recent_buy_usd=0.0 top_tokens=['0x17a2466c34d9a93dbef8bda91bc56005b4162666901df319bcddb063d6bd8991:1=2.6222']
