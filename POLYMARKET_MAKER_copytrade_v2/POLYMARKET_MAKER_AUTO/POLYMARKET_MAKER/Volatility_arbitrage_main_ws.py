@@ -71,6 +71,10 @@ class WSAggregatorClient:
         auth: Optional[Dict[str, str]] = None,
         verbose: bool = False,
         label: str = "aggregator",
+        flush_interval_sec: float = 0.5,
+        ping_interval_sec: float = 25.0,
+        ping_timeout_sec: float = 20.0,
+        enable_text_ping: bool = False,
     ):
         self._on_event = on_event
         self._on_state = on_state
@@ -101,7 +105,10 @@ class WSAggregatorClient:
         self._reconnect_delay = 1
         self._max_reconnect_delay = 60
         self._silence_timeout = 600
-        self._flush_interval = 0.1  # 100ms 批量刷新待处理订阅
+        self._flush_interval = max(0.1, float(flush_interval_sec))
+        self._ping_interval = max(1.0, float(ping_interval_sec))
+        self._ping_timeout = max(1.0, float(ping_timeout_sec))
+        self._enable_text_ping = bool(enable_text_ping)
 
         # 统计
         self._last_event_ts = 0.0
@@ -251,8 +258,8 @@ class WSAggregatorClient:
             try:
                 self._ws.run_forever(
                     sslopt={"cert_reqs": ssl.CERT_REQUIRED},
-                    ping_interval=25,
-                    ping_timeout=10,
+                    ping_interval=self._ping_interval,
+                    ping_timeout=self._ping_timeout,
                 )
             except Exception as exc:
                 if self._verbose:
@@ -325,17 +332,18 @@ class WSAggregatorClient:
         self._flush_thread = threading.Thread(target=flush_loop, daemon=True)
         self._flush_thread.start()
 
-        # PING心跳线程
-        def ping_loop():
-            while self._ws_connected and not self._stop_event.is_set():
-                try:
-                    ws.send("PING")
-                except Exception:
-                    break
-                time.sleep(10)
+        # 可选文本心跳（默认关闭）：避免与 websocket 底层 ping/pong 重复造成抖动
+        if self._enable_text_ping:
+            def ping_loop():
+                while self._ws_connected and not self._stop_event.is_set():
+                    try:
+                        ws.send("PING")
+                    except Exception:
+                        break
+                    time.sleep(max(1.0, self._ping_interval / 2.0))
 
-        self._ping_thread = threading.Thread(target=ping_loop, daemon=True)
-        self._ping_thread.start()
+            self._ping_thread = threading.Thread(target=ping_loop, daemon=True)
+            self._ping_thread.start()
 
         # 静默检测线程
         def silence_guard():
