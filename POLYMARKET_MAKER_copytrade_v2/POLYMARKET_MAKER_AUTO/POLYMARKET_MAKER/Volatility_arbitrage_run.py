@@ -2189,10 +2189,10 @@ def main(run_config: Optional[Dict[str, Any]] = None):
     stagnation_pct = _normalize_ratio(run_cfg.get("stagnation_pct"), 0.0)
     no_event_exit_minutes = _coerce_float(run_cfg.get("no_event_exit_minutes"))
     if no_event_exit_minutes is None:
-        no_event_exit_minutes = 10.0
+        no_event_exit_minutes = 20.0
     signal_timeout_minutes = _coerce_float(run_cfg.get("signal_timeout_minutes"))
     if signal_timeout_minutes is None:
-        signal_timeout_minutes = 30.0
+        signal_timeout_minutes = 45.0
     price_none_exit_count = max(0, int(PRICE_NONE_EXIT_COUNT))
     set_price_none_exit_threshold(price_none_exit_count)
     if stagnation_window_minutes <= 0:

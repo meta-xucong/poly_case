@@ -71,6 +71,10 @@ class WSAggregatorClient:
         auth: Optional[Dict[str, str]] = None,
         verbose: bool = False,
         label: str = "aggregator",
+        flush_interval_sec: float = 0.5,
+        ping_interval_sec: float = 25.0,
+        ping_timeout_sec: float = 20.0,
+        enable_text_ping: bool = False,
     ):
         self._on_event = on_event
         self._on_state = on_state
@@ -101,7 +105,10 @@ class WSAggregatorClient:
         self._reconnect_delay = 1
         self._max_reconnect_delay = 60
         self._silence_timeout = 600
-        self._flush_interval = 0.1  # 100ms 批量刷新待处理订阅
+        self._flush_interval = max(0.1, float(flush_interval_sec))
+        self._ping_interval = max(1.0, float(ping_interval_sec))
+        self._ping_timeout = max(1.0, float(ping_timeout_sec))
+        self._enable_text_ping = bool(enable_text_ping)
 
         # 统计
         self._last_event_ts = 0.0
@@ -251,8 +258,8 @@ class WSAggregatorClient:
             try:
                 self._ws.run_forever(
                     sslopt={"cert_reqs": ssl.CERT_REQUIRED},
-                    ping_interval=25,
-                    ping_timeout=10,
+                    ping_interval=self._ping_interval,
+                    ping_timeout=self._ping_timeout,
                 )
             except Exception as exc:
                 if self._verbose:
@@ -325,17 +332,18 @@ class WSAggregatorClient:
         self._flush_thread = threading.Thread(target=flush_loop, daemon=True)
         self._flush_thread.start()
 
-        # PING心跳线程
-        def ping_loop():
-            while self._ws_connected and not self._stop_event.is_set():
-                try:
-                    ws.send("PING")
-                except Exception:
-                    break
-                time.sleep(10)
+        # 可选文本心跳（默认关闭）：避免与 websocket 底层 ping/pong 重复造成抖动
+        if self._enable_text_ping:
+            def ping_loop():
+                while self._ws_connected and not self._stop_event.is_set():
+                    try:
+                        ws.send("PING")
+                    except Exception:
+                        break
+                    time.sleep(max(1.0, self._ping_interval / 2.0))
 
-        self._ping_thread = threading.Thread(target=ping_loop, daemon=True)
-        self._ping_thread.start()
+            self._ping_thread = threading.Thread(target=ping_loop, daemon=True)
+            self._ping_thread.start()
 
         # 静默检测线程
         def silence_guard():
@@ -483,6 +491,9 @@ def ws_watch_by_ids(
     on_state: Optional[Callable[[str, Dict[str, Any]], None]] = None,
     verbose: bool = False,
     stop_event: Optional[threading.Event] = None,
+    ping_interval_sec: float = 25.0,
+    ping_timeout_sec: float = 20.0,
+    enable_text_ping: bool = False,
 ):
     """
     只负责：连接 → 订阅 → 将 WS 事件回调给 on_event（逐条 dict）。
@@ -491,6 +502,8 @@ def ws_watch_by_ids(
     - on_event: 回调函数，参数是一条事件（dict）。若服务端下发 list，将按条回调。
     - on_state: 连接状态通知，state in {open, closed, error, silence}
     - verbose: 默认 False。为 True 时打印 OPEN/SUB/ERROR/CLOSED 及无回调时的事件。
+    - ping_interval_sec / ping_timeout_sec: 底层 websocket ping/pong 参数。
+    - enable_text_ping: 是否启用文本 PING（默认关闭，避免与底层 ping/pong 重复）。
     """
     ids = [str(x) for x in asset_ids if x]
     if not ids:
@@ -503,6 +516,9 @@ def ws_watch_by_ids(
             print(f"  - token_id[{i}] = {tid}")
 
     stop_event = stop_event or threading.Event()
+    ping_interval = max(1.0, float(ping_interval_sec))
+    ping_timeout = max(1.0, float(ping_timeout_sec))
+    use_text_ping = bool(enable_text_ping)
 
     reconnect_delay = 1
     max_reconnect_delay = 60
@@ -538,16 +554,17 @@ def ws_watch_by_ids(
             last_event_ts = time.monotonic()
             _notify("open", {"label": label, "asset_ids": ids})
 
-            # 文本心跳 PING（与底层 ping 帧并行存在）
-            def _ping():
-                while not ping_stop["v"] and not stop_event.is_set():
-                    try:
-                        ws.send("PING")
-                        time.sleep(10)
-                    except Exception:
-                        break
+            # 可选文本心跳（默认关闭）：避免与底层 ping/pong 并行造成抖动
+            if use_text_ping:
+                def _ping():
+                    while not ping_stop["v"] and not stop_event.is_set():
+                        try:
+                            ws.send("PING")
+                            time.sleep(max(1.0, ping_interval / 2.0))
+                        except Exception:
+                            break
 
-            threading.Thread(target=_ping, daemon=True).start()
+                threading.Thread(target=_ping, daemon=True).start()
 
             def _silence_guard():
                 while not silence_guard_stop["v"] and not stop_event.is_set():
@@ -629,8 +646,8 @@ def ws_watch_by_ids(
         try:
             wsa.run_forever(
                 sslopt={"cert_reqs": ssl.CERT_REQUIRED},
-                ping_interval=25,
-                ping_timeout=10,
+                ping_interval=ping_interval,
+                ping_timeout=ping_timeout,
             )
         except Exception as exc:
             ping_stop["v"] = True

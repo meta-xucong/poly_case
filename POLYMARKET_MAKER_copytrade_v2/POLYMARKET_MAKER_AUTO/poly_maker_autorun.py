@@ -66,7 +66,7 @@ DEFAULT_GLOBAL_CONFIG = {
     "refill_check_interval_sec": 60.0,
     # Pending 软淘汰（避免无数据 token 长期卡在 pending）
     "enable_pending_soft_eviction": True,
-    "pending_soft_eviction_minutes": 12.0,
+    "pending_soft_eviction_minutes": 20.0,
     "pending_soft_eviction_check_interval_sec": 300.0,
     # Shared WS 等待配置
     "shared_ws_max_pending_wait_sec": 45.0,
@@ -75,6 +75,7 @@ DEFAULT_GLOBAL_CONFIG = {
     "shared_ws_wait_pause_minutes": 1.0,
     "shared_ws_wait_escalation_window_sec": 240.0,
     "shared_ws_wait_escalation_min_failures": 2,
+    "ws_no_event_warn_interval_sec": 30.0,
 }
 
 # Shared WS 等待防抖参数（写死，避免依赖外部 JSON）
@@ -537,6 +538,9 @@ class GlobalConfig:
     shared_ws_wait_escalation_min_failures: int = DEFAULT_GLOBAL_CONFIG[
         "shared_ws_wait_escalation_min_failures"
     ]
+    ws_no_event_warn_interval_sec: float = DEFAULT_GLOBAL_CONFIG[
+        "ws_no_event_warn_interval_sec"
+    ]
     # Slot refill (回填) 配置
     enable_slot_refill: bool = bool(DEFAULT_GLOBAL_CONFIG["enable_slot_refill"])
     refill_cooldown_minutes: float = DEFAULT_GLOBAL_CONFIG["refill_cooldown_minutes"]
@@ -692,6 +696,12 @@ class GlobalConfig:
                 merged.get(
                     "shared_ws_wait_escalation_min_failures",
                     cls.shared_ws_wait_escalation_min_failures,
+                )
+            ),
+            ws_no_event_warn_interval_sec=float(
+                merged.get(
+                    "ws_no_event_warn_interval_sec",
+                    cls.ws_no_event_warn_interval_sec,
                 )
             ),
             # Slot refill (回填) 配置
@@ -932,20 +942,39 @@ class AutoRunManager:
                     self._restart_ws_subscription(desired)
                 self._flush_ws_cache_if_needed()
 
-                # 定期健康检查（每10秒，加快故障检测和恢复）
+                # 定期健康检查（默认30秒，降低低活跃市场的误告警）
                 now = time.time()
-                if now - last_health_check >= 10.0:
+                health_check_interval = max(10.0, float(self.config.ws_no_event_warn_interval_sec))
+                if now - last_health_check >= health_check_interval:
                     current_count = getattr(self, '_ws_event_count', 0)
 
                     # 检查数据流是否停滞
                     if current_count == last_event_count and self._ws_token_ids:
-                        print(f"[WARN] WS 聚合器10秒内未收到任何新事件（订阅了 {len(self._ws_token_ids)} 个token）")
+                        ws_connected = False
+                        if self._ws_client is not None:
+                            ws_connected = self._ws_client.is_connected()
+                        elif self._ws_thread and self._ws_thread.is_alive():
+                            ws_connected = True
+
+                        if ws_connected:
+                            print(
+                                f"[WARN][QUIET] WS 聚合器{int(health_check_interval)}秒内无新事件"
+                                f"（连接正常，订阅 {len(self._ws_token_ids)} 个token）"
+                            )
+                        else:
+                            print(
+                                f"[WARN][CONN] WS 聚合器{int(health_check_interval)}秒内无新事件"
+                                f"（连接异常，订阅 {len(self._ws_token_ids)} 个token）"
+                            )
                     elif current_count > last_event_count:
                         # 数据流正常，每小时打印一次统计（避免刷屏）
                         if not hasattr(self, '_last_flow_log'):
                             self._last_flow_log = 0.0
                         if now - self._last_flow_log >= 3600.0:
-                            print(f"[WS][FLOW] 数据流正常，10秒内收到 {current_count - last_event_count} 个事件")
+                            print(
+                                f"[WS][FLOW] 数据流正常，{int(health_check_interval)}秒内收到 "
+                                f"{current_count - last_event_count} 个事件"
+                            )
                             self._last_flow_log = now
 
                     last_event_count = current_count
@@ -2669,12 +2698,12 @@ class AutoRunManager:
                 continue
 
             # 检查重试次数（按退出原因分级）
-            # - NO_DATA_TIMEOUT: 最多1次，避免低活跃 token 反复回填
+            # - NO_DATA_TIMEOUT: 最多2次，降低瞬时抖动导致的误淘汰
             # - SHARED_WS_UNAVAILABLE: 视为基础设施瞬态故障，不设置硬上限
             retry_count = self._refill_retry_counts.get(token_id, 0)
             effective_max_retries = max_retries
             if exit_reason == "NO_DATA_TIMEOUT":
-                effective_max_retries = 1
+                effective_max_retries = min(max_retries, 2)
             elif exit_reason == "SHARED_WS_UNAVAILABLE":
                 effective_max_retries = 10**9
             if retry_count >= effective_max_retries:
