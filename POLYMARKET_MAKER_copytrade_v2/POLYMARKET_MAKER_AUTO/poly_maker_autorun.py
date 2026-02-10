@@ -66,7 +66,7 @@ DEFAULT_GLOBAL_CONFIG = {
     "refill_check_interval_sec": 60.0,
     # Pending 软淘汰（避免无数据 token 长期卡在 pending）
     "enable_pending_soft_eviction": True,
-    "pending_soft_eviction_minutes": 12.0,
+    "pending_soft_eviction_minutes": 20.0,
     "pending_soft_eviction_check_interval_sec": 300.0,
     # Shared WS 等待配置
     "shared_ws_max_pending_wait_sec": 45.0,
@@ -950,10 +950,22 @@ class AutoRunManager:
 
                     # 检查数据流是否停滞
                     if current_count == last_event_count and self._ws_token_ids:
-                        print(
-                            f"[WARN] WS 聚合器{int(health_check_interval)}秒内未收到任何新事件"
-                            f"（订阅了 {len(self._ws_token_ids)} 个token）"
-                        )
+                        ws_connected = False
+                        if self._ws_client is not None:
+                            ws_connected = self._ws_client.is_connected()
+                        elif self._ws_thread and self._ws_thread.is_alive():
+                            ws_connected = True
+
+                        if ws_connected:
+                            print(
+                                f"[WARN][QUIET] WS 聚合器{int(health_check_interval)}秒内无新事件"
+                                f"（连接正常，订阅 {len(self._ws_token_ids)} 个token）"
+                            )
+                        else:
+                            print(
+                                f"[WARN][CONN] WS 聚合器{int(health_check_interval)}秒内无新事件"
+                                f"（连接异常，订阅 {len(self._ws_token_ids)} 个token）"
+                            )
                     elif current_count > last_event_count:
                         # 数据流正常，每小时打印一次统计（避免刷屏）
                         if not hasattr(self, '_last_flow_log'):
@@ -2686,12 +2698,12 @@ class AutoRunManager:
                 continue
 
             # 检查重试次数（按退出原因分级）
-            # - NO_DATA_TIMEOUT: 最多1次，避免低活跃 token 反复回填
+            # - NO_DATA_TIMEOUT: 最多2次，降低瞬时抖动导致的误淘汰
             # - SHARED_WS_UNAVAILABLE: 视为基础设施瞬态故障，不设置硬上限
             retry_count = self._refill_retry_counts.get(token_id, 0)
             effective_max_retries = max_retries
             if exit_reason == "NO_DATA_TIMEOUT":
-                effective_max_retries = 1
+                effective_max_retries = min(max_retries, 2)
             elif exit_reason == "SHARED_WS_UNAVAILABLE":
                 effective_max_retries = 10**9
             if retry_count >= effective_max_retries:
